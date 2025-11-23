@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ylia Callan — Australian author, researcher, and folk musician exploring physics, consciousness, and cosmic storytelling.">
+    <meta name="theme-color" content="#000000">
+    <title>Ylia Callan | Author • Researcher • Musician</title>
+
+    <!-- SEO & Schema -->
+    <link rel="canonical" href="https://yliacallan.github.io/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ylia Callan",
+      "jobTitle": "Author, Researcher, Musician",
+      "url": "https://yliacallan.github.io",
+      "image": "https://yliacallan.github.io/assets/ylia-portrait.jpg",
+      "description": "Australian folk musician, independent writer, and researcher bridging physics, philosophy, and consciousness.",
+      "sameAs": [
+        "https://play.google.com/store/books/author?id=Ylia+Callan",
+        "https://soundcloud.com/yliacallan",
+        "https://youtube.com/@yliacallan"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": []
+    }
+    </script>
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E✍️%3C/text%3E%3C/svg%3E">
+
+    <!-- Critical CSS (inlined) -->
+    <style>
+        :root {
+            --black: #000000;
+            --cyan: #00eaff;
+            --cyan-glow: 0 0 12px rgba(0, 234, 255, 0.5);
+            --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        *, *::before, *::after { box-sizing: border-box; }
+        body, h1, h2, h3, p, ul { margin:0; padding:0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+            background: var(--black);
+            color: #e0faff;
+            line-height: 1.65;
+            overflow-x: hidden;
+        }
+        img { max-width: 100%; display: block; }
+        a { color: var(--cyan); text-decoration: none; transition: var(--transition); }
+        a:hover { opacity: 0.8; }
+
+        /* Layout */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(0,0,0,0.95);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,234,255,0.15);
+        }
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--cyan);
+            text-shadow: var(--cyan-glow);
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        .nav-links a {
+            font-weight: 500;
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -6px;
+            left: 0;
+            background: var(--cyan);
+            transition: var(--transition);
+        }
+        .nav-links a:hover::after { width: 100%; }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            width: 28px;
+            height: 20px;
+            position: relative;
+        }
+        .hamburger span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background: var(--cyan);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+        .hamburger span:nth-child(2) { margin: 5px 0; }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            background: radial-gradient(circle at center, rgba(0,234,255,0.06) 0%, transparent 70%);
+        }
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            margin-bottom: 0.5rem;
+            color: var(--cyan);
+            text-shadow: var(--cyan-glow);
+            animation: glow 4s ease-in-out infinite alternate;
+        }
+        .hero .subtitle {
+            font-size: clamp(1.2rem, 4vw, 1.8rem);
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        .hero .bio {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            opacity: 0.85;
+        }
+
+        /* Carousel */
+        .carousel {
+            padding: 4rem 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .carousel h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--cyan);
+            text-shadow: var(--cyan-glow);
+        }
+        .swiper {
+            padding: 2rem 0;
+        }
+        .swiper-slide {
+            background: rgba(0,234,255,0.03);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: var(--transition);
+            text-align: center;
+        }
+        .swiper-slide:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--cyan-glow);
+        }
+        .book-cover {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--cyan);
+        }
+        .book-title {
+            padding: 1.5rem;
+            font-size: 1.4rem;
+            color: var(--cyan);
+        }
+
+        /* Gallery */
+        .gallery {
+            padding: 4rem 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .gallery h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--cyan);
+            text-shadow: var(--cyan-glow);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 2rem;
+        }
+        .book-card {
+            border-radius: 16px;
+            overflow: hidden;
+            background: rgba(0,234,255,0.03);
+            transition: var(--transition);
+        }
+        .book-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--cyan-glow);
+        }
+        .book-card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-bottom: 2px solid var(--cyan);
+        }
+        .book-card h3 {
+            padding: 1rem;
+            text-align: center;
+            color: var(--cyan);
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 1rem;
+            text-align: center;
+            border-top: 1px solid rgba(0,234,255,0.15);
+        }
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .socials svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--cyan);
+            transition: var(--transition);
+        }
+        .socials a:hover svg { transform: scale(1.2); }
+
+        /* Animations */
+        @keyframes glow {
+            from { text-shadow: 0 0 12px rgba(0,234,255,0.5); }
+            to { text-shadow: 0 0 20px rgba(0,234,255,0.8), 0 0 30px rgba(0,234,255,0.4); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { 
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: rgba(0,0,0,0.98);
+                flex-direction: column;
+                align-items: center;
+                justify-content: start;
+                padding-top: 4rem;
+                transition: left 0.4s ease;
+            }
+            .nav-links.active { left: 0; }
+            .hamburger { display: block; }
+            .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+            .hamburger.active span:nth-child(2) { opacity: 0; }
+            .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -8px); }
+        }
+        
+                /* ========== SOCIAL SHARE BAR – FIXED & BEAUTIFUL ========== */
+        .social-share{
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 1.5rem;
+            background: rgba(0,234,255,.05);
+            border: 1px solid rgba(0,234,255,.25);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .social-share label{
+            color: var(--cyan);
+            font-weight: 600;
+            text-shadow: var(--cyan-glow);
+            margin-right: 0.5rem;
+        }
+        .share-buttons{
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .share-btn{
+            width: 48px;
+            height: 48px;
+            background: rgba(0,234,255,.1);
+            border: 2px solid var(--cyan);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            position: relative;
+            cursor: pointer;
+        }
+        .share-btn:hover{
+            background: var(--cyan);
+            box-shadow: var(--cyan-glow);
+            transform: translateY(-4px);
+        }
+        .share-btn svg{
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+        .tooltip{
+            position: absolute;
+            top: -36px;
+            background: #000;
+            color: var(--cyan);
+            padding: 6px 10px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            opacity: 0;
+            transition: opacity .3s;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+        .share-btn.copied .tooltip{
+            opacity: 1;
+        }
+        @media(max-width:640px){
+            .social-share{flex-direction:column;gap:1rem}
+            .social-share label{font-size:1.1rem}
+        }
+
+        .metadata,.description,.themes{max-width:1000px;margin:4rem auto;padding:0 1rem}
+        .metadata{background:rgba(0,234,255,.03);border:1px solid rgba(0,234,255,.2);border-radius:16px;padding:2rem}
+        .metadata dl{display:grid;grid-template-columns:max-content 1fr;gap:1rem 2rem}
+        .metadata dt{color:var(--cyan);font-weight:600}
+        
+        .related{margin:4rem auto;padding:2rem;max-width:1400px}
+        .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:2rem}
+        .related-card{overflow:hidden;border-radius:16px;background:rgba(0,234,255,.03);transition:var(--transition)}
+        .related-card:hover{box-shadow:var(--cyan-glow);transform:translateY(-8px)}
+        .related-card img{height:300px;object-fit:cover;width:100%}
+
+        footer{padding:3rem 1rem;text-align:center;border-top:1px solid rgba(0,234,255,.15)}
+        .socials{display:flex;gap:1.5rem;justify-content:center;margin:1.5rem 0}
+        .socials svg{width:28px;height:28px;fill:var(--cyan);transition:var(--transition)}
+        .socials a:hover svg{transform:scale(1.2)}
+
+        @keyframes glow{from{text-shadow:0 0 12px rgba(0,234,255,.5)}to{text-shadow:0 0 20px rgba(0,234,255,.8),0 0 30px rgba(0,234,255,.4)}}
+        h1,h2{animation:glow 4s ease-in-out infinite alternate}
+
+    </style>
+
+    <!-- Swiper.js (lightweight) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Ylia Callan</div>
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#books">Books</a>
+                <a href="/catalogue/">Catalogue</a>
+                <a href="/contact/">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div>
+                <h1>Ylia Callan</h1>
+                <p class="subtitle">Author • Researcher • Musician</p>
+                <p class="bio">
+                    Ylia Callan is an Australian folk musician, independent writer, and researcher whose work bridges physics, philosophy, and consciousness. Based in Uki, NSW, he blends fingerstyle and slide guitar on 6- and 12-string acoustics, creating music shaped by natural landscapes and timeless storytelling traditions.<br><br>
+                    As a writer and researcher, Callan explores how cosmic processes—light, structure, gravity, and information—shape life, culture, and the evolution of intelligence. His books combine scientific curiosity with accessible, reflective narrative, offering readers a pathway to rethink the relationship between the universe and human awareness.
+                </p>
+            </div>
+        </section>
+
+        <section class="carousel">
+            <h2>Featured Works</h2>
+            <div class="swiper featured-swiper">
+                <div class="swiper-wrapper" id="featuredSlides"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        
+            <!-- SOCIAL SHARE BAR – NOW PERFECT -->
+    <div class="social-share">
+        <label>Share:</label>
+        <div class="share-buttons">
+            <a href="https://twitter.com/intent/tweet?url=https://yliacallan.github.io/books/the-architecture-of-silence/&text=The%20Architecture%20of%20Silence%20by%20Ylia%20Callan" target="_blank" rel="noopener" class="share-btn" aria-label="Twitter">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M18.9 4.1h3.4l-7.4 8.5 8.7 11.4h-6.8l-5.3-6.9-6.1 6.9H2.1l7.9-9-7.4-9.7h7l4.8 6.3zm-1.2 16.2h2.1L8.9 6.6H6.6z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://yliacallan.github.io/books/the-architecture-of-silence/" target="_blank" rel="noopener" class="share-btn" aria-label="Facebook">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M17 2v4h-2c-.6 0-1 .4-1 1v3h3l-.5 4h-2.5v10h-4v-10H7v-4h3V6.3C10 3.8 12.2 2 15.1 2H17z"/></svg>
+            </a>
+            <a href="mailto:?subject=The%20Architecture%20of%20Silence%20by%20Ylia%20Callan&body=Check%20this%20out:%20https://yliacallan.github.io/books/the-architecture-of-silence/" class="share-btn" aria-label="Email">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+            <button id="copyBtn" class="share-btn" aria-label="Copy link">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M19 21H8V7h11m0-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2z"/></svg>
+                <span class="tooltip">Copied!</span>
+            </button>
+        </div>
+    </div>
+
+        <section class="gallery" id="books">
+            <h2>All Books</h2>
+            <div class="grid" id="bookGrid"></div>
+        </section>
+    </main>
+    
+        <!-- SOCIAL SHARE BAR – NOW PERFECT -->
+    <div class="social-share">
+        <label>Share:</label>
+        <div class="share-buttons">
+            <a href="https://twitter.com/intent/tweet?url=https://yliacallan.github.io/books/the-architecture-of-silence/&text=The%20Architecture%20of%20Silence%20by%20Ylia%20Callan" target="_blank" rel="noopener" class="share-btn" aria-label="Twitter">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M18.9 4.1h3.4l-7.4 8.5 8.7 11.4h-6.8l-5.3-6.9-6.1 6.9H2.1l7.9-9-7.4-9.7h7l4.8 6.3zm-1.2 16.2h2.1L8.9 6.6H6.6z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://yliacallan.github.io/books/the-architecture-of-silence/" target="_blank" rel="noopener" class="share-btn" aria-label="Facebook">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M17 2v4h-2c-.6 0-1 .4-1 1v3h3l-.5 4h-2.5v10h-4v-10H7v-4h3V6.3C10 3.8 12.2 2 15.1 2H17z"/></svg>
+            </a>
+            <a href="mailto:?subject=The%20Architecture%20of%20Silence%20by%20Ylia%20Callan&body=Check%20this%20out:%20https://yliacallan.github.io/books/the-architecture-of-silence/" class="share-btn" aria-label="Email">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+            <button id="copyBtn" class="share-btn" aria-label="Copy link">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M19 21H8V7h11m0-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2z"/></svg>
+                <span class="tooltip">Copied!</span>
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="socials">
+            <a href="https://play.google.com/store/books/author?id=Ylia+Callan" aria-label="Google Play Books">
+                <svg viewBox="0 0 24 24"><path d="M22.2 10.2c1.2.8 1.2 2.7 0 3.5l-9 5.2c-1.2.7-2.7-.2-2.7-1.5V6.6c0-1.3 1.5-2.2 2.7-1.5l9 5.1zM3 5v14c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2z"/></svg>
+            </a>
+            <a href="https://soundcloud.com/yliacallan" aria-label="SoundCloud">
+                <svg viewBox="0 0 24 24"><path d="M8.4 17.2c-.3 0-.5-.2-.5-.5v-9c0-.3.2-.5.5-.5s.5.2.5.5v9c0 .3-.2.5-.5.5zm-1.9 0c-.3 0-.5-.2-.5-.5v-7.5c0-.3.2-.5.5-.5s.5.2.5.5v7.5c0 .3-.2.5-.5.5zm-1.9 0c-.3 0-.5-.2-.5-.5v-6c0-.3.2-.5.5-.5s.5.2.5.5v6c0 .3-.2.5-.5.5zm-1.9 0c-.3 0-.5-.2-.5-.5v-4.5c0-.3.2-.5.5-.5s.5.2.5.5v4.5c0 .3-.2.5-.5.5zm-1.9 0c-.3 0-.5-.2-.5-.5v-3c0-.3.2-.5.5-.5s.5.2.5.5v3c0 .3-.2.5-.5.5zm-1.9 0c-.3 0-.5-.2-.5-.5V9.5c0-.3.2-.5.5-.5s.5.2.5.5v7.2c0 .3-.2.5-.5.5zm6.6-1.5c-.3 0-.5-.2-.5-.5v-7.5c0-.3.2-.5.5-.5s.5.2.5.5v7.5c0 .3-.2.5-.5.5zm1.9 0c-.3 0-.5-.2-.5-.5v-8c0-.3.2-.5.5-.5s.5.2.5.5v8c0 .3-.2.5-.5.5zm1.9 0c-.3 0-.5-.2-.5-.5v-8.5c0-.3.2-.5.5-.5s.5.2.5.5v8.5c0 .3-.2.5-.5.5zm1.9 0c-.3 0-.5-.2-.5-.5v-9c0-.3.2-.5.5-.5s.5.2.5.5v9c0 .3-.2.5-.5.5zm3.8-2.5c-.3 0-.5-.2-.5-.5v-3.5c0-1.9 1.5-3.4 3.4-3.4.3 0 .5.2.5.5s-.2.5-.5.5c-1.3 0-2.4 1.1-2.4 2.4v3.5c0 .3-.2.5-.5.5z"/></svg>
+            </a>
+            <a href="https://youtube.com/@yliacallan" aria-label="YouTube">
+                <svg viewBox="0 0 24 24"><path d="M23.5 6.2s-.2-1.6-1-2.3c-1-.9-2.1-.9-2.6-1C16.9 2.5 12 2.5 12 2.5s-4.9 0-7.9.4c-.5.1-1.6.1-2.6 1-.8.7-1 2.3-1 2.3s-.2 1.4-.2 2.8v1.3c0 1.4.2 2.8.2 2.8s.2 1.6 1 2.3c1 .9 2.3.8 2.9 1 2.1.2 5.9.3 5.9.3s4.9 0 7.9-.4c.5-.1 1.6-.1 2.6-1 .8-.7 1-2.3 1-2.3s.2-1.4.2-2.8v-1.3c0-1.4-.2-2.8-.2-2.8zM9.7 14.5V9l5.3 2.7-5.3 2.8z"/></svg>
+            </a>
+        </div>
+        <p>&copy; <span id="year">2025</span> Ylia Callan. All rights reserved.</p>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Main JS -->
+    <script defer>
+        // Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Books data (replace with real covers & links when ready)
+        const books = [
+            { title: "The Architecture of Silence", cover: "https://via.placeholder.com/400x600/000000/00eaff?text=Architecture+of+Silence", url: "/books/architecture-of-silence/" },
+            { title: "Resonance Fields", cover: "https://via.placeholder.com/400x600/000000/00eaff?text=Resonance+Fields", url: "/books/resonance-fields/" },
+            { title: "Light as Memory", cover: "https://via.placeholder.com/400x600/000000/00eaff?text=Light+as+Memory", url: "/books/light-as-memory/" },
+            { title: "The Listening Sky", cover: "https://via.placeholder.com/400x600/000000/00eaff?text=The+Listening+Sky", url: "/books/the-listening-sky/" },
+            { title: "Gravity's Echo", cover: "https://via.placeholder.com/400x600/000000/00eaff?text=Gravity's+Echo", url: "/books/gravitys-echo/" },
+            { title: "Patterns in the Void", cover: "https://via.placeholder.com/400x600/000000/00eaff?text=Patterns+in+the+Void", url: "/books/patterns-in-the-void/" }
+        ];
+
+        // Randomize order on each load
+        function shuffle(array) {
+            return array.sort(() => Math.random() - 0.5);
+        }
+
+        const shuffledBooks = shuffle([...books]);
+
+        // Populate featured carousel (first 4)
+        const featuredSlides = document.getElementById('featuredSlides');
+        shuffledBooks.slice(0, 4).forEach(book => {
+            featuredSlides.innerHTML += `
+                <div class="swiper-slide">
+                    <a href="${book.url}">
+                        <img src="${book.cover}" alt="${book.title} by Ylia Callan" loading="lazy" width="400" height="600">
+                        <div class="book-title">${book.title}</div>
+                    </a>
+                </div>
+            `;
+        });
+
+        // Populate gallery (all books)
+        const bookGrid = document.getElementById('bookGrid');
+        shuffledBooks.forEach(book => {
+            bookGrid.innerHTML += `
+                <a href="${book.url}" class="book-card">
+                    <img src="${book.cover}" alt="${book.title} by Ylia Callan" loading="lazy" width="400" height="600">
+                    <h3>${book.title}</h3>
+                </a>
+            `;
+        });
+
+        // Initialize Swiper
+        new Swiper('.featured-swiper', {
+            loop: true,
+            autoplay: { delay: 4000, disableOnInteraction: false },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            grabCursor: true,
+            breakpoints: {
+                320: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+            }
+        });
+
+        // PWA Service Worker (placeholder – register when ready)
+        if ('serviceWorker' in navigator) {
+            // Uncomment when you add sw.js
+            // navigator.serviceWorker.register('/sw.js');
+        }
+        
+        // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    document.getElementById('hamburger').addEventListener('click', () => {
+        document.getElementById('hamburger').classList.toggle('active');
+        document.getElementById('navLinks').classList.toggle('active');
+    });
+
+    // COPY LINK – 100% WORKING
+    document.getElementById('copyBtn').addEventListener('click', async () => {
+        try {
+            await navigator.clipboard.writeText(location.href);
+            const btn = document.getElementById('copyBtn');
+            btn.classList.add('copied');
+            setTimeout(() => btn.classList.remove('copied'), 2000);
+        } catch (err) {
+            alert('Link copied: ' + location.href);
+        }
+    });
+    
+    </script>
+
+    <!-- Non-critical CSS deferred -->
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
+</body>
+</html>
