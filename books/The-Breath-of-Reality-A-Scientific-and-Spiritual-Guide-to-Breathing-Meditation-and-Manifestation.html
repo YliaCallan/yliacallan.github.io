@@ -337,37 +337,47 @@
   opacity: 0.8 !important;
 }
 
-/* Big 1200×630 hero image — perfect on all devices */
-.book-cover-hero {
-  text-align: center;
-  margin: 2.5rem auto 1.5rem;
-  padding: 0 1rem;
-  max-width: 100%;
+/* Centered Contact + Banner + Socials – Perfect on Mobile/Desktop */
+.socials h2 {
+  text-align: center !important;
+  width: 100% !important;
+  margin: 3rem 0 2rem !important;
+  font-size: 2.5rem !important;
+  color: var(--cyan) !important;
+  text-shadow: var(--cyan-glow) !important;
+}
+
+/* Banner wrapper – full centered */
+.book-cover-wrapper {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin: 1.5rem 0 !important;
+  padding: 0 1rem !important;
 }
 
 .book-cover-large {
-  width: 100%;
-  max-width: 900px;           /* Looks stunning on desktop */
-  height: auto;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 234, 255, 0.25);
-  border: 2px solid rgba(0, 234, 255, 0.3);
-  transition: var(--transition);
+  width: 100% !important;
+  max-width: 900px !important;
+  height: auto !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 30px rgba(0, 234, 255, 0.25) !important;
+  border: 2px solid rgba(0, 234, 255, 0.3) !important;
+  transition: var(--transition) !important;
+  display: block !important;
 }
 
 .book-cover-large:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0, 234, 255, 0.4);
-  border-color: var(--cyan);
+  transform: translateY(-4px) !important;
+  box-shadow: 0 20px 50px rgba(0, 234, 255, 0.4) !important;
+  border-color: var(--cyan) !important;
 }
 
-/* Mobile fine-tuning */
+/* Mobile spacing */
 @media (max-width: 768px) {
-  .book-cover-hero { margin: 2rem auto 1rem; }
-  .book-cover-large {
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 234, 255, 0.2);
-  }
+  .book-cover-wrapper { margin: 1rem 0 !important; padding: 0 0.5rem !important; }
+  .book-cover-large { border-radius: 12px !important; }
 }
         
     </style>
@@ -514,16 +524,27 @@
 </main>
 
 
-    <button class="share-button">Share</button>
-
-
     <footer>
 
-    <section class="socials" id="socials">
-    <h2>Contact</h2>
-        </section>
-    <div class="footer-socials">
+  <!-- Banner Image – centered below h2 -->
+  <div class="book-cover-wrapper">
+    <img
+      src="/books/assets/images/ylia-callan-book-banner-1200x400.png"
+      alt="Ylia Callan's author website banner – Infinity Spheres"
+      class="book-cover-large"
+      loading="lazy">
+  </div>
+    
+  <!-- Share button (if you want it here) -->
+  <button class="share-button" style="display: block; margin: 2rem auto;">Share</button>
 
+  <!-- Contact Section – h2 perfectly centered -->
+  <section class="socials" id="socials">
+    <h2 style="text-align: center; margin: 3rem 0 2rem; width: 100%;">Contact</h2>
+  </section>
+
+  <!-- Social Links – centered below banner -->
+  <div class="footer-socials">
     <!-- LINE 1 – Main socials -->
     <div class="social-row">
       <a href="https://www.youtube.com/@ylia" target="_blank" rel="noopener">YouTube</a>
@@ -536,29 +557,26 @@
     <!-- LINE 2 – Music + App + Install + Home -->
     <div class="social-row">
       <a href="https://music.youtube.com/channel/UCpA_L99T91Wgousjvq_jZDw" target="_blank" rel="noopener">Music 🎼</a>
-      <button type="button" 
-        class="install-trigger footer-app-btn" 
-        onclick="triggerInstall()">
-  App 📱
-</button>
-      <a href="https://yliacallan.github.io/">Home ♾️</a>
+      <button type="button" class="install-trigger nav-app-btn" onclick="triggerInstall()">App 📱</button>
+      <a href="https://yliacallan.github.io/books/">Home ♾️</a>
     </div>
 
-   <!-- LINE 3 – Book stores -->
+    <!-- LINE 3 – Book stores -->
     <div class="social-row">
       <a href="https://play.google.com/store/books/author?id=Ylia+Callan" target="_blank" rel="noopener">Google Play</a>
       <a href="https://books.apple.com/us/author/ylia-callan/id672856291" target="_blank" rel="noopener">Apple Books</a>
     </div>
 
-    <!-- NEW: Simple Copy Link button -->
+    <!-- Copy Link Row – centered -->
+    <div class="social-row copy-link-row">
+      <button id="copyLinkBtn" class="copy-link">Copy Link 🔗</button>
+      <span id="copyFeedback">Copied!</span>
+    </div>
 
-      <div class="social-row copy-link-row">
-  <button id="copyLinkBtn" class="copy-link">Copy Link🔗</button>
-  <span id="copyFeedback">Copied!</span>
-</div>
-        
-    <p>© <span id="year">2025</span> Ylia Callan. All rights reserved.</p>
+    <p>&copy; <span id="year">2025</span> Ylia Callan. All rights reserved.</p>
+  </div>
 </footer>
+
 
 
         <!-- Floating Install Button — ADD ID BACK -->
