@@ -336,6 +336,40 @@
 .nav-app-btn:hover, .footer-app-btn:hover {
   opacity: 0.8 !important;
 }
+
+/* Perfectly centered big hero image – works on ALL screens */
+.book-cover-wrapper {
+  display: flex;
+  justify-content: center;    /* horizontal center */
+  align-items: center;        /* vertical center (if needed) */
+  width: 100%;
+  margin: 2.5rem auto 1.5rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.book-cover-large {
+  width: 100%;
+  max-width: 900px;           /* looks stunning on desktop */
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 234, 255, 0.25);
+  border: 2px solid rgba(0, 234, 255, 0.3);
+  transition: var(--transition);
+  display: block;
+}
+
+.book-cover-large:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0, 234, 255, 0.4);
+  border-color: var(--cyan);
+}
+
+/* Mobile polish */
+@media (max-width: 768px) {
+  .book-cover-wrapper { margin: 2rem auto 1rem; padding: 0 0.5rem; }
+  .book-cover-large { border-radius: 12px; }
+}
         
     </style>
 </head>
@@ -369,6 +403,14 @@
         <p class="subtitle">A Complete Guide to Body, Mind and Longevity</p>
         <p class="byline">by Ylia Callan</p>
     </section>
+
+<div class="book-cover-wrapper">
+  <img 
+    src="/books/assets/images/Whole-Health-A-Complete-Guide-to-Body-Mind-and-Longevity-by-Ylia-Callan-1200x630.png"
+    alt="Whole Health by Ylia Callan – A Complete Guide to Body, Mind and Longevity"
+    class="book-cover-large"
+    loading="lazy">
+</div>
 
     <!-- PDF.js Viewer -->
     
@@ -435,7 +477,7 @@
             <li>Mental Health - Stress Management - Healthy Lifestyle Guide - Whole Foods</li>
             <li>Fitness - Sunlight - Meditation - Emotional Health - Social Connection</li>
             <li>Mental Clarity - Ageing Well - Lifestyle Tips - Self-Care - Holistic Living</li>
-            <li>Breathing - Posture - Spirituality - Preventive Healthcare,</li>
+            <li>Breathing - Posture - Spirituality - Preventive Healthcare</li>
         </ul>
     </section>
 
@@ -470,6 +512,14 @@
             <section class="socials" id="socials">
             <h2>Contact</h2>
         </section>
+
+<div class="book-cover-wrapper">
+  <img 
+    src="/books/assets/images/ylia-callan-book-banner-1200x400.png" 
+    alt="Ylia Callan's author website banner – Infinity Spheres"
+    class="book-cover-large"
+    loading="lazy">
+</section>
 
     <div class="footer-socials">
 
