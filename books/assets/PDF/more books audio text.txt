@@ -1,0 +1,66 @@
+About Ylia Callan
+
+Ylia Callan is an Australian folk musician, independent writer, and researcher whose work explores the intersections of physics, philosophy, and consciousness.
+
+Musician, Writer & Researcher
+
+Based in Uki, New South Wales, Callan is a singer-songwriter and multi-instrumentalist known for his expressive fingerstyle acoustic guitar, often played on a 12-string. His sound blends elements of folk, slide blues, and classic rock, with a focus on organic textures and open tunings. His compositions frequently evoke the natural landscapes of regional Australia.
+
+As a researcher, Callan investigates themes spanning cosmology, ancient history, information theory, and biological evolution. His writing connects large-scale physical processes—light, entropy, gravitational structure—to the development of consciousness and culture on Earth. His work is characterised by:
+
+cross-disciplinary exploration
+
+synthesis of scientific research with philosophical inquiry
+
+accessible explanations of complex cosmic ideas
+
+Callan is currently developing independent manuscripts that bridge physics with metaphysical questions about the nature of reality, intelligence, and the cosmos.
+
+
+https://yliacallan.github.io/books/resonance-fields/
+
+
+Infinity-Why-Nothing-Ends-and-Everything-Is-Possible-by-Ylia-Callan.pdf
+
+
+
+.socials h2 {
+text-align: center;
+font-size: 2.5rem;
+margin-bottom: 3rem;
+color: var(--cyan);
+text-shadow: var(--cyan-glow);
+gap: 1.5rem;
+margin: 1.5rem 0;
+}
+
+
+The-Breath-of-Reality-A-Scientific-and-Spiritual-Guide-to-Breathing-Meditation-and-Manifestation
+
+
+Whole-Health-A-Complete-Guide-to-Body-Mind-and-Longevity-by-Ylia-Callan
+
+Book Cover - Whole Health - A Complete Guide to Body, Mind and Longevity - Author Ylia Callan
+
+
+https://github.com/YliaCallan/books/blob/main/assets/covers/The-Breath-of-Reality-A-Scientific-and-Spiritual-Guide-to-Breathing-Meditation-and-Manifestation-Cover-400x600.jpg
+
+
+https://play.google.com/store/books/author?id=Ylia+Callan
+
+https://books.apple.com/us/author/ylia-callan/id672856291
+
+https://www.youtube.com/@ylia
+
+https://www.linkedin.com/in/ylia-callan-8b889976/
+
+https://www.instagram.com/yl12ia/
+
+https://www.tiktok.com/guitaralize/
+
+https://x.com/guitaralize/
+
+
+
+
+
