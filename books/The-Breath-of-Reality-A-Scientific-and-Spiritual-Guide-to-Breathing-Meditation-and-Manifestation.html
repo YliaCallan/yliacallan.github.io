@@ -336,6 +336,39 @@
 .nav-app-btn:hover, .footer-app-btn:hover {
   opacity: 0.8 !important;
 }
+
+/* Big 1200×630 hero image — perfect on all devices */
+.book-cover-hero {
+  text-align: center;
+  margin: 2.5rem auto 1.5rem;
+  padding: 0 1rem;
+  max-width: 100%;
+}
+
+.book-cover-large {
+  width: 100%;
+  max-width: 900px;           /* Looks stunning on desktop */
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 234, 255, 0.25);
+  border: 2px solid rgba(0, 234, 255, 0.3);
+  transition: var(--transition);
+}
+
+.book-cover-large:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 234, 255, 0.4);
+  border-color: var(--cyan);
+}
+
+/* Mobile fine-tuning */
+@media (max-width: 768px) {
+  .book-cover-hero { margin: 2rem auto 1rem; }
+  .book-cover-large {
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 234, 255, 0.2);
+  }
+}
         
     </style>
 </head>
@@ -369,6 +402,14 @@
         <p class="subtitle">A Scientific and Spiritual Guide to Breathing, Meditation and Manifestation</p>
         <p class="byline">by Ylia Callan</p>
     </section>
+
+<section class="book-cover-hero">
+  <img 
+    src="/books/assets/images/The-Breath-of-Reality-A-Scientific-and-Spiritual-Guide-to-Breathing-Meditation-and-Manifestation-Featured.jpg" 
+    alt="The Breath of Reality by Ylia Callan – A Scientific and Spiritual Guide to Breathing, Meditation and Manifestation"
+    class="book-cover-large"
+    loading="lazy">
+</section>
 
     <!-- PDF.js Viewer -->
     
