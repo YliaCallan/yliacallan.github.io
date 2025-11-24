@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ylia-books-pwa-v4';
+const CACHE_NAME = 'ylia-books-pwa-v5';
 const OFFLINE_URLS = [
   '/',
   '/index.html',
