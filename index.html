@@ -156,7 +156,7 @@ footer{padding:3rem 1rem;text-align:center;border-top:1px solid rgba(0,234,255,.
 .copy-link:hover{background:var(--cyan);color:#000;box-shadow:0 0 20px rgba(0,234,255,.5)}
 
 /* Share & PWA buttons */
-.share-button{background:#00e3ff;color:#000;padding:12px 20px;font-size:18px;font-weight:600;border:none;border-radius:10px;cursor:pointer;margin:20px auto 0;display:block;max-width:280px;box-shadow:0 0 10px rgba(0,227,255,.6);transition:.2s}
+.share-button{background:#00e3ff;color:#000;padding:12px 20px;font-size:18px;font-weight:600;border:none;border-radius:10px;cursor:pointer;margin:20px auto 0;display:block;width:100%;max-width:280px;box-shadow:0 0 10px rgba(0,227,255,.6);transition:.2s}
 .share-button:hover{background:#0ff;transform:translateY(-2px)}
 .nav-app-btn,.footer-app-btn{background:none;border:none;padding:0;margin:0;color:#00eaff;font-weight:600;font-size:inherit;cursor:pointer;display:inline-block}
 .nav-app-btn:hover,.footer-app-btn:hover{opacity:.8}
@@ -181,7 +181,39 @@ footer{padding:3rem 1rem;text-align:center;border-top:1px solid rgba(0,234,255,.
 @keyframes glow{from{text-shadow:0 0 12px rgba(0,234,255,.5)}to{text-shadow:0 0 20px rgba(0,234,255,.8),0 0 30px rgba(0,234,255,.4)}}
 h1,h2{animation:glow 4s ease-in-out infinite alternate}
 
+/* Fix Swiper pagination bullets – bigger + better spaced + prettier */
+.swiper-pagination-bullet {
+  width: 14px !important;
+  height: 14px !important;
+  background: rgba(0,234,255,0.3) !important;
+  opacity: 1 !important;
+  margin: 0 6px !important;        /* adds proper spacing */
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  position: relative;
+}
 
+/* Active bullet – big glowing cyan */
+.swiper-pagination-bullet-active {
+  background: #00eaff !important;
+  box-shadow: 0 0 16px #00eaff !important;
+  transform: scale(1.4) !important;
+}
+
+/* Makes the invisible hit area 48×48px (Google loves this) */
+.swiper-pagination-bullet::before {
+  content: '';
+  position: absolute;
+  top: -12px; left: -12px;
+  right: -12px; bottom: -12px;
+}
+
+
+/* Fix all book covers – perfect ratio, no more Lighthouse warnings */
+img[width="400"][alt*="by Ylia Callan"],
+.book-cover, .related-card img, .book-card img {
+  height: auto !important;
+}
 
     
 </style>
