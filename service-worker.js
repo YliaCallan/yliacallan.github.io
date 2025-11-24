@@ -1,43 +1,37 @@
-const CACHE_NAME = 'ylia-books-pwa-v2';
+const CACHE_NAME = 'ylia-books-pwa-v3'; // Bump version for fresh cache
 const OFFLINE_URLS = [
-  '/',
+  '/', // Homepage
   '/index.html',
   '/manifest.json',
   '/install-pwa.js',
-  '/icon-192.png',
-  '/icon-512.png'
+  '/pwa-icons/icon-192.png',
+  '/pwa-icons/icon-512.png',
+  '/books/', // Books subfolder
+  '/books/index.html' // Books page fallback
 ];
 
-// Install SW
 self.addEventListener('install', event => {
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(OFFLINE_URLS))
-      .catch(err => console.error("Cache addAll failed:", err))
-  );
-  self.skipWaiting();
-});
-
-// Fetch handler — cache-first only for GET requests
-self.addEventListener('fetch', event => {
-
-  // Only handle GET
-  if (event.request.method !== 'GET') return;
-
-  event.respondWith(
-    caches.match(event.request)
-      .then(cached => {
-        // Cache hit → return cached
-        if (cached) return cached;
-
-        // Otherwise → network
-        return fetch(event.request)
-          .catch(() => caches.match('/index.html'));
+      .then(cache => {
+        console.log('Caching URLs');
+        return cache.addAll(OFFLINE_URLS);
       })
+      .catch(err => console.error('Cache addAll failed:', err))
   );
 });
 
-// Activate & clean old caches
+self.addEventListener('fetch', event => {
+  if (event.request.method !== 'GET') return;
+  event.respondWith(
+    caches.match(event.request).then(cached => {
+      if (cached) return cached;
+      return fetch(event.request).catch(() => caches.match('/index.html'));
+    })
+  );
+});
+
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(keys => {
