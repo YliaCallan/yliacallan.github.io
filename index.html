@@ -181,38 +181,62 @@ footer{padding:3rem 1rem;text-align:center;border-top:1px solid rgba(0,234,255,.
 @keyframes glow{from{text-shadow:0 0 12px rgba(0,234,255,.5)}to{text-shadow:0 0 20px rgba(0,234,255,.8),0 0 30px rgba(0,234,255,.4)}}
 h1,h2{animation:glow 4s ease-in-out infinite alternate}
 
-/* Fix Swiper pagination bullets – bigger + better spaced + prettier */
-.swiper-pagination-bullet {
-  width: 14px !important;
-  height: 14px !important;
-  background: rgba(0,234,255,0.3) !important;
-  opacity: 1 !important;
-  margin: 0 6px !important;        /* adds proper spacing */
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-/* Active bullet – big glowing cyan */
-.swiper-pagination-bullet-active {
-  background: #00eaff !important;
-  box-shadow: 0 0 16px #00eaff !important;
-  transform: scale(1.4) !important;
-}
-
-/* Makes the invisible hit area 48×48px (Google loves this) */
-.swiper-pagination-bullet::before {
-  content: '';
-  position: absolute;
-  top: -12px; left: -12px;
-  right: -12px; bottom: -12px;
-}
-
 
 /* Fix all book covers – perfect ratio, no more Lighthouse warnings */
 img[width="400"][alt*="by Ylia Callan"],
 .book-cover, .related-card img, .book-card img {
   height: auto !important;
+}
+
+
+
+/* ============================================= */
+/* FINAL TOUCH TARGET FIX – 100% Lighthouse clean */
+/* ============================================= */
+
+/* 1. Swiper pagination bullets – huge invisible 48×48px tap area */
+.swiper-pagination-bullet {
+  width: 13px !important;
+  height: 13px !important;
+  margin: 0 9px !important;
+  background: rgba(0, 234, 255, 0.35) !important;
+  border-radius: 50%;
+  opacity: 1 !important;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #00eaff !important;
+  box-shadow: 0 0 14px #00eaff !important;
+  transform: scale(1.4) !important;
+}
+
+/* Invisible 48×48px hit zone – this is what satisfies Lighthouse */
+.swiper-pagination-bullet::before {
+  content: "";
+  position: absolute;
+  top: -17px;
+  left: -17px;
+  right: -17px;
+  bottom: -17px;
+}
+
+/* 2. Book cards in carousel – proper spacing + full-card tap target on mobile */
+@media (max-width: 768px) {
+  .swiper-slide {
+    padding: 0 14px !important;           /* horizontal breathing room */
+    box-sizing: border-box;
+  }
+  
+  /* Makes the entire slide one big tappable area */
+  .swiper-slide a {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 20px 0 !important;           /* generous vertical tap area */
+    text-align: center;
+  }
 }
 
     
