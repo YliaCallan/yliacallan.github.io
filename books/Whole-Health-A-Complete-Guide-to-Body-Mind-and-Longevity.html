@@ -188,8 +188,23 @@ h1,h2{animation:glow 4s ease-in-out infinite alternate}
     
 </style>
 
+
+    <!-- PWA Core – ROOT ONLY – FINAL VERSION -->
+
+<link rel="manifest" href="/manifest.json?v=2">
+<script src="/install-pwa.js?v=10" defer></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js?v=10')
+      .then(() => console.log('PWA: SW registered'))
+      .catch(err => console.error('PWA: SW failed', err));
+  }
+</script>
+
     
 </head>
+
+
 <body>
 
 <header>
@@ -520,24 +535,6 @@ document.getElementById("logoShare").addEventListener("click", async () => {
   Install App
 </button>
 
-<!-- PWA Core – ROOT ONLY – FINAL VERSION -->
-<link rel="manifest" href="/manifest.json">
-
-<script>
-// Global device detection – only declare once!
-const isiOS     = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-const isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
-const isAndroid = /Android/.test(navigator.userAgent);
-</script>
-
-<script src="/install-pwa.js?v=9" defer></script>
-<script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/service-worker.js?v=9')
-    .then(reg => console.log('PWA: SW registered (root)', reg.scope))
-    .catch(err => console.log('PWA: SW failed', err));
-}
-</script>
 
     
 <script>
