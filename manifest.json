@@ -1,16 +1,16 @@
 {
   "name": "Ylia Callan Books",
-  "short_name": "Ylia's Books",
+  "short_name": "Ylia's Books",  // ← This should show in install prompt
   "description": "Author • Researcher • Musician",
-  "start_url": "/?source=pwa",
-  "scope": "/",
+  "start_url": "/",  // ← Always start at homepage
+  "scope": "/",      // ← Covers whole site (root + /books/)
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#00eaff",
   "orientation": "any",
   "icons": [
     {
-      "src": "/icon-192.png",
+      "src": "/icon-192.png",  // ← Root path
       "sizes": "192x192",
       "type": "image/png"
     },
