@@ -233,6 +233,34 @@ img[width="400"][alt*="by Ylia Callan"],
     }
 }
 
+/* Day Night Mode */
+:root {
+  --black: #000000;
+  --cyan: #00eaff;
+  --cyan-glow: 0 0 12px rgba(0,234,255,0.5);
+  --transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+  --bg: #000000;  /* Default dark */
+  --text: #e0faff;
+  --card-bg: rgba(0,234,255,0.03);
+}
+
+[data-theme="light"] {
+  --bg: #f8faff;
+  --text: #000;
+  --card-bg: rgba(0,234,255,0.08);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.6s, color 0.6s;
+}
+
+.metadata, .viewer-container, .related-card {
+  background: var(--card-bg);
+  transition: all 0.6s;
+}
+
     
 </style>
 
@@ -257,60 +285,6 @@ img[width="400"][alt*="by Ylia Callan"],
 
 <body>
 
-<script>
-// ——— AUTO DAY / NIGHT MODE + MANUAL TOGGLE ———
-const setTheme = (mode) => {
-  if (mode === 'dark') {
-    document.documentElement.style.setProperty('--bg', '#000');
-    document.documentElement.style.setProperty('--text', '#e0faff');
-    document.documentElement.style.setProperty('--card-bg', 'rgba(0,234,255,0.04)');
-    document.body.style.background = '#000';
-  } else {
-    document.documentElement.style.setProperty('--bg', '#f8faff');
-    document.documentElement.style.setProperty('--text', '#000');
-    document.documentElement.style.setProperty('--card-bg', 'rgba(0,234,255,0.08)');
-    document.body.style.background = '#f8faff';
-  }
-  localStorage.setItem('theme', mode);
-  document.getElementById('themeToggle')?.innerHTML = mode === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
-};
-
-// Auto-detect based on user time
-const autoSetTheme = () => {
-  const hour = new Date().getHours();
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const saved = localStorage.getItem('theme');
-
-  if (saved) {
-    setTheme(saved);
-  } else if (prefersDark || (hour >= 18 || hour < 7)) {
-    setTheme('dark');           // night time = dark mode
-  } else {
-    setTheme('light');
-  }
-};
-
-// Toggle button
-const toggleTheme = () => {
-  const current = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-  setTheme(current === 'dark' ? 'light' : 'dark');
-};
-
-// Run on load
-autoSetTheme();
-</script>
-
-<!-- Add these CSS variables once in your <style> block (or root) -->
-<style>
-:root {
-  --bg: #000;
-  --text: #e0faff;
-  --card-bg: rgba(0,234,255,0.04);
-}
-body { background: var(--bg); color: var(--text); transition: background 0.6s, color 0.6s; }
-.metadata, .viewer-container, .related-card { background: var(--card-bg); transition: all 0.6s; }
-</style>
-
     <header>
         <nav>
             <div class="site-logo" id="logoShare">Ylia Callan</div>
@@ -321,14 +295,14 @@ body { background: var(--bg); color: var(--text); transition: background 0.6s, c
                 <a href="#audiobooks">Audiobooks</a>
                 <a href="#socials">Contact</a>
                 <a href="https://music.youtube.com/channel/UCpA_L99T91Wgousjvq_jZDw" target="_blank" rel="noopener">Music🎼</a>
+                <button type="button" id="themeToggle" onclick="toggleTheme()" 
+        style="background:none; border:none; color:var(--cyan); font-weight:600; cursor:pointer; padding:0.5rem;">
+  🌙 Dark Mode
+</button>
                 <button type="button" 
         class="install-trigger nav-app-btn" 
         onclick="triggerInstall()">
   App 📱
-</button>
-                <button type="button" id="themeToggle" onclick="toggleTheme()" 
-        style="background:none;border:none;color:var(--cyan);font-weight:600;cursor:pointer;">
-  Dark Mode 🌙 
 </button>
             </div>
             <div class="hamburger" id="hamburger">
@@ -378,23 +352,20 @@ body { background: var(--bg); color: var(--text); transition: background 0.6s, c
             <div class="grid" id="bookGrid"></div>
         </section>
         
-        <!-- Audiobooks Section – goes right after the pulsing "More Books" link -->
-<section class="audiobooks-section" style="margin: 5rem auto 3rem; text-align:center; max-width:1000px;">
-    <h2 style="color:var(--cyan); text-shadow:var(--cyan-glow); margin-bottom:2rem; animation:glow 4s ease-in-out infinite alternate;">
-        Audiobooks
-    </h2>
-    
-    <div class="actions" style="justify-content:center;">
-        <a href="https://play.google.com/store/audiobooks/details/..." 
+        <section id="audiobooks" class="socials">
+    <h2 style="text-align:center; margin:1rem 0 2rem;">Audiobooks</h2>
+        <div class="actions" style="justify-content:center;">
+        <a href="https://play.google.com/store/books/collection/cluster?gsr=ShmCARYKEgoOQVFBQUFFQ3FlRm80NE0QERAE:S:ANO1ljLItnQ" 
            class="btn" target="_blank" rel="noopener">
-           Google Play Audiobooks
+           Google Play
         </a>
-        <a href="https://books.apple.com/..." 
+        <a href="https://books.apple.com/gb/author/ylia-callan/id672856291?see-all=audio-books" 
            class="btn" target="_blank" rel="noopener">
-           Apple Books Audiobooks
+           Apple Books
         </a>
     </div>
 </section>
+        
         
     </main>
     
@@ -688,6 +659,42 @@ document.querySelectorAll('#navLinks a').forEach(link => {
   });
 });
         
+</script>
+
+<script>
+// Auto Day/Night Mode + Manual Toggle – Complete
+const setTheme = (mode) => {
+  if (mode === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.getElementById('themeToggle').innerHTML = '☀️ Light Mode';
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    document.getElementById('themeToggle').innerHTML = '🌙 Dark Mode';
+  }
+  localStorage.setItem('theme', mode);
+};
+
+const toggleTheme = () => {
+  const current = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  setTheme(current === 'dark' ? 'light' : 'dark');
+};
+
+const autoSetTheme = () => {
+  const hour = new Date().getHours();
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const saved = localStorage.getItem('theme');
+  if (saved) {
+    setTheme(saved);
+  } else if (prefersDark || (hour >= 18 || hour < 7)) {
+    setTheme('dark');
+  } else {
+    setTheme('light');
+  }
+};
+
+// Run on load
+autoSetTheme();
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', autoSetTheme);
 </script>
 
 
