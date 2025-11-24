@@ -195,7 +195,48 @@ h1,h2{animation:glow 4s ease-in-out infinite alternate}
     }
 }
 
+/* Day Night Mode */
+:root {
+  --black: #000000;
+  --cyan: #00eaff;
+  --cyan-glow: 0 0 12px rgba(0,234,255,0.5);
+  --transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+  --bg: #000000;  /* Default dark */
+  --text: #e0faff;
+  --card-bg: rgba(0,234,255,0.03);
+}
 
+[data-theme="light"] {
+  --bg: #f8faff;
+  --text: #000;
+  --card-bg: rgba(0,234,255,0.08);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.6s, color 0.6s;
+}
+
+.metadata, .viewer-container, .related-card {
+  background: var(--card-bg);
+  transition: all 0.6s;
+}
+
+.swiper-slide h3, .swiper-slide .book-title, .swiper-slide .slide-title {
+    position: relative !important;
+    z-index: 10 !important;
+    margin-bottom: -40px !important;
+    padding-bottom: 0 !important;
+}
+.swiper-pagination { bottom: 20px !important; }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
     
 </style>
 
@@ -227,6 +268,10 @@ h1,h2{animation:glow 4s ease-in-out infinite alternate}
                 <a href="https://yliacallan.github.io/#audiobooks">Audiobooks</a>
                 <a href="https://yliacallan.github.io/#socials">Contact</a>
                 <a href="https://music.youtube.com/channel/UCpA_L99T91Wgousjvq_jZDw" target="_blank" rel="noopener">Music🎼</a>
+                <button type="button" id="themeToggle" onclick="toggleTheme()" 
+        style="background:none; border:none; color:var(--cyan); font-weight:600; cursor:pointer; padding:0.5rem;">
+  Dark Mode🌙 
+</button>
                 <button type="button" 
         class="install-trigger nav-app-btn" 
         onclick="triggerInstall()">
@@ -644,7 +689,41 @@ document.querySelectorAll('#navLinks a').forEach(link => {
 
    </script>
 
+<script>
+// Auto Day/Night Mode + Manual Toggle – Complete
+const setTheme = (mode) => {
+  if (mode === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.getElementById('themeToggle').innerHTML = '☀️ Light Mode';
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    document.getElementById('themeToggle').innerHTML = '🌙 Dark Mode';
+  }
+  localStorage.setItem('theme', mode);
+};
 
+const toggleTheme = () => {
+  const current = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  setTheme(current === 'dark' ? 'light' : 'dark');
+};
+
+const autoSetTheme = () => {
+  const hour = new Date().getHours();
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const saved = localStorage.getItem('theme');
+  if (saved) {
+    setTheme(saved);
+  } else if (prefersDark || (hour >= 18 || hour < 7)) {
+    setTheme('dark');
+  } else {
+    setTheme('light');
+  }
+};
+
+// Run on load
+autoSetTheme();
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', autoSetTheme);
+</script>
     
 </body>
 </html>
