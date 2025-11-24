@@ -58,7 +58,7 @@
     }
     </script>
 
-  <style>
+<style>
 :root{
   --black:#000;--cyan:#00eaff;--cyan-glow:0 0 12px rgba(0,234,255,.5);--transition:all .35s cubic-bezier(.4,0,.2,1)
 }
@@ -69,6 +69,8 @@ a:hover{opacity:.8}
 h1,h2,h3{color:var(--cyan);text-shadow:var(--cyan-glow);margin:2rem 0 1rem;text-align:center}
 h1{font-size:clamp(2.5rem,7vw,4.5rem)}
 img{max-width:100%;display:block}
+
+/* Header & Nav */
 header{position:sticky;top:0;background:rgba(0,0,0,.95);backdrop-filter:blur(12px);z-index:1000;border-bottom:1px solid rgba(0,234,255,.15)}
 nav{max-width:1400px;margin:0 auto;padding:1rem;display:flex;justify-content:space-between;align-items:center}
 .site-logo{font-size:24px;font-weight:900;color:#00e3ff;text-shadow:0 0 10px #00e3ff;cursor:pointer;transition:.2s}
@@ -81,32 +83,39 @@ nav{max-width:1400px;margin:0 auto;padding:1rem;display:flex;justify-content:spa
 .hamburger span{display:block;height:3px;width:100%;background:var(--cyan);border-radius:2px;transition:var(--transition)}
 .hamburger span:nth-child(2){margin:5px 0}
 
-/* Book page specific */
+/* Book page layout */
 .book-hero{padding:4rem 1rem;background:radial-gradient(circle at center,rgba(0,234,255,.06),transparent 70%)}
 .subtitle{font-size:1.4rem;opacity:.9;margin:1rem 0;text-align:center}
 .byline{font-size:1.1rem;opacity:.8;text-align:center}
 
-.viewer-container{background:#111;border:2px solid rgba(0,234,255,.2);border-radius:16px;margin:2rem auto;max-width:1000px;overflow:hidden}
+/* PDF Viewer – centered again */
+.viewer-container{
+  background:#111;border:2px solid rgba(0,234,255,.2);border-radius:16px;
+  margin:2rem auto;max-width:1000px;overflow:hidden
+}
 .viewer-container iframe{width:100%;height:80vh;border:none}
 @media(max-width:768px){.viewer-container iframe{height:70vh}}
 
+/* Action buttons */
 .actions{max-width:1000px;margin:2rem auto;padding:0 1rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
 .btn{display:flex;align-items:center;justify-content:center;gap:12px;padding:1rem 1.5rem;background:rgba(0,234,255,.1);border:2px solid var(--cyan);color:var(--cyan);font-weight:600;border-radius:12px;transition:var(--transition)}
 .btn:hover{box-shadow:var(--cyan-glow);transform:translateY(-4px)}
 .btn-primary{background:var(--cyan);color:#000}
 .btn-primary:hover{filter:brightness(1.1)}
 
+/* Metadata – perfect now (ISBN never overflows) */
 .metadata,.description,.themes{max-width:1000px;margin:4rem auto;padding:0 1rem}
 .metadata{background:rgba(0,234,255,.03);border:1px solid rgba(0,234,255,.2);border-radius:16px;padding:2rem}
 .metadata dl{
   display:grid;
-  grid-template-columns:1fr 2fr;        /* ← THIS FIXES ISBN overflow */
+  grid-template-columns:1fr 2fr;   /* ← fixes ISBN on iPhone */
   gap:1rem 1.5rem;
   align-items:start
 }
 .metadata dt{color:var(--cyan);font-weight:600}
-.metadata dd{margin:0;word-break:break-all}   /* ← backup for super-long text */
+.metadata dd{margin:0}
 
+/* Related books */
 .related{margin:4rem auto;padding:2rem;max-width:1400px}
 .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:2rem}
 .related-card{overflow:hidden;border-radius:16px;background:rgba(0,234,255,.03);transition:var(--transition)}
@@ -117,30 +126,43 @@ nav{max-width:1400px;margin:0 auto;padding:1rem;display:flex;justify-content:spa
   border-bottom:2px solid var(--cyan);border-radius:12px 12px 0 0;display:block
 }
 
-/* Footer & Contact */
+/* Footer & Socials */
 footer{padding:3rem 1rem;text-align:center;border-top:1px solid rgba(0,234,255,.15)}
-.socials h2{text-align:center;margin:3rem 0 2rem;font-size:2.5rem}
+.socials h2{text-align:center;margin:3rem 0 2rem;font-size:2.5rem;color:var(--cyan);text-shadow:var(--cyan-glow)}
 .book-cover-wrapper{display:flex;justify-content:center;align-items:center;width:100%;margin:1.5rem 0;padding:0 1rem}
 .book-cover-large{width:100%;max-width:900px;height:auto;border-radius:16px;
   box-shadow:0 10px 30px rgba(0,234,255,.25);border:2px solid rgba(0,234,255,.3);transition:var(--transition)}
 .book-cover-large:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,234,255,.4);border-color:var(--cyan)}
 @media(max-width:768px){.book-cover-wrapper{margin:1rem 0;padding:0 .5rem}.book-cover-large{border-radius:12px}}
 
-/* Share button */
-.share-button{background:#00e3ff;color:#000;padding:12px 20px;font-size:18px;font-weight:600;
+/* Share button – big and beautiful again */
+.share-button{
+  background:#00e3ff;color:#000;padding:12px 20px;font-size:18px;font-weight:600;
   border:none;border-radius:10px;cursor:pointer;margin:20px auto 0;display:block;max-width:280px;
-  box-shadow:0 0 10px rgba(0,227,255,.6);transition:.2s}
+  box-shadow:0 0 10px rgba(0,227,255,.6);transition:.2s
+}
 .share-button:hover{background:#0ff;transform:translateY(-2px)}
 
-/* PWA button styling */
-.nav-app-btn,.footer-app-btn{background:none;border:none;padding:0;margin:0;color:#00eaff;font-weight:600;
-  font-size:inherit;cursor:pointer;display:inline-block}
+/* Footer social links – proper spacing again */
+.footer-socials{padding:0 1rem 2rem;text-align:center;font-size:1.1rem}
+.social-row{display:flex;justify-content:center;align-items:center;gap:2rem;flex-wrap:wrap;margin:1rem 0;width:100%}
+.social-row a{color:var(--cyan);font-weight:600;white-space:nowrap;transition:all .3s}
+.social-row a:hover{opacity:.8;text-shadow:var(--cyan-glow);transform:translateY(-2px)}
+@media(max-width:480px){.social-row{gap:1.5rem;font-size:1rem}}
+
+/* Copy Link button – restored */
+.copy-link-row{display:flex;justify-content:center;align-items:center;position:relative;margin:1rem 0}
+#copyFeedback{position:absolute;left:50%;transform:translateX(-50%);bottom:-28px;color:var(--cyan);font-weight:600;opacity:0;transition:opacity .4s;pointer-events:none;white-space:nowrap}
+.copy-link{background:transparent;border:2px solid var(--cyan);color:var(--cyan);padding:.6rem 1.4rem;border-radius:50px;font-weight:600;cursor:pointer;transition:all .3s;font-size:.95rem}
+.copy-link:hover{background:var(--cyan);color:#000;box-shadow:0 0 20px rgba(0,234,255,.5)}
+
+/* PWA install buttons */
+.nav-app-btn,.footer-app-btn{background:none;border:none;padding:0;margin:0;color:#00eaff;font-weight:600;font-size:inherit;cursor:pointer;display:inline-block}
 .nav-app-btn:hover,.footer-app-btn:hover{opacity:.8}
 
 /* Mobile menu */
 @media(max-width:768px){
-  .nav-links{position:fixed;top:70px;left:-100%;width:100%;height:calc(100vh-70px);background:rgba(0,0,0,.98);
-    flex-direction:column;align-items:center;padding-top:4rem;transition:left .4s}
+  .nav-links{position:fixed;top:70px;left:-100%;width:100%;height:calc(100vh-70px);background:rgba(0,0,0,.98);flex-direction:column;align-items:center;padding-top:4rem;transition:left .4s}
   .nav-links.active{left:0}
   .hamburger{display:block}
   .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,6px)}
@@ -148,7 +170,7 @@ footer{padding:3rem 1rem;text-align:center;border-top:1px solid rgba(0,234,255,.
   .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-8px)}
 }
 
-/* Glow animation */
+/* Glow */
 @keyframes glow{from{text-shadow:0 0 12px rgba(0,234,255,.5)}to{text-shadow:0 0 20px rgba(0,234,255,.8),0 0 30px rgba(0,234,255,.4)}}
 h1,h2{animation:glow 4s ease-in-out infinite alternate}
 </style>
