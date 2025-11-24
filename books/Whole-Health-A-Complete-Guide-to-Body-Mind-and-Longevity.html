@@ -185,7 +185,15 @@ h1,h2{animation:glow 4s ease-in-out infinite alternate}
   }
 }
 
-
+/* Auto-growing mobile menu – no more fixed height issues */
+@media(max-width:768px) {
+    .nav-links {
+        height: auto !important;
+        min-height: calc(100vh - 70px);
+        padding-top: .5rem;
+        padding-bottom: 3rem;
+    }
+}
     
 </style>
 

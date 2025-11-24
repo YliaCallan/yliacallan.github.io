@@ -228,7 +228,7 @@ img[width="400"][alt*="by Ylia Callan"],
     .nav-links {
         height: auto !important;
         min-height: calc(100vh - 70px);
-        padding-top: 5rem;
+        padding-top: .5rem;
         padding-bottom: 3rem;
     }
 }
@@ -260,6 +260,14 @@ body {
   background: var(--card-bg);
   transition: all 0.6s;
 }
+
+.swiper-slide h3, .swiper-slide .book-title, .swiper-slide .slide-title {
+    position: relative !important;
+    z-index: 10 !important;
+    margin-bottom: -40px !important;
+    padding-bottom: 0 !important;
+}
+.swiper-pagination { bottom: 20px !important; }
 
     
 </style>
@@ -297,7 +305,7 @@ body {
                 <a href="https://music.youtube.com/channel/UCpA_L99T91Wgousjvq_jZDw" target="_blank" rel="noopener">Music🎼</a>
                 <button type="button" id="themeToggle" onclick="toggleTheme()" 
         style="background:none; border:none; color:var(--cyan); font-weight:600; cursor:pointer; padding:0.5rem;">
-  🌙 Dark Mode
+  Dark Mode🌙 
 </button>
                 <button type="button" 
         class="install-trigger nav-app-btn" 
@@ -353,12 +361,12 @@ body {
         </section>
         
         <section id="audiobooks" class="socials">
-    <h2 style="text-align:center; margin:1rem 0 2rem;">Audiobooks</h2>
+    <h2 style="text-align:center; margin:4rem 0 2rem;">Audiobooks</h2>
         <div class="actions" style="justify-content:center;">
         <a href="https://play.google.com/store/books/collection/cluster?gsr=ShmCARYKEgoOQVFBQUFFQ3FlRm80NE0QERAE:S:ANO1ljLItnQ" 
            class="btn" target="_blank" rel="noopener">
            Google Play
-        </a>
+        </a> - 
         <a href="https://books.apple.com/gb/author/ylia-callan/id672856291?see-all=audio-books" 
            class="btn" target="_blank" rel="noopener">
            Apple Books
