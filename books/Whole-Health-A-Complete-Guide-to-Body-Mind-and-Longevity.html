@@ -173,6 +173,18 @@ footer{padding:3rem 1rem;text-align:center;border-top:1px solid rgba(0,234,255,.
 /* Glow */
 @keyframes glow{from{text-shadow:0 0 12px rgba(0,234,255,.5)}to{text-shadow:0 0 20px rgba(0,234,255,.8),0 0 30px rgba(0,234,255,.4)}}
 h1,h2{animation:glow 4s ease-in-out infinite alternate}
+
+/* Center PDF Viewer */
+@supports (-webkit-touch-callout: none) {
+  .viewer-container iframe {
+    transform: scale(0.85);
+    transform-origin: top left;
+    width: 118%;
+    height: calc(100vh * 1.18);
+  }
+}
+
+    
 </style>
 
     
