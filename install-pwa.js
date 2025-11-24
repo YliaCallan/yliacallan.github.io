@@ -1,23 +1,25 @@
+// ———— ADD THESE TWO LINES FIRST ————
+const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+const isFirefox = navigator.userAgent.toLowerCase().includes('firefox');
+// ——————————————————————————————————
+
 /* -------------------------------------------------------
-   PWA INSTALL CONTROLLER — CLEAN VERSION  
+   PWA INSTALL CONTROLLER — CLEAN VERSION
    Works correctly for:
    - Android Chrome (native install prompt)
    - iOS Safari (manual popup ONLY on click)
    - Desktop Chrome (no auto UI)
    - Firefox (manual instructions)
 ------------------------------------------------------- */
-
 let deferredPrompt = null;
 let isInstalled = false;
-
 const installButton = document.getElementById("installButton");
 const iosPrompt = document.getElementById("iosPrompt");
-
 
 // Detect if already installed
 function isAlreadyInstalled() {
   return (
-    window.navigator.standalone === true || 
+    window.navigator.standalone === true ||
     window.matchMedia("(display-mode: standalone)").matches
   );
 }
@@ -25,40 +27,38 @@ function isAlreadyInstalled() {
 // Update the install button visibility
 function updateInstallUI() {
   const standalone = isAlreadyInstalled();
-
   console.log("PWA Debug: updateInstallUI()", {
     isInstalled,
     standalone,
     deferredPrompt
   });
 
-  // Hide if installed
   if (isInstalled || standalone) {
     installButton.style.display = "none";
     iosPrompt.style.display = "none";
     return;
   }
 
-  // ANDROID / CHROME — Show only when beforeinstallprompt happens
+  // Android / Chrome — only show when we have a prompt
   if (!isiOS && !isFirefox && deferredPrompt) {
     installButton.style.display = "block";
     return;
   }
 
-  // iOS — Show install button (but NOT the popup)
+  // iOS — always show the button (click → manual popup)
   if (isiOS) {
     installButton.style.display = "block";
     iosPrompt.style.display = "none";
     return;
   }
 
-  // Firefox — Show button (manual instructions)
+  // Firefox — show button (click → instructions)
   if (isFirefox) {
     installButton.style.display = "block";
     return;
   }
 
-  // Desktop Chrome / others — hide
+  // Everything else (desktop, etc.) — hide
   installButton.style.display = "none";
 }
 
@@ -69,7 +69,6 @@ window.addEventListener("beforeinstallprompt", (e) => {
   console.log("PWA Debug: beforeinstallprompt fired");
   e.preventDefault();
   deferredPrompt = e;
-
   updateInstallUI();
 });
 
@@ -88,16 +87,12 @@ window.addEventListener("appinstalled", () => {
 function triggerInstall() {
   console.log("PWA Debug: triggerInstall()");
 
-  // iOS — Show custom popup
   if (isiOS) {
-    console.log("PWA Debug: iOS detected → showing manual popup");
     iosPrompt.style.display = "flex";
     return;
   }
 
-  // Firefox — no native install prompt
   if (isFirefox) {
-    console.log("PWA Debug: Firefox → showing instructions");
     alert(
       "Firefox Install:\n\n" +
       "1. Tap the menu button (⋮)\n" +
@@ -107,23 +102,15 @@ function triggerInstall() {
     return;
   }
 
-  // Chrome/Android — native install
   if (deferredPrompt) {
-    console.log("PWA Debug: Showing native install prompt");
     deferredPrompt.prompt();
-
     deferredPrompt.userChoice.then((choice) => {
       console.log("PWA Debug: User choice:", choice.outcome);
-
-      if (choice.outcome === "accepted") {
-        isInstalled = true;
-      }
-
+      if (choice.outcome === "accepted") isInstalled = true;
       deferredPrompt = null;
       updateInstallUI();
     });
   } else {
-    console.log("PWA Debug: No prompt available");
     alert("Install unavailable. Try refreshing the page.");
   }
 }
@@ -132,7 +119,6 @@ function triggerInstall() {
    iOS POPUP CLOSE BUTTON
 ------------------------------------------------------- */
 function hideIosPrompt() {
-  console.log("PWA Debug: hideIosPrompt()");
   iosPrompt.style.display = "none";
 }
 
@@ -144,6 +130,6 @@ window.addEventListener("load", () => {
   updateInstallUI();
 });
 
-// Expose functions
+// Expose functions globally
 window.triggerInstall = triggerInstall;
 window.hideIosPrompt = hideIosPrompt;

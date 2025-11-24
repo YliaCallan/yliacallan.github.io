@@ -5,7 +5,9 @@ const OFFLINE_URLS = [
   '/manifest.json',
   '/install-pwa.js',
   '/pwa-icons/icon-192.png',
-  '/pwa-icons/icon-512.png'
+  '/pwa-icons/icon-512.png',
+  '/books/The-Breath-of-Reality-A-Scientific-and-Spiritual-Guide-to-Breathing-Meditation-and-Manifestation.html'  // Add book page
+  '/books/Whole-Health-A-Complete-Guide-to-Body-Mind-and-Longevity.html'
 ];
 
 self.addEventListener('install', event => {
