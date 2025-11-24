@@ -288,6 +288,31 @@ body {
   box-shadow: var(--cyan-glow) !important;
 }
     
+    /* Fix carousel pagination overlap on iPhone – titles fully visible */
+@media (max-width: 414px) and (max-height: 896px) { /* Targets iPhone portrait */
+  .swiper-slide {
+    padding-bottom: 50px !important; /* Extra space for bullets below title */
+  }
+  
+  .book-title {
+    margin-bottom: 20px !important; /* Pulls title up away from bullets */
+    padding-bottom: 0 !important;
+    position: relative;
+    z-index: 2; /* Puts title above bullets if needed */
+  }
+  
+  .swiper-pagination {
+    bottom: 8px !important; /* Moves bullets down from slide edge */
+  }
+}
+
+/* Hide pagination dots on mobile – clean & beautiful */
+@media (max-width: 768px) {
+  .swiper-pagination {
+    display: none !important;
+  }
+}
+    
     
     
     
@@ -330,12 +355,6 @@ body {
         style="background:none; border:none; color:var(--cyan); font-weight:600; cursor:pointer; padding:0.5rem;">
   Dark Mode🌙 
 </button>
-                <button type="button" 
-        class="install-trigger nav-app-btn" 
-        onclick="triggerInstall()">
-  App📱
-</button>
-
             </div>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -387,7 +406,7 @@ body {
 <!-- Audiobooks – BIG buttons exactly like book pages -->
 <section id="audiobooks" style="margin: 5rem 0; text-align:center;">
     <h2 style="color:var(--cyan); text-shadow:var(--cyan-glow); margin-bottom:2rem; animation:glow 4s ease-in-out infinite alternate;">
-        Audiobooks
+        ♾️Audiobooks♾️
     </h2>
     
     <div class="actions" style="justify-content:center;">
