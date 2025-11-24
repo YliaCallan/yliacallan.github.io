@@ -6,8 +6,6 @@ const OFFLINE_URLS = [
   '/install-pwa.js',
   '/pwa-icons/icon-192.png',
   '/pwa-icons/icon-512.png',
-  '/books/', // Books subfolder
-  '/books/index.html' // Books page fallback
 ];
 
 self.addEventListener('install', event => {
