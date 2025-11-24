@@ -194,49 +194,33 @@ img[width="400"][alt*="by Ylia Callan"],
 /* FINAL TOUCH TARGET FIX – 100% Lighthouse clean */
 /* ============================================= */
 
-/* 1. Swiper pagination bullets – huge invisible 48×48px tap area */
 .swiper-pagination-bullet {
-  width: 13px !important;
-  height: 13px !important;
-  margin: 0 9px !important;
-  background: rgba(0, 234, 255, 0.35) !important;
+  width: 44px !important;     /* actual element is now 44×44 */
+  height: 44px !important;    /* Google requires minimum 44×44 */
+  background: rgba(0,234,255,0.25) !important;
   border-radius: 50%;
   opacity: 1 !important;
-  position: relative;
+  margin: 0 4px !important;   /* small gap because the element itself is huge now */
   transition: all 0.3s ease;
+  display: inline-flex !important;   /* important! */
+  align-items: center;
+  justify-content: center;
 }
 
-.swiper-pagination-bullet-active {
-  background: #00eaff !important;
-  box-shadow: 0 0 14px #00eaff !important;
-  transform: scale(1.4) !important;
-}
-
-/* Invisible 48×48px hit zone – this is what satisfies Lighthouse */
+/* Tiny visible dot inside the huge invisible one */
 .swiper-pagination-bullet::before {
   content: "";
-  position: absolute;
-  top: -17px;
-  left: -17px;
-  right: -17px;
-  bottom: -17px;
+  width: 12px;
+  height: 12px;
+  background: #00eaff;
+  border-radius: 50%;
+  display: block;
 }
 
-/* 2. Book cards in carousel – proper spacing + full-card tap target on mobile */
-@media (max-width: 768px) {
-  .swiper-slide {
-    padding: 0 14px !important;           /* horizontal breathing room */
-    box-sizing: border-box;
-  }
-  
-  /* Makes the entire slide one big tappable area */
-  .swiper-slide a {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    padding: 20px 0 !important;           /* generous vertical tap area */
-    text-align: center;
-  }
+.swiper-pagination-bullet-active::before {
+  background: #00eaff;
+  box-shadow: 0 0 16px #00eaff;
+  transform: scale(1.4);
 }
 
     
