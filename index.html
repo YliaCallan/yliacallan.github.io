@@ -228,7 +228,23 @@ img[width="400"][alt*="by Ylia Callan"],
 
     <!-- Swiper.js (lightweight) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
+    <!-- PWA Core – ROOT ONLY – FINAL VERSION -->
+
+<link rel="manifest" href="/manifest.json?v=2">
+<script src="/install-pwa.js?v=10" defer></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js?v=10')
+      .then(() => console.log('PWA: SW registered'))
+      .catch(err => console.error('PWA: SW failed', err));
+  }
+</script>
+
+
 </head>
+
+
 <body>
 
     <header>
@@ -548,20 +564,6 @@ document.getElementById("logoShare").addEventListener("click", async () => {
   Install App
 </button>
 
-<!-- PWA Core – ROOT ONLY – FINAL VERSION -->
-
-<link rel="manifest" href="/manifest.json?v=2">
-<script src="/install-pwa.js?v=10" defer></script>
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js?v=10')
-      .then(() => console.log('PWA: SW registered'))
-      .catch(err => console.error('PWA: SW failed', err));
-  }
-</script>
-
-
-
     
 <script>
 // Perfect "Copy Link" – works everywhere, no jump, no errors
@@ -600,15 +602,7 @@ document.querySelectorAll('#navLinks a').forEach(link => {
         
 </script>
 
-<script>
-  // Force show install button if SW is ready
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.ready.then(() => {
-      const btn = document.getElementById('installButton');
-      if (btn && !isiOS && !isFirefox) btn.style.display = 'block';
-    });
-  }
-</script>
+
 
     
 </body>
