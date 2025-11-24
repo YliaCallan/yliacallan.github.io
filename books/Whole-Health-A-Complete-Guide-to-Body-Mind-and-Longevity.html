@@ -684,10 +684,10 @@ document.querySelectorAll('#navLinks a').forEach(link => {
 const setTheme = (mode) => {
   if (mode === 'dark') {
     document.documentElement.setAttribute('data-theme', 'dark');
-    document.getElementById('themeToggle').innerHTML = '☀️ Light Mode';
+    document.getElementById('themeToggle').innerHTML = 'Light Mode☀️';
   } else {
     document.documentElement.setAttribute('data-theme', 'light');
-    document.getElementById('themeToggle').innerHTML = '🌙 Dark Mode';
+    document.getElementById('themeToggle').innerHTML = 'Dark Mode🌙 ';
   }
   localStorage.setItem('theme', mode);
 };

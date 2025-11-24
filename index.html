@@ -269,8 +269,24 @@ body {
 }
 .swiper-pagination { bottom: 20px !important; }
 
+    /* Audiobook buttons */
     
-    
+.audiobook-buttons {
+  gap: 2rem !important;
+  margin: 1.5rem 0 !important;
+}
+
+.audiobook-btn {
+  font-size: 1.1rem !important;
+  padding: 1rem 2rem !important;  /* Bigger like socials */
+  min-width: 200px;  /* Prevents squishing on mobile */
+  transition: var(--transition) !important;
+}
+
+.audiobook-btn:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: var(--cyan-glow) !important;
+}
     
     
     
@@ -319,6 +335,7 @@ body {
         onclick="triggerInstall()">
   App📱
 </button>
+
             </div>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -367,18 +384,24 @@ body {
             <div class="grid" id="bookGrid"></div>
         </section>
         
-        <section id="audiobooks" class="socials">
-    <h2 style="text-align:center; margin:4rem 0 2rem;">Audiobooks</h2>
-<div class="social-row" style="justify-content: center; gap: 2rem; margin: 1.5rem 0;">
-  <a href="https://play.google.com/store/books/collection/cluster?gsr=ShmCARYKEgoOQVFBQUFFQ3FlRm80NE0QERAE:S:ANO1ljLItnQ" 
-     class="btn" target="_blank" rel="noopener">
-    Google Play
-  </a>
-  <a href="https://books.apple.com/gb/author/ylia-callan/id672856291?see-all=audio-books" 
-     class="btn" target="_blank" rel="noopener">
-    Apple Books
-  </a>
-</div>
+<!-- Audiobooks – BIG buttons exactly like book pages -->
+<section id="audiobooks" style="margin: 5rem 0; text-align:center;">
+    <h2 style="color:var(--cyan); text-shadow:var(--cyan-glow); margin-bottom:2rem; animation:glow 4s ease-in-out infinite alternate;">
+        Audiobooks
+    </h2>
+    
+    <div class="actions" style="justify-content:center;">
+        <a href="https://play.google.com/store/books/collection/cluster?gsr=ShmCARYKEgoOQVFBQUFFQ3FlRm80NE0QERAE:S:ANO1ljLItnQ" 
+           class="btn" target="_blank" rel="noopener" style="color:var(--cyan); font-weight:700; font-size:1.35rem; 
+              text-shadow:var(--cyan-glow); transition:var(--transition);">
+           Google Play
+        </a>  -  
+        <a href="https://books.apple.com/gb/author/ylia-callan/id672856291?see-all=audio-books" 
+           class="btn" target="_blank" rel="noopener" style="color:var(--cyan); font-weight:700; font-size:1.35rem; 
+              text-shadow:var(--cyan-glow); transition:var(--transition);">
+           Apple Books
+        </a>
+    </div>
 </section>
         
         
@@ -681,10 +704,10 @@ document.querySelectorAll('#navLinks a').forEach(link => {
 const setTheme = (mode) => {
   if (mode === 'dark') {
     document.documentElement.setAttribute('data-theme', 'dark');
-    document.getElementById('themeToggle').innerHTML = '☀️ Light Mode';
+    document.getElementById('themeToggle').innerHTML = 'Light Mode☀️';
   } else {
     document.documentElement.setAttribute('data-theme', 'light');
-    document.getElementById('themeToggle').innerHTML = '🌙 Dark Mode';
+    document.getElementById('themeToggle').innerHTML = 'Dark Mode🌙 ';
   }
   localStorage.setItem('theme', mode);
 };
