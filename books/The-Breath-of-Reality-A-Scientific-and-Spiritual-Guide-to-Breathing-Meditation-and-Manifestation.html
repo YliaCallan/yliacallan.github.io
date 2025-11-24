@@ -185,17 +185,6 @@ h1,h2{animation:glow 4s ease-in-out infinite alternate}
   }
 }
 
-<!-- Add this keyframes once in your <style> block (or in any page’s <head>) -->
-@keyframes pulse-glow {
-    from {
-        box-shadow: 0 0 20px rgba(0,234,255,0.4);
-        transform: scale(1);
-    }
-    to {
-        box-shadow: 0 0 35px rgba(0,234,255,0.7), 0 0 50px rgba(0,234,255,0.3);
-        transform: scale(1.04);
-    }
-}
 
     
 </style>
@@ -361,17 +350,30 @@ h1,h2{animation:glow 4s ease-in-out infinite alternate}
             </a>
         </div>
         
-        <!-- Centered pulsing "More Books" link -->
-<div style="text-align:center; margin-top: 3rem;">
-    <a href="https://yliacallan.github.io/#catalogue"
-       style="color:var(--cyan); font-weight:700; font-size:1.35rem; text-decoration:none; 
-              display:inline-block; padding:0.8rem 1.2rem; border-radius:50px;
-              background:rgba(0,234,255,0.08); border:2px solid var(--cyan);
-              box-shadow:0 0 20px rgba(0,234,255,0.4);
-              animation:pulse-glow 3s ease-in-out infinite alternate;">
+<!-- Pulsing "More Books" link – now actually works and looks insane -->
+<div style="text-align:center; margin-top: 3rem; padding: 1rem;">
+    <a href="https://yliacallan.github.io/#catalogue" id="moreBooksLink"
+       style="color:var(--cyan); font-weight:700; font-size:1.4rem; text-decoration:none;
+              display:inline-block; padding:1rem 2rem; border-radius:50px;
+              background:rgba(0,234,255,0.1); border:2px solid var(--cyan);
+              box-shadow:0 0 20px rgba(0,234,255,0.5);
+              animation:pulse-glow 2.8s ease-in-out infinite alternate;">
         More Books →
     </a>
 </div>
+
+<style>
+@keyframes pulse-glow {
+    from {
+        box-shadow: 0 0 20px rgba(0,234,255,0.5);
+        transform: scale(1);
+    }
+    to {
+        box-shadow: 0 0 40px rgba(0,234,255,0.8), 0 0 60px rgba(0,234,255,0.4);
+        transform: scale(1.06);
+    }
+}
+</style>
 
     </section>
 </main>
