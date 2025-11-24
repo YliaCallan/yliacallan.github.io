@@ -192,21 +192,6 @@ h1,h2{animation:glow 4s ease-in-out infinite alternate}
 </head>
 <body>
 
-<!-- PWA Core – ROOT paths only -->
-<link rel="manifest" href="/manifest.json">
-<script>
-// iOS detection (fixes "isiOS is not defined")
-const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-</script>
-<script src="/install-pwa.js?v=8" defer></script>
-<script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/service-worker.js?v=8')
-    .then(reg => console.log('PWA: SW registered', reg))
-    .catch(err => console.log('PWA: SW failed', err));
-}
-</script>
-
 <header>
     <nav>
         <div class="site-logo" id="logoShare">Ylia Callan</div>
@@ -421,12 +406,6 @@ if ('serviceWorker' in navigator) {
         });
 
 
-        // PWA Service Worker (placeholder – register when ready)
-        if ('serviceWorker' in navigator) {
-            // Uncomment when you add sw.js
-            // navigator.serviceWorker.register('/sw.js');
-        }
-
  // Share Buttons
 async function doShare() {
     const shareData = {
@@ -546,16 +525,23 @@ document.getElementById("logoShare").addEventListener("click", async () => {
   Install App
 </button>
 
-<!-- PWA Core -->
+<!-- PWA Core – ROOT ONLY – FINAL VERSION -->
 <link rel="manifest" href="/manifest.json">
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-<script src="/install-pwa.js?v=8" defer></script> <!-- ?v=8 forces refresh -->
+
 <script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./service-worker.js?v=8')
-      .then(() => console.log('PWA: SW registered'))
-      .catch(err => console.error('PWA: SW failed', err));
-  }
+// Global device detection – only declare once!
+const isiOS     = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+const isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+const isAndroid = /Android/.test(navigator.userAgent);
+</script>
+
+<script src="/install-pwa.js?v=9" defer></script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js?v=9')
+    .then(reg => console.log('PWA: SW registered (root)', reg.scope))
+    .catch(err => console.log('PWA: SW failed', err));
+}
 </script>
 
     
@@ -597,15 +583,6 @@ document.querySelectorAll('#navLinks a').forEach(link => {
 
    </script>
 
-<script>
-  // Force show install button on desktop if service worker is ready
-  if ('serviceWorker' in navigator && !isiOS && !isFirefox) {
-    navigator.serviceWorker.ready.then(() => {
-      const btn = document.getElementById('installButton');
-      if (btn) btn.style.display = 'block';
-    });
-  }
-</script>
 
     
 </body>
