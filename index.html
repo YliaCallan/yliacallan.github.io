@@ -549,7 +549,17 @@ document.getElementById("logoShare").addEventListener("click", async () => {
 </button>
 
 <!-- PWA Core – ROOT ONLY – FINAL VERSION -->
+
 <link rel="manifest" href="/manifest.json">
+<script src="/install-pwa.js?v=9" defer></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js?v=9')
+      .then(() => console.log('PWA: SW registered'))
+      .catch(err => console.error('PWA: SW failed', err));
+  }
+</script>
+
 
 <script>
 // Global device detection – only declare once!
@@ -558,14 +568,7 @@ const isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
 const isAndroid = /Android/.test(navigator.userAgent);
 </script>
 
-<script src="/install-pwa.js?v=9" defer></script>
-<script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/service-worker.js?v=9')
-    .then(reg => console.log('PWA: SW registered (root)', reg.scope))
-    .catch(err => console.log('PWA: SW failed', err));
-}
-</script>
+
 
     
 <script>

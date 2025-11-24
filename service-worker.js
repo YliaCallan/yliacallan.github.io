@@ -1,5 +1,6 @@
-const CACHE_NAME = 'ylia-books-pwa-v3'; // Bump version for fresh cache
+const CACHE_NAME = 'ylia-books-pwa-v3';
 const OFFLINE_URLS = [
+  '/',
   '/index.html',
   '/manifest.json',
   '/install-pwa.js',
@@ -11,10 +12,7 @@ self.addEventListener('install', event => {
   self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then(cache => {
-        console.log('Caching URLs');
-        return cache.addAll(OFFLINE_URLS);
-      })
+      .then(cache => cache.addAll(OFFLINE_URLS))
       .catch(err => console.error('Cache addAll failed:', err))
   );
 });
@@ -32,11 +30,9 @@ self.addEventListener('fetch', event => {
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(keys => {
-      return Promise.all(
-        keys.map(key => {
-          if (key !== CACHE_NAME) return caches.delete(key);
-        })
-      );
+      return Promise.all(keys.map(key => {
+        if (key !== CACHE_NAME) return caches.delete(key);
+      }));
     })
   );
   self.clients.claim();
