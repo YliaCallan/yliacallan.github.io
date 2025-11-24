@@ -13,9 +13,6 @@ let isInstalled = false;
 const installButton = document.getElementById("installButton");
 const iosPrompt = document.getElementById("iosPrompt");
 
-// Detect platforms
-const isiOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
-const isFirefox = /Firefox/.test(navigator.userAgent);
 
 // Detect if already installed
 function isAlreadyInstalled() {
