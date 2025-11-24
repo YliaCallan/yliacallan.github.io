@@ -223,6 +223,16 @@ img[width="400"][alt*="by Ylia Callan"],
   transform: scale(1.4);
 }
 
+/* Auto-growing mobile menu – no more fixed height issues */
+@media(max-width:768px) {
+    .nav-links {
+        height: auto !important;
+        min-height: calc(100vh - 70px);
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+    }
+}
+
     
 </style>
 
@@ -247,6 +257,60 @@ img[width="400"][alt*="by Ylia Callan"],
 
 <body>
 
+<script>
+// ——— AUTO DAY / NIGHT MODE + MANUAL TOGGLE ———
+const setTheme = (mode) => {
+  if (mode === 'dark') {
+    document.documentElement.style.setProperty('--bg', '#000');
+    document.documentElement.style.setProperty('--text', '#e0faff');
+    document.documentElement.style.setProperty('--card-bg', 'rgba(0,234,255,0.04)');
+    document.body.style.background = '#000';
+  } else {
+    document.documentElement.style.setProperty('--bg', '#f8faff');
+    document.documentElement.style.setProperty('--text', '#000');
+    document.documentElement.style.setProperty('--card-bg', 'rgba(0,234,255,0.08)');
+    document.body.style.background = '#f8faff';
+  }
+  localStorage.setItem('theme', mode);
+  document.getElementById('themeToggle')?.innerHTML = mode === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
+};
+
+// Auto-detect based on user time
+const autoSetTheme = () => {
+  const hour = new Date().getHours();
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const saved = localStorage.getItem('theme');
+
+  if (saved) {
+    setTheme(saved);
+  } else if (prefersDark || (hour >= 18 || hour < 7)) {
+    setTheme('dark');           // night time = dark mode
+  } else {
+    setTheme('light');
+  }
+};
+
+// Toggle button
+const toggleTheme = () => {
+  const current = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  setTheme(current === 'dark' ? 'light' : 'dark');
+};
+
+// Run on load
+autoSetTheme();
+</script>
+
+<!-- Add these CSS variables once in your <style> block (or root) -->
+<style>
+:root {
+  --bg: #000;
+  --text: #e0faff;
+  --card-bg: rgba(0,234,255,0.04);
+}
+body { background: var(--bg); color: var(--text); transition: background 0.6s, color 0.6s; }
+.metadata, .viewer-container, .related-card { background: var(--card-bg); transition: all 0.6s; }
+</style>
+
     <header>
         <nav>
             <div class="site-logo" id="logoShare">Ylia Callan</div>
@@ -254,12 +318,17 @@ img[width="400"][alt*="by Ylia Callan"],
                 <a href="https://yliacallan.github.io/">Home</a>
                 <a href="#books">Books</a>
                 <a href="#catalogue">Catalogue</a>
+                <a href="#audiobooks">Audiobooks</a>
                 <a href="#socials">Contact</a>
                 <a href="https://music.youtube.com/channel/UCpA_L99T91Wgousjvq_jZDw" target="_blank" rel="noopener">Music🎼</a>
                 <button type="button" 
         class="install-trigger nav-app-btn" 
         onclick="triggerInstall()">
   App 📱
+</button>
+                <button type="button" id="themeToggle" onclick="toggleTheme()" 
+        style="background:none;border:none;color:var(--cyan);font-weight:600;cursor:pointer;">
+  Dark Mode 🌙 
 </button>
             </div>
             <div class="hamburger" id="hamburger">
@@ -308,6 +377,25 @@ img[width="400"][alt*="by Ylia Callan"],
             <h2>♾️Catalogue♾️</h2>
             <div class="grid" id="bookGrid"></div>
         </section>
+        
+        <!-- Audiobooks Section – goes right after the pulsing "More Books" link -->
+<section class="audiobooks-section" style="margin: 5rem auto 3rem; text-align:center; max-width:1000px;">
+    <h2 style="color:var(--cyan); text-shadow:var(--cyan-glow); margin-bottom:2rem; animation:glow 4s ease-in-out infinite alternate;">
+        Audiobooks
+    </h2>
+    
+    <div class="actions" style="justify-content:center;">
+        <a href="https://play.google.com/store/audiobooks/details/..." 
+           class="btn" target="_blank" rel="noopener">
+           Google Play Audiobooks
+        </a>
+        <a href="https://books.apple.com/..." 
+           class="btn" target="_blank" rel="noopener">
+           Apple Books Audiobooks
+        </a>
+    </div>
+</section>
+        
     </main>
     
 <footer>
