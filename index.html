@@ -600,6 +600,16 @@ document.querySelectorAll('#navLinks a').forEach(link => {
         
 </script>
 
+<script>
+  // Force show install button if SW is ready
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.ready.then(() => {
+      const btn = document.getElementById('installButton');
+      if (btn && !isiOS && !isFirefox) btn.style.display = 'block';
+    });
+  }
+</script>
+
     
 </body>
 </html>
