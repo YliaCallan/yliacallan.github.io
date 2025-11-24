@@ -192,6 +192,21 @@ h1,h2{animation:glow 4s ease-in-out infinite alternate}
 </head>
 <body>
 
+<!-- PWA Core – ROOT paths only -->
+<link rel="manifest" href="/manifest.json">
+<script>
+// iOS detection (fixes "isiOS is not defined")
+const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+</script>
+<script src="/install-pwa.js?v=8" defer></script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js?v=8')
+    .then(reg => console.log('PWA: SW registered', reg))
+    .catch(err => console.log('PWA: SW failed', err));
+}
+</script>
+
 <header>
     <nav>
         <div class="site-logo" id="logoShare">Ylia Callan</div>
