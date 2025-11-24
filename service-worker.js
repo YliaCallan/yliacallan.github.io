@@ -1,11 +1,10 @@
 const CACHE_NAME = 'ylia-books-pwa-v3'; // Bump version for fresh cache
 const OFFLINE_URLS = [
-  '/', // Homepage
   '/index.html',
   '/manifest.json',
   '/install-pwa.js',
   '/pwa-icons/icon-192.png',
-  '/pwa-icons/icon-512.png',
+  '/pwa-icons/icon-512.png'
 ];
 
 self.addEventListener('install', event => {
