@@ -10,12 +10,12 @@
   "orientation": "any",
   "icons": [
     {
-      "src": "/icon-192.png",  // ← Root path
+      "src": "/pwa-icons/icon-192.png",  // ← Root path
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/icon-512.png",
+      "src": "/pwa-icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"
