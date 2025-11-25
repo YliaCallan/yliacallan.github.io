@@ -12,7 +12,7 @@
     <!-- Open Graph -->
     <meta property="og:title" content="The Sacred Alphabet - Language, Meaning and Mind • Ylia Callan">
     <meta property="og:description" content="Explore the sacred power of language from its primal origins to its futuristic possibilities. This book reveals how words shape mind, emotion and culture.">
-    <meta property="og:image" content="https://yliacallan.github.io/books/assets/images/The-Sacred-Alphabet-Language-Meaning-and-Mind-1200x630.png">
+    <meta property="og:image" content="https://yliacallan.github.io/books/assets/images/The-Sacred-Alphabet-1200x630.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://yliacallan.github.io/books/The-Sacred-Alphabet-Language-Meaning-and-Mind/">
@@ -22,7 +22,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="The Sacred Alphabet - Language, Meaning and Mind • Ylia Callan">
     <meta name="twitter:description" content="Explore the sacred power of language from its primal origins to its futuristic possibilities. This book reveals how words shape mind, emotion and culture.">
-    <meta name="twitter:image" content="https://yliacallan.github.io/books/assets/images/The-Sacred-Alphabet-Language-Meaning-and-Mind-1200x630.png">
+    <meta name="twitter:image" content="https://yliacallan.github.io/books/assets/images/The-Sacred-Alphabet-1200x630.png">
 
     <!-- Schema: Book -->
     <script type="application/ld+json">
@@ -39,7 +39,7 @@
       "inLanguage": "en",
       "bookFormat": ["EBook", "AudioBook"],
       "url": "https://yliacallan.github.io/books/The-Sacred-Alphabet-Language-Meaning-and-Mind",
-      "image": "https://yliacallan.github.io/books/assets/covers/The-Sacred-Alphabet-Language-Meaning-and-Mind-1600x2400.png",
+      "image": "https://yliacallan.github.io/books/assets/covers/The-Sacred-Alphabet-1600x2400.png",
       "description": "Explore the sacred power of language from its primal origins to its futuristic possibilities. This book reveals how words shape mind, emotion and culture.",
       "workExample": [
         {
