@@ -393,16 +393,7 @@ body {
             </div>
         </section>
         
-            <!-- SOCIAL SHARE BAR – NOW PERFECT -->
-
-    <button class="share-button">Share</button>
-
-        <section class="gallery" id="catalogue">
-            <h2>♾️Catalogue♾️</h2>
-            <div class="grid" id="bookGrid"></div>
-        </section>
-        
-<!-- Audiobooks – BIG buttons exactly like book pages -->
+        <!-- Audiobooks – BIG buttons exactly like book pages -->
 <section id="audiobooks" style="margin: 5rem 0; text-align:center;">
     <h2 style="color:var(--cyan); text-shadow:var(--cyan-glow); margin-bottom:2rem; animation:glow 4s ease-in-out infinite alternate;">
         ♾️Audiobooks♾️
@@ -421,6 +412,14 @@ body {
         </a>
     </div>
 </section>
+        
+            <!-- SOCIAL SHARE BAR – NOW PERFECT -->
+    <button class="share-button">Share</button>
+
+        <section class="gallery" id="catalogue">
+            <h2>♾️Catalogue♾️</h2>
+            <div class="grid" id="bookGrid"></div>
+        </section>
         
         
     </main>
@@ -557,7 +556,7 @@ body {
 
         // Populate featured carousel (first 4)
         const featuredSlides = document.getElementById('featuredSlides');
-        shuffledBooks.slice(0, 4).forEach(book => {
+        shuffledBooks.slice(0, 12).forEach(book => {
             featuredSlides.innerHTML += `
                 <div class="swiper-slide">
                     <a href="${book.url}">
