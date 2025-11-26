@@ -1,0 +1,742 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <title>The 3.8 Billion Year Story of Life and Evolution • Ylia Callan</title>
+    <meta name="description" content="A sweeping journey through 3.8 billion years of evolution, from the first microbes to the rise of humans.">
+    <link rel="canonical" href="https://yliacallan.github.io/books/The-3.8-Billion-Year-Story-of-Life-and-Evolution.html/">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="The 3.8 Billion Year Story of Life and Evolution • Ylia Callan">
+    <meta property="og:description" content="A sweeping journey through 3.8 billion years of evolution, from the first microbes to the rise of humans.">
+    <meta property="og:image" content="https://yliacallan.github.io/books/assets/images/3.8-Billion-Year-Story-1200x630.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://yliacallan.github.io/books/The-3.8-Billion-Year-Story-of-Life-and-Evolution.html/">
+    <meta property="og:type" content="book">
+
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The 3.8 Billion Year Story of Life and Evolution • Ylia Callan">
+    <meta name="twitter:description" content="A sweeping journey through 3.8 billion years of evolution, from the first microbes to the rise of humans.">
+    <meta name="twitter:image" content="https://yliacallan.github.io/books/assets/images/3.8-Billion-Year-Story-1200x630.png">
+
+    <!-- Schema: Book -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "The 3.8 Billion Year Story of Life and Evolution",
+      "author": {
+        "@type": "Person",
+        "name": "Ylia Callan"
+      },
+      "publisher": "Independent Publishing",
+      "datePublished": "2025",
+      "inLanguage": "en",
+      "bookFormat": ["EBook", "AudioBook"],
+      "url": "https://yliacallan.github.io/books/The-3.8-Billion-Year-Story-of-Life-and-Evolution.html/",
+      "image": "https://yliacallan.github.io/books/assets/covers/3.8-Billion-Year-Story-1600x2400.png",
+      "description": "A sweeping journey through 3.8 billion years of evolution, from the first microbes to the rise of humans.",
+      "workExample": [
+        {
+          "@type": "Book",
+          "isbn": "9798231518791",
+          "bookFormat": "http://schema.org/EBook",
+          "potentialAction": {
+            "@type": "ReadAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://yliacallan.github.io/books/assets/PDF/The-3.8-Billion-Year-Story-of-Life-and-Evolution-by-Ylia-Callan.pdf"
+            }
+          }
+        }
+      ]
+    }
+    </script>
+
+<style>
+:root{
+  --black:#000;--cyan:#00eaff;--cyan-glow:0 0 12px rgba(0,234,255,.5);--transition:all .35s cubic-bezier(.4,0,.2,1)
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:var(--black);color:#e0faff;line-height:1.65;overflow-x:hidden}
+a{color:var(--cyan);text-decoration:none;transition:var(--transition)}
+a:hover{opacity:.8}
+h1,h2,h3{color:var(--cyan);text-shadow:var(--cyan-glow);margin:2rem 0 1rem;text-align:center}
+h1{font-size:clamp(2.5rem,7vw,4.5rem)}
+img{max-width:100%;display:block}
+
+/* Header & Nav */
+header{position:sticky;top:0;background:rgba(0,0,0,.95);backdrop-filter:blur(12px);z-index:1000;border-bottom:1px solid rgba(0,234,255,.15)}
+nav{max-width:1400px;margin:0 auto;padding:1rem;display:flex;justify-content:space-between;align-items:center}
+.site-logo{font-size:24px;font-weight:900;color:#00e3ff;text-shadow:0 0 10px #00e3ff;cursor:pointer;transition:.2s}
+.site-logo:hover{opacity:.8;transform:scale(1.02)}
+.nav-links{display:flex;gap:2rem}
+.nav-links a{position:relative;font-weight:500}
+.nav-links a::after{content:'';position:absolute;bottom:-6px;left:0;width:0;height:2px;background:var(--cyan);transition:var(--transition)}
+.nav-links a:hover::after{width:100%}
+.hamburger{display:none;cursor:pointer;width:28px;height:20px;position:relative}
+.hamburger span{display:block;height:3px;width:100%;background:var(--cyan);border-radius:2px;transition:var(--transition)}
+.hamburger span:nth-child(2){margin:5px 0}
+
+/* Book page layout */
+.book-hero{padding:4rem 1rem;background:radial-gradient(circle at center,rgba(0,234,255,.06),transparent 70%)}
+.subtitle{font-size:1.4rem;opacity:.9;margin:1rem 0;text-align:center}
+.byline{font-size:1.1rem;opacity:.8;text-align:center}
+
+/* PDF Viewer – centered again */
+.viewer-container{
+  background:#111;border:2px solid rgba(0,234,255,.2);border-radius:16px;
+  margin:2rem auto;max-width:1000px;overflow:hidden
+}
+.viewer-container iframe{width:100%;height:80vh;border:none}
+@media(max-width:768px){.viewer-container iframe{height:70vh}}
+
+/* Action buttons */
+.actions{max-width:1000px;margin:2rem auto;padding:0 1rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.btn{display:flex;align-items:center;justify-content:center;gap:12px;padding:1rem 1.5rem;background:rgba(0,234,255,.1);border:2px solid var(--cyan);color:var(--cyan);font-weight:600;border-radius:12px;transition:var(--transition)}
+.btn:hover{box-shadow:var(--cyan-glow);transform:translateY(-4px)}
+.btn-primary{background:var(--cyan);color:#000}
+.btn-primary:hover{filter:brightness(1.1)}
+
+/* Metadata – perfect now (ISBN never overflows) */
+.metadata,.description,.themes{max-width:1000px;margin:4rem auto;padding:0 1rem}
+.metadata{background:rgba(0,234,255,.03);border:1px solid rgba(0,234,255,.2);border-radius:16px;padding:2rem}
+.metadata dl{
+  display:grid;
+  grid-template-columns:1fr 2fr;   /* ← fixes ISBN on iPhone */
+  gap:1rem 1.5rem;
+  align-items:start
+}
+.metadata dt{color:var(--cyan);font-weight:600}
+.metadata dd{margin:0}
+
+/* Related books */
+.related{margin:4rem auto;padding:2rem;max-width:1400px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:2rem}
+.related-card{overflow:hidden;border-radius:16px;background:rgba(0,234,255,.03);transition:var(--transition)}
+.related-card:hover{box-shadow:var(--cyan-glow);transform:translateY(-8px)}
+.related-card img{
+  width:100%;height:auto !important;max-height:70vh;object-fit:contain !important;
+  background:#000;padding:12px 8px 8px;box-sizing:border-box;
+  border-bottom:2px solid var(--cyan);border-radius:12px 12px 0 0;display:block
+}
+
+/* Footer & Socials */
+footer{padding:0rem 1rem;text-align:center;border-top:1px solid rgba(0,234,255,.15)}
+.socials h2{text-align:center;margin:3rem 0 2rem;font-size:2.5rem;color:var(--cyan);text-shadow:var(--cyan-glow)}
+.book-cover-wrapper{display:flex;justify-content:center;align-items:center;width:100%;margin:1.5rem 0;padding:0 1rem}
+.book-cover-large{width:100%;max-width:900px;height:auto;border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,234,255,.25);border:2px solid rgba(0,234,255,.3);transition:var(--transition)}
+.book-cover-large:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,234,255,.4);border-color:var(--cyan)}
+@media(max-width:768px){.book-cover-wrapper{margin:1rem 0;padding:0 .5rem}.book-cover-large{border-radius:12px}}
+
+/* Share button – big and beautiful again */
+.share-button{
+  background:#00e3ff;color:#000;padding:12px 20px;font-size:18px;font-weight:600;
+  border:none;border-radius:10px;cursor:pointer;margin:20px auto 0;display:block;width:100%;max-width:280px;
+  box-shadow:0 0 10px rgba(0,227,255,.6);transition:.2s
+}
+.share-button:hover{background:#0ff;transform:translateY(-2px)}
+
+/* Footer social links – proper spacing again */
+.footer-socials{padding:0 1rem 2rem;text-align:center;font-size:1.1rem}
+.social-row + .social-row { margin-top: 2rem; }
+.social-row{display:flex;justify-content:center;align-items:center;gap:2rem;flex-wrap:wrap;margin:1rem 0;width:100%}
+.social-row a{color:var(--cyan);font-weight:600;white-space:nowrap;transition:all .3s}
+.social-row a:hover{opacity:.8;text-shadow:var(--cyan-glow);transform:translateY(-2px)}
+@media(max-width:480px){.social-row{gap:1.5rem;font-size:1rem}}
+
+/* Copy Link button – restored */
+.copy-link-row{display:flex;justify-content:center;align-items:center;position:relative;margin:1rem 0}
+#copyFeedback{position:absolute;left:50%;transform:translateX(-50%);bottom:-28px;color:var(--cyan);font-weight:600;opacity:0;transition:opacity .4s;pointer-events:none;white-space:nowrap}
+.copy-link{background:transparent;border:2px solid var(--cyan);color:var(--cyan);padding:.6rem 1.4rem;border-radius:50px;font-weight:600;cursor:pointer;transition:all .3s;font-size:.95rem}
+.copy-link:hover{background:var(--cyan);color:#000;box-shadow:0 0 20px rgba(0,234,255,.5)}
+
+/* PWA install buttons */
+.nav-app-btn,.footer-app-btn{background:none;border:none;padding:0;margin:0;color:#00eaff;font-weight:600;font-size:inherit;cursor:pointer;display:inline-block}
+.nav-app-btn:hover,.footer-app-btn:hover{opacity:.8}
+
+/* Mobile menu */
+@media(max-width:768px){
+  .nav-links{position:fixed;top:70px;left:-100%;width:100%;height:calc(100vh-70px);background:rgba(0,0,0,.98);flex-direction:column;align-items:center;padding-top:4rem;transition:left .4s}
+  .nav-links.active{left:0}
+  .hamburger{display:block}
+  .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,6px)}
+  .hamburger.active span:nth-child(2){opacity:0}
+  .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-8px)}
+}
+
+/* Glow */
+@keyframes glow{from{text-shadow:0 0 12px rgba(0,234,255,.5)}to{text-shadow:0 0 20px rgba(0,234,255,.8),0 0 30px rgba(0,234,255,.4)}}
+h1,h2{animation:glow 4s ease-in-out infinite alternate}
+
+/* Center PDF Viewer */
+@supports (-webkit-touch-callout: none) {
+  .viewer-container iframe {
+    transform: scale(0.85);
+    transform-origin: top left;
+    width: 118%;
+    height: calc(100vh * 1.18);
+  }
+}
+
+/* Auto-growing mobile menu – no more fixed height issues */
+@media(max-width:768px) {
+    .nav-links {
+        height: auto !important;
+        min-height: calc(100vh - 70px);
+        padding-top: .5rem;
+        padding-bottom: 3rem;
+    }
+}
+
+/* Day Night Mode */
+:root {
+  --black: #000000;
+  --cyan: #00eaff;
+  --cyan-glow: 0 0 12px rgba(0,234,255,0.5);
+  --transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+  --bg: #000000;  /* Default dark */
+  --text: #e0faff;
+  --card-bg: rgba(0,234,255,0.03);
+}
+
+[data-theme="light"] {
+  --bg: #f8faff;
+  --text: #000;
+  --card-bg: rgba(0,234,255,0.08);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.6s, color 0.6s;
+}
+
+.metadata, .viewer-container, .related-card {
+  background: var(--card-bg);
+  transition: all 0.6s;
+}
+
+.swiper-slide h3, .swiper-slide .book-title, .swiper-slide .slide-title {
+    position: relative !important;
+    z-index: 10 !important;
+    margin-bottom: -40px !important;
+    padding-bottom: 0 !important;
+}
+.swiper-pagination { bottom: 20px !important; }
+ 
+     /* Fix carousel pagination overlap on iPhone – titles fully visible */
+@media (max-width: 414px) and (max-height: 896px) { /* Targets iPhone portrait */
+  .swiper-slide {
+    padding-bottom: 50px !important; /* Extra space for bullets below title */
+  }
+  
+  .book-title {
+    margin-bottom: 20px !important; /* Pulls title up away from bullets */
+    padding-bottom: 0 !important;
+    position: relative;
+    z-index: 2; /* Puts title above bullets if needed */
+  }
+  
+  .swiper-pagination {
+    bottom: 8px !important; /* Moves bullets down from slide edge */
+  }
+}
+
+/* Hide pagination dots on mobile – clean & beautiful */
+@media (max-width: 768px) {
+  .swiper-pagination {
+    display: none !important;
+  }
+}
+ 
+ 
+ 
+ 
+ 
+ 
+    
+</style>
+
+    <!-- PWA Core – ROOT ONLY – FINAL VERSION -->
+
+<link rel="manifest" href="/manifest.json?v=2">
+<script src="/install-pwa.js?v=10" defer></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js?v=10')
+      .then(() => console.log('PWA: SW registered'))
+      .catch(err => console.error('PWA: SW failed', err));
+  }
+</script>
+
+    
+</head>
+
+
+<body>
+
+<header>
+    <nav>
+        <div class="site-logo" id="logoShare">Ylia Callan</div>
+            <div class="nav-links" id="navLinks">
+                <a href="https://yliacallan.github.io/">Home</a>
+                <a href="https://yliacallan.github.io/#books">Books</a>
+                <a href="https://yliacallan.github.io/#catalogue">Catalogue</a>
+                <a href="https://yliacallan.github.io/#audiobooks">Audiobooks</a>
+                <a href="https://yliacallan.github.io/#socials">Contact</a>
+                <a href="https://music.youtube.com/channel/UCpA_L99T91Wgousjvq_jZDw" target="_blank" rel="noopener">Music🎼</a>
+                <button type="button" id="themeToggle" onclick="toggleTheme()" 
+        style="background:none; border:none; color:var(--cyan); font-weight:600; cursor:pointer; padding:0.5rem;">
+  Dark Mode🌙 
+</button>
+            </div>
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <!-- Book Hero -->
+    <section class="book-hero">
+        <h1>The 3.8 Billion Year Story of Life and Evolution</h1>
+        <p class="subtitle"></p>
+        <p class="byline">by Ylia Callan</p>
+    </section>
+
+<section class="book-cover-wrapper">
+
+<img 
+  src="/books/assets/images/3.8-Billion-Year-Story-800x420.png"
+  alt="The 3.8 Billion Year Story of Life and Evolution by Ylia Callan"
+  class="book-cover-large"
+  width="800"
+  height="420"
+  fetchpriority="high"
+  loading="eager">
+    
+    
+</section>
+
+    <!-- PDF.js Viewer -->
+    
+<div class="viewer-container">
+<iframe 
+    src="https://yliacallan.github.io/books/assets/pdfjs/web/viewer.html?file=https://yliacallan.github.io/books/assets/PDF/The-3.8-Billion-Year-Story-of-Life-and-Evolution-by-Ylia-Callan.pdf#zoom=page-width"
+    width="100%" 
+    height="900" 
+    style="border:none;" 
+    loading="lazy"
+    title="PDF viewer for The 3.8 Billion Year Story of Life and Evolution by Ylia Callan">
+</iframe>
+
+</div>
+
+    <div class="actions">
+        <a href="https://yliacallan.github.io/books/assets/PDF/The-3.8-Billion-Year-Story-of-Life-and-Evolution-by-Ylia-Callan.pdf" download class="btn btn-primary">
+            Download 📖
+        </a>
+        </div>
+    
+        <div class="actions">
+        <a href="https://play.google.com/store/books/details/Ylia_Callan_The_3_8_Billion_Year_Story_of_Life_and?id=sUJ-EQAAQBAJ" class="btn" target="_blank" rel="noopener">Google Books</a>
+        <a href="https://books.apple.com/au/book/the-3-8-billion-year-story-of-life-and-evolution/id6747998004" class="btn" target="_blank" rel="noopener">Apple Books</a>
+        <a href="https://books2read.com/u/4jj2qY" class="btn" target="_blank" rel="noopener">Other Retailers</a>
+    </div>
+
+    <!-- SOCIAL SHARE BAR – NOW PERFECT -->
+    
+    <button class="share-button">Share</button>
+        </div>
+    </div>
+
+    <!-- Rest of your content (metadata, description, etc.) -->
+    <!-- Metadata -->
+    <div class="metadata">
+        <dl>
+            <dt>Author</dt><dd>Ylia Callan</dd>
+            <dt>Published</dt><dd>2025</dd>
+            <dt>Category</dt><dd>Evolution • Earth Sciences • Evolution</dd>
+            <dt>Formats</dt><dd>PDF • EPUB • Audiobook</dd>
+            <dt>Length</dt><dd>∼ 37 pages</dd>
+            <dt>ISBN (eBook)</dt><dd>9798231518791</dd>
+        </dl>
+    </div>
+
+    <!-- Description -->
+    <section class="description">
+        <h2>Book Description</h2>
+<p>From the moment life first sparked in Earth's ancient oceans to the rise of modern humans, The 3.8 Billion Year Story of Life and Evolution traces the extraordinary journey of life across deep time. This engaging and accessible book takes readers on a sweeping tour through the major milestones of evolution - from the earliest microbes and the rise of photosynthesis to the age of dinosaurs, the reign of mammals, and the dawn of our own species.</p>
+
+<p>Spanning mass extinctions, geological upheavals, and evolutionary breakthroughs, each chapter reveals how life has continually adapted to a changing planet. Discover how early plants reshaped the atmosphere, how reptiles conquered dry land, and how mammals seized their moment after the fall of the dinosaurs. Along the way, you'll meet trilobites, giant dragonflies, ancient amphibians, and the earliest hominins, all part of the intricate web of life that shaped the world we inhabit today.</p>
+
+<p>Grounded in current science and written in clear, concise language, this book offers a compelling timeline of life's unfolding story - a story of survival, innovation, and the deep interconnectedness of all living things.</p>
+</section>
+
+    <!-- Key Themes -->
+    <section class="themes">
+        <h2>Key Themes</h2>
+        <ul>
+            <li>Evolution of Life - Earth History - Biological Evolution - Mass Extinctions</li>
+            <li>Human Evolution - Paleontology - Fossil Record - Geological Time - Origin of Species</li>
+            <li>Prehistoric Earth - Science History - Timeline of Life - Evolutionary Biology</li>
+            <li>Life Sciences - Earth Sciences - Life on Earth - Origins of Life - Microbial Earth</li>
+            <li>Oxygen Revolution - Cambrian Explosion - Snowball Earth - Dinosaurs</li>
+            <li>Carboniferous Swamps - Devonian Expansion - Human Evolution - Geology</li>
+        </ul>
+    </section>
+    
+    <!-- Audiobooks Section – goes right after the pulsing "More Books" link -->
+<section class="audiobooks-section" style="margin: 5rem auto 3rem; text-align:center; max-width:1000px;">
+    <h2 style="color:var(--cyan); text-shadow:var(--cyan-glow); margin-bottom:2rem; animation:glow 4s ease-in-out infinite alternate;">
+        ♾️Audiobooks♾️
+    </h2>
+    
+    <div class="actions" style="justify-content:center;">
+        <a href="https://play.google.com/store/books/collection/cluster?gsr=ShmCARYKEgoOQVFBQUFFQ3FlRm80NE0QERAE:S:ANO1ljLItnQ" 
+           class="btn" target="_blank" rel="noopener" style="color:var(--cyan); font-weight:700; font-size:1.35rem; 
+              text-shadow:var(--cyan-glow); transition:var(--transition);">
+           Google Play
+        </a>
+        <a href="https://books.apple.com/gb/author/ylia-callan/id672856291?see-all=audio-books" 
+           class="btn" target="_blank" rel="noopener" style="color:var(--cyan); font-weight:700; font-size:1.35rem; 
+              text-shadow:var(--cyan-glow); transition:var(--transition);">
+           Apple Books
+        </a>
+    </div>
+</section>
+
+    <!-- Related Books -->
+    <section class="related">
+        <h2 style="text-align:center">Related Titles</h2>
+        <div class="related-grid">
+            <a href="https://yliacallan.github.io/books/Whole-Health-A-Complete-Guide-to-Body-Mind-and-Longevity.html" class="related-card">
+                <img src="https://yliacallan.github.io/books/assets/covers/Whole-Health-A-Complete-Guide-to-Body-Mind-and-Longevity-by-Ylia-Callan-400x600.png" alt="Book Cover - Whole Health - A Complete Guide to Body, Mind and Longevity - Author Ylia Callan" loading="lazy">
+            </a>
+            <a href="/books/light-as-memory/" class="related-card">
+                <img src="https://yliacallan.github.io/" alt="Light as Memory" loading="lazy">
+            </a>
+            <a href="/books/the-listening-sky/" class="related-card">
+                <img src="https://yliacallan.github.io/" alt="The Listening Sky" loading="lazy">
+            </a>
+            <a href="/books/the-lisng-sky/" class="related-card">
+                <img src="https://yliacallan.github.io/" alt="The Listening Sky" loading="lazy">
+            </a>
+            <a href="/books/the-listeky/" class="related-card">
+                <img src="https://yliacallan.github.io/" alt="The Listening Sky" loading="lazy">
+            </a>
+        </div>
+        
+<!-- Pulsing "More Books" link – now actually works and looks insane -->
+<div style="text-align:center; margin-top: 3rem; padding: 1rem;">
+    <a href="https://yliacallan.github.io/#catalogue" id="moreBooksLink"
+       style="color:var(--cyan); font-weight:700; font-size:1.4rem; text-decoration:none;
+              display:inline-block; padding:1rem 2rem; border-radius:50px;
+              background:rgba(0,234,255,0.1); border:2px solid var(--cyan);
+              box-shadow:0 0 20px rgba(0,234,255,0.5);
+              animation:pulse-glow 2.8s ease-in-out infinite alternate;">
+        More Books →
+    </a>
+</div>
+
+<style>
+@keyframes pulse-glow {
+    from {
+        box-shadow: 0 0 20px rgba(0,234,255,0.5);
+        transform: scale(1);
+    }
+    to {
+        box-shadow: 0 0 40px rgba(0,234,255,0.8), 0 0 60px rgba(0,234,255,0.4);
+        transform: scale(1.06);
+    }
+}
+</style>
+
+
+    </section>
+    
+    
+</main>
+
+
+    <footer>
+
+  <!-- Banner Image – centered below h2 -->
+  <div class="book-cover-wrapper">
+      <img 
+  src="/books/assets/images/ylia-callan-book-banner-800w-min.png"
+  alt="Ylia Callan's author website banner – Infinity Spheres"
+  class="book-cover-large"
+  width="800"
+  height="267"
+  fetchpriority="high"
+  loading="eager">
+  </div>
+    
+  <!-- Share button (if you want it here) -->
+  <button class="share-button" style="display: block; margin: 2rem auto;">Share</button>
+
+  <!-- Contact Section – h2 perfectly centered -->
+  <section class="socials" id="socials">
+    <h2 style="text-align: center; margin: 3rem 0 2rem; width: 100%;">Contact</h2>
+  </section>
+
+  <!-- Social Links – centered below banner -->
+  <div class="footer-socials">
+    <!-- LINE 1 – Main socials -->
+    <div class="social-row">
+      <a href="https://www.youtube.com/@ylia" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.linkedin.com/in/ylia-callan-8b889976/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/yl12ia/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/guitaralize/" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://x.com/guitaralize/" target="_blank" rel="noopener">X (Twitter)</a>
+    </div>
+
+    <!-- LINE 2 – Music + App + Install + Home -->
+    <div class="social-row">
+      <a href="https://music.youtube.com/channel/UCpA_L99T91Wgousjvq_jZDw" target="_blank" rel="noopener">Music 🎼</a>
+      <button type="button" class="install-trigger nav-app-btn" onclick="triggerInstall()">App 📱</button>
+      <a href="https://yliacallan.github.io/">Home ♾️</a>
+    </div>
+
+    <!-- LINE 3 – Book stores -->
+    <div class="social-row">
+      <a href="https://play.google.com/store/books/author?id=Ylia+Callan" target="_blank" rel="noopener">Google Play</a>
+      <a href="https://books.apple.com/us/author/ylia-callan/id672856291" target="_blank" rel="noopener">Apple Books</a>
+    </div>
+
+    <!-- Copy Link Row – centered -->
+    <div class="social-row copy-link-row">
+      <button id="copyLinkBtn" class="copy-link">Copy Link 🔗</button>
+      <span id="copyFeedback">Copied!</span>
+    </div>
+
+    <p>&copy; <span id="year">2025</span> Ylia Callan. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+        <!-- Floating Install Button — ADD ID BACK -->
+<button id="installButton" class="install-trigger" onclick="triggerInstall()"
+        style="display:none; position:fixed; bottom:20px; right:20px; background:#00eaff; color:#000; border:none; padding:14px 26px; border-radius:50px; font-weight:700; font-size:1rem; cursor:pointer; box-shadow:0 0 24px rgba(0,234,255,0.7); z-index:9998;">
+  Install App
+</button>
+
+<script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+
+ // Share Buttons
+async function doShare() {
+    const shareData = {
+        title: document.title,
+        text: "Check out this site!",
+        url: window.location.href
+    };
+
+    // Native Web Share API
+    if (navigator.share) {
+        try {
+            await navigator.share(shareData);
+            return; // Exit function if share succeeds
+        } catch (err) {
+            // Check specifically if the user cancelled the share (AbortError)
+            if (err.name === 'AbortError') {
+                console.log("Share cancelled by user:", err);
+                return; // IMPORTANT: Exit the function if user cancelled
+            } else {
+                console.error("An error occurred during sharing:", err);
+                // If it's another error (e.g. no network), fall through to clipboard fallback
+            }
+        }
+    }
+
+    // Fallback: copy link (only runs if navigator.share is not available OR an error other than AbortError occurred)
+    try {
+        await navigator.clipboard.writeText(window.location.href);
+        alert("Link copied to clipboard!");
+    } catch (e) {
+        alert("Unable to copy link.");
+    }
+}
+
+// Attach to ALL share buttons
+document.querySelectorAll(".share-button").forEach(btn => {
+    btn.addEventListener("click", doShare);
+});
+
+// Share website on logo click
+document.getElementById("logoShare").addEventListener("click", async () => {
+    const shareData = {
+        title: document.title,
+        text: "Check out these books by Ylia Callan",
+        url: window.location.href
+    };
+
+    if (navigator.share) {
+        try {
+            await navigator.share(shareData);
+        } catch (err) {
+            console.log("Share cancelled:", err);
+            // You should add the AbortError check here too for consistency if you don't want the logo click to fallback on cancel:
+            if (err.name === 'AbortError') {
+                return; 
+            }
+        }
+    } else {
+        // Fallback: copy link
+        try {
+            await navigator.clipboard.writeText(window.location.href);
+            alert("Link copied to clipboard!");
+        } catch (e) {
+            alert("Unable to share or copy link.");
+        }
+    }
+});
+
+    
+    </script>
+
+    <!-- Non-critical CSS deferred -->
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
+
+
+<!-- iOS Add to Home Screen Popup — PERFECTLY MATCHES APPLE -->
+<div id="iosPrompt" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.95); backdrop-filter:blur(12px); align-items:center; justify-content:center; z-index:9999; padding:20px; font-family:system-ui;">
+  <div style="background:#000; border:2px solid #00eaff; border-radius:20px; padding:36px 28px; max-width:340px; text-align:center; color:#e0faff; box-shadow:0 0 40px rgba(0,234,255,0.5);">
+    <h3 style="margin:0 0 20px; color:#00eaff; font-size:1.5rem; font-weight:700;">Add to Home Screen</h3>
+    <p style="margin:0 0 32px; line-height:1.7; opacity:0.9; font-size:1.1rem;">
+      Tap the Share button below<br>then select <strong>“Add to Home Screen”</strong>
+    </p>
+
+    <!-- Icons Container — perfectly aligned -->
+    <div style="display:flex; align-items:center; justify-content:center; gap:30px; margin:20px 0;">
+      
+      <!-- REAL Apple Share Icon (arrow perfectly positioned) -->
+      <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#00eaff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="11" width="18" height="10" rx="2" ry="2"/>
+        <path d="M12 17V2"/>
+        <path d="m8 6 4-4 4 4"/>
+      </svg>
+
+      <!-- Right Arrow (flow indicator) -->
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+
+      <!-- REAL Apple "Add to Home Screen" Icon -->
+      <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#00eaff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+        <line x1="12" y1="8" x2="12" y2="16"/>
+        <line x1="8" y1="12" x2="16" y2="12"/>
+      </svg>
+    </div>
+
+    <button onclick="hideIosPrompt()" style="margin-top:20px; background:#00eaff; color:#000; border:none; padding:14px 36px; border-radius:16px; font-weight:700; font-size:1.2rem; cursor:pointer; box-shadow:0 4px 15px rgba(0,234,255,0.4);">
+      Got it
+    </button>
+  </div>
+</div>
+    
+<!-- Floating Install Button -->
+<button class="install-trigger" onclick="triggerInstall()"
+        style="display:none; position:fixed; bottom:20px; right:20px; background:#00eaff; color:#000; border:none; padding:14px 26px; border-radius:50px; font-weight:700; font-size:1rem; cursor:pointer; box-shadow:0 0 24px rgba(0,234,255,0.7); z-index:9998;">
+  Install App
+</button>
+
+
+    
+<script>
+  
+// Perfect "Copy Link" – works everywhere, no jump, no errors
+document.getElementById('copyLinkBtn')?.addEventListener('click', async () => {
+  const url = location.href;
+  const feedback = document.getElementById('copyFeedback');
+
+  try {
+    await navigator.clipboard.writeText(url);
+  } catch (err) {
+    // Fallback for very old browsers (almost never needed today)
+    const textarea = document.createElement('textarea');
+    textarea.value = url;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+  }
+
+  // Show feedback (text is already "Copied!" in HTML, just fade in/out)
+  feedback.style.opacity = '1';
+  setTimeout(() => feedback.style.opacity = '0', 2000);
+});
+</script>
+
+    <script>
+// EXACT FIX FOR YOUR HAMBURGER MENU — CLOSES ON LINK CLICK
+document.querySelectorAll('#navLinks a').forEach(link => {
+  link.addEventListener('click', () => {
+    // Toggle off the active classes (your exact structure)
+    document.getElementById('hamburger').classList.remove('active');
+    document.getElementById('navLinks').classList.remove('active');
+    console.log('Menu closed!');  // Confirm in console
+  });
+});
+
+   </script>
+
+<script>
+// Auto Day/Night Mode + Manual Toggle – Complete
+const setTheme = (mode) => {
+  if (mode === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.getElementById('themeToggle').innerHTML = 'Light Mode☀️';
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    document.getElementById('themeToggle').innerHTML = 'Dark Mode🌙 ';
+  }
+  localStorage.setItem('theme', mode);
+};
+
+const toggleTheme = () => {
+  const current = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  setTheme(current === 'dark' ? 'light' : 'dark');
+};
+
+const autoSetTheme = () => {
+  const hour = new Date().getHours();
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const saved = localStorage.getItem('theme');
+  if (saved) {
+    setTheme(saved);
+  } else if (prefersDark || (hour >= 18 || hour < 7)) {
+    setTheme('dark');
+  } else {
+    setTheme('light');
+  }
+};
+
+// Run on load
+autoSetTheme();
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', autoSetTheme);
+</script>
+    
+</body>
+</html>
