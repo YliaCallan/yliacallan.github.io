@@ -436,6 +436,26 @@ header a:hover,
   color: #bbbbbb !important;
   text-shadow: none !important;
 }
+
+/* Fix: make the "Got it" / "Close" button neutral again */
+#installPopup button,
+.install-prompt button,
+#iosPrompt button,
+#iosPrompt .close-btn {
+  color: #ffffff !important;           /* clean white */
+  background: rgba(255,255,255,0.12) !important;
+  text-shadow: none !important;
+  border: 1px solid rgba(255,255,255,0.3) !important;
+  border-radius: 12px !important;
+  padding: 0.6rem 1.4rem !important;
+  font-weight: 600 !important;
+  margin-top: 1rem !important;
+}
+
+#installPopup button:hover,
+#iosPrompt button:hover {
+  background: rgba(255,255,255,0.22) !important;
+}
     
     
 </style>
