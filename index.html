@@ -456,6 +456,9 @@ header a:hover,
 #iosPrompt button:hover {
   background: rgba(255,255,255,0.22) !important;
 }
+  
+
+
     
     
 </style>
@@ -862,9 +865,7 @@ document.getElementById("logoShare").addEventListener("click", async () => {
     }
 });
 
-    
     </script>
-
 
     <!-- Non-critical CSS deferred -->
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
@@ -913,7 +914,6 @@ document.getElementById("logoShare").addEventListener("click", async () => {
         style="display:none; position:fixed; bottom:20px; right:20px; background:#00eaff; color:#000; border:none; padding:14px 26px; border-radius:50px; font-weight:700; font-size:1rem; cursor:pointer; box-shadow:0 0 24px rgba(0,234,255,0.7); z-index:9998;">
   Install App
 </button>
-
     
 <script>
 // Perfect "Copy Link" – works everywhere, no jump, no errors
@@ -987,6 +987,59 @@ const autoSetTheme = () => {
 autoSetTheme();
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', autoSetTheme);
 </script>
+
+
+
+<!-- Epic Sun (day) + Stars (night) background -->
+<div id="epicBackground"></div>
+
+<style>
+  #epicBackground {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(circle at 50% 30%, rgba(255,220,100,0.15) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 1.2s ease;
+  }
+
+  /* DAY MODE – glowing animated sun */
+  [data-theme="light"] #epicBackground {
+    opacity: 1;
+    background: 
+      radial-gradient(circle at 50% 20%, #ffd700 0%, #ff9800 30%, transparent 60%),
+      radial-gradient(circle at 50% 20%, #fff 0%, transparent 40%);
+    animation: sunPulse 12s ease-in-out infinite;
+  }
+
+  @keyframes sunPulse {
+    0%, 100% { box-shadow: 0 0 80px 40px rgba(255,200,0,0.4); }
+    50%      { box-shadow: 0 0 120px 60px rgba(255,230,50,0.6); }
+  }
+
+  /* NIGHT MODE – twinkling stars */
+  [data-theme="dark"] #epicBackground,
+  :root:not([data-theme]) #epicBackground {
+    opacity: 1;
+    background: 
+      radial-gradient(2px 2px at 20% 30%, #fff, transparent 50%),
+      radial-gradient(2px 2px at 80% 70%, #fff, transparent 50%),
+      radial-gradient(1px 1px at 40% 80%, #fff, transparent 50%),
+      radial-gradient(2px 2px at 90% 40%, #fff, transparent 50%),
+      radial-gradient(1px 1px at 10% 90%, #fff, transparent 50%),
+      radial-gradient(3px 3px at 60% 20%, #fff, transparent 50%);
+    background-repeat: repeat;
+    background-size: 200px 200px, 300px 300px, 250px 250px, 350px 350px, 280px 280px, 400px 400px;
+    animation: starsTwinkle 20s linear infinite;
+  }
+
+  @keyframes starsTwinkle {
+    0%, 100% { opacity: 0.7; }
+    50%      { opacity: 1; }
+  }
+</style>
+
 
 
 
