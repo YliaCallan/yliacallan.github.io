@@ -447,6 +447,36 @@ html[data-theme="light"] .install-prompt * {
   color: inherit !important;
   background: transparent !important;
 } 
+
+/* FINAL PWA POPUP FIX – cyan title + grey subtitle in BOTH modes */
+#iosPrompt,
+#iosPrompt *,
+.install-prompt,
+.install-prompt * {
+  background: rgba(0,0,0,0.94) !important;
+  color: #00eaff !important;  /* cyan for title */
+  text-shadow: var(--cyan-glow) !important;
+  border: 2px solid #00eaff !important;
+  backdrop-filter: blur(12px);
+}
+
+/* Grey for subtitle text only (p, small) */
+#iosPrompt p,
+#iosPrompt small,
+.install-prompt p,
+.install-prompt small {
+  color: #bbbbbb !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+}
+
+/* Override light mode broad rules – force cyan/grey */
+[data-theme="light"] #iosPrompt,
+[data-theme="light"] #iosPrompt *,
+[data-theme="light"] .install-prompt,
+[data-theme="light"] .install-prompt * {
+  color: inherit !important;  /* inherits cyan from above */
+}
     
     
 </style>
