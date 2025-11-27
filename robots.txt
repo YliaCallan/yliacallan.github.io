@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Allow homepage and all content
+Allow: /books/
+Allow: /pwa-icons/
+Allow: /assets/
+
+# Block PWA technical files
+Disallow: /install-pwa.js
+Disallow: /service-worker.js
+Disallow: /manifest.json
+
+# Block PDF.js internals 
+Disallow: /books/assets/pdfjs/
+
+Sitemap: https://yliacallan.github.io/sitemap.xml
