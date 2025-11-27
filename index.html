@@ -681,61 +681,91 @@ header a:hover,
                 1024: { slidesPerView: 3 }
             }
         });
+        
+        
+        
+        
+        
+        
 
 
-
-
-
-
-<script>
-// Your existing doShare() — keep everything exactly as you have it
+ // Share Buttons
 async function doShare() {
     const shareData = {
         title: document.title,
-        text: "Check out this book by Ylia Callan",
+        url: window.location.href
+    };
+
+    // Native Web Share API
+    if (navigator.share) {
+        try {
+            await navigator.share(shareData);
+            return; // Exit function if share succeeds
+        } catch (err) {
+            // Check specifically if the user cancelled the share (AbortError)
+            if (err.name === 'AbortError') {
+                console.log("Share cancelled by user:", err);
+                return; // IMPORTANT: Exit the function if user cancelled
+            } else {
+                console.error("An error occurred during sharing:", err);
+                // If it's another error (e.g. no network), fall through to clipboard fallback
+            }
+        }
+    }
+
+    // Fallback: copy link (only runs if navigator.share is not available OR an error other than AbortError occurred)
+    try {
+        await navigator.clipboard.writeText(window.location.href);
+        alert("Link copied to clipboard!");
+    } catch (e) {
+        alert("Unable to copy link.");
+    }
+}
+
+// Attach to ALL share buttons
+document.querySelectorAll(".share-button").forEach(btn => {
+    btn.addEventListener("click", doShare);
+});
+
+// Share website on logo click
+document.getElementById("logoShare").addEventListener("click", async () => {
+    const shareData = {
+        title: document.title,
         url: window.location.href
     };
 
     if (navigator.share) {
         try {
             await navigator.share(shareData);
-            return;
         } catch (err) {
-            if (err.name === 'AbortError') return; // user cancelled → do nothing
-            console.warn("Native share failed:", err);
+            console.log("Share cancelled:", err);
+            // You should add the AbortError check here too for consistency if you don't want the logo click to fallback on cancel:
+            if (err.name === 'AbortError') {
+                return; 
+            }
+        }
+    } else {
+        // Fallback: copy link
+        try {
+            await navigator.clipboard.writeText(window.location.href);
+            alert("Link copied to clipboard!");
+        } catch (e) {
+            alert("Unable to share or copy link.");
         }
     }
-
-    // Fallback copy (only runs if share not supported)
-    try {
-        await navigator.clipboard.writeText(window.location.href);
-        alert("Link copied!");
-    } catch (e) {
-        alert("Failed to copy");
-    }
-}
-
-// ADD ONLY THIS PART — fixes iOS/Android "Copy Link" inside native sheet
-document.addEventListener('copy', (e) => {
-    // If we're inside a native share sheet and user chose "Copy Link"
-    if (navigator.share && e.clipboardData) {
-        e.preventDefault();
-        const cleanUrl = window.location.href;
-        e.clipboardData.setData('text/plain', cleanUrl);
-        console.log("Clean URL copied from native share sheet:", cleanUrl);
-    }
 });
 
-// Keep your existing button attachments
-document.querySelectorAll(".share-button").forEach(btn => {
-    btn.addEventListener("click", doShare);
-});
-document.getElementById("logoShare")?.addEventListener("click", doShare);
-</script>
-
-
-
-
+    
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     <!-- Non-critical CSS deferred -->
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
