@@ -405,7 +405,19 @@ header a:hover,
   box-shadow: 0 10px 30px rgba(0,234,255,0.5) !important;
 }
     
-    
+/* PWA Install popup – always cyan text + dark background in BOTH modes */
+#installPopup,
+#installButton + div,
+.install-prompt,
+.pwa-install-banner,
+[data-theme="light"] #installPopup,
+[data-theme="light"] .install-prompt {
+  background: rgba(0,0,0,0.92) !important;
+  color: var(--cyan) !important;
+  text-shadow: var(--cyan-glow) !important;
+  border: 2px solid var(--cyan) !important;
+  backdrop-filter: blur(12px);
+}    
     
     
 </style>
