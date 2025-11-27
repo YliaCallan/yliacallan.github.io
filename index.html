@@ -495,11 +495,11 @@ header a:hover,
   <div class="social-row" style="justify-content:center; gap:2.5rem; flex-wrap:wrap;">
     <a href="https://play.google.com/store/books/collection/cluster?gsr=ShmCARYKEgoOQVFBQUFFQ3FlRm80NE0QERAE:S:ANO1ljLItnQ"
        target="_blank" rel="noopener">
-      Google Play Audiobooks
+      Google Play 📚
     </a>
     <a href="https://books.apple.com/gb/author/ylia-callan/id672856291?see-all=audio-books"
        target="_blank" rel="noopener">
-      Apple Books Audiobooks
+      Apple Books 📖
     </a>
   </div>
 </section>
@@ -692,7 +692,6 @@ header a:hover,
 async function doShare() {
     const shareData = {
         title: document.title,
-        text: "Check out this site!",
         url: window.location.href
     };
 
@@ -731,7 +730,6 @@ document.querySelectorAll(".share-button").forEach(btn => {
 document.getElementById("logoShare").addEventListener("click", async () => {
     const shareData = {
         title: document.title,
-        text: "Check out these books by Ylia Callan",
         url: window.location.href
     };
 
