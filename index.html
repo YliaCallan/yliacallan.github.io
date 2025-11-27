@@ -312,7 +312,17 @@ body {
   }
 }
     
-    
+ /* Fix contrast ONLY in light/day mode – perfect fix */
+[data-theme="light"],
+[data-theme="light"] a,
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] dt,
+[data-theme="light"] .btn,
+[data-theme="light"] .social-row a {
+  color: #003340 !important;     /* Deep teal — passes 7+:1 contrast on white */
+  text-shadow: none !important;  /* Optional: remove glow in light mode for cleaner look */
+}   
     
     
     
