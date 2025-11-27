@@ -270,22 +270,6 @@ body {
 
     /* Audiobook buttons */
     
-.audiobook-buttons {
-  gap: 2rem !important;
-  margin: 1.5rem 0 !important;
-}
-
-.audiobook-btn {
-  font-size: 1.1rem !important;
-  padding: 1rem 2rem !important;  /* Bigger like socials */
-  min-width: 200px;  /* Prevents squishing on mobile */
-  transition: var(--transition) !important;
-}
-
-.audiobook-btn:hover {
-  transform: translateY(-4px) !important;
-  box-shadow: var(--cyan-glow) !important;
-}
     
     /* Fix carousel pagination overlap on iPhone – titles fully visible */
 @media (max-width: 414px) and (max-height: 896px) { /* Targets iPhone portrait */
@@ -310,6 +294,43 @@ body {
   .swiper-pagination {
     display: none !important;
   }
+}
+
+/* FINAL FIX – Audiobooks buttons on homepage – 100% works */
+#audiobooks .social-row {
+  all: unset !important;               /* ← kills the old .social-row styling */
+  display: flex !important;
+  justify-content: center !important;
+  gap: 2rem !important;
+  flex-wrap: wrap !important;
+  margin: 2rem 0 !important;
+}
+
+#audiobooks .social-row a {
+  all: unset !important;               /* ← completely resets the killer rule */
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 58px !important;
+  padding: 1rem 2.2rem !important;
+  background: rgba(0,234,255,0.12) !important;
+  border: 2px solid var(--cyan) !important;
+  border-radius: 16px !important;
+  color: var(--cyan) !important;
+  font-weight: 700 !important;
+  font-size: 1.15rem !important;
+  min-width: 240px !important;
+  text-align: center !important;
+  cursor: pointer !important;
+  transition: var(--transition) !important;
+  box-shadow: 0 4px 15px rgba(0,234,255,0.2) !important;
+}
+
+#audiobooks .social-row a:hover {
+  background: var(--cyan) !important;
+  color: #000 !important;
+  transform: translateY(-6px) !important;
+  box-shadow: 0 10px 30px rgba(0,234,255,0.5) !important;
 }
     
 /* PERFECT contrast fix — ONLY in light/day mode */
@@ -427,7 +448,7 @@ body {
            class="btn" target="_blank" rel="noopener" style="color:var(--cyan); font-weight:700; font-size:1.35rem; 
               text-shadow:var(--cyan-glow); transition:var(--transition);">
            Google Play
-        </a>  -  
+        </a> -  
         <a href="https://books.apple.com/gb/author/ylia-callan/id672856291?see-all=audio-books" 
            class="btn" target="_blank" rel="noopener" style="color:var(--cyan); font-weight:700; font-size:1.35rem; 
               text-shadow:var(--cyan-glow); transition:var(--transition);">
