@@ -454,6 +454,120 @@ In Seeds of the Living Cosmos, explore the idea that life is not a cosmic accide
         transform: scale(1.06);
     }
 }
+
+/* DAY/NIGHT MODE — NEW VERSION: black header + cyan text in BOTH modes */
+[data-theme="light"] {
+  --bg: #f8faff;
+  --text: #000;
+  --card-bg: rgba(0,234,255,0.08);
+}
+
+/* Keep header & mobile menu BLACK with cyan text in light mode */
+[data-theme="light"] header,
+[data-theme="light"] .nav-links {
+  background: rgba(0,0,0,0.95) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,234,255,.15);
+}
+
+/* Cyan glowing text in header/menu (both modes) */
+header a,
+header button,
+.nav-links a,
+.nav-links button,
+.hamburger span {
+  color: var(--cyan) !important;
+  text-shadow: var(--cyan-glow) !important;
+}
+
+/* Hamburger stays cyan */
+.hamburger span,
+[data-theme="light"] .hamburger span {
+  background: var(--cyan) !important;
+}
+
+/* Hover glow stays cyan */
+header a:hover,
+.nav-links a:hover,
+.nav-links button:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+  text-shadow: 0 0 20px rgba(0,234,255,0.8) !important;
+}
+
+/* Only the main page content gets dark text in light mode */
+[data-theme="light"] body { background: var(--bg); color: var(--text); }
+[data-theme="light"] h1, [data-theme="light"] h2, [data-theme="light"] h3,
+[data-theme="light"] p, [data-theme="light"] dt, [data-theme="light"] dd,
+[data-theme="light"] .book-title {
+  color: #001122 !important;
+  text-shadow: none !important;
+}
+[data-theme="light"] a:not(header a):not(.nav-links a),
+[data-theme="light"] .btn,
+[data-theme="light"] .social-row a,
+[data-theme="light"] .install-trigger,
+[data-theme="light"] .copy-link {
+  color: #002233 !important;
+}
+[data-theme="light"] a:hover:not(header a):not(.nav-links a),
+[data-theme="light"] .btn:hover {
+  color: #00c8ff !important;
+  text-shadow: 0 0 12px rgba(0,200,255,0.4) !important;
+}
+    
+/* PWA install popup – identical in day & night mode (black bg + cyan/grey text) */
+#installPopup,
+.install-prompt,
+.pwa-install-banner,
+#iosPrompt {
+  background: rgba(0,0,0,0.94) !important;
+  border: 2px solid #00eaff !important;
+  border-radius: 16px !important;
+  padding: 1.6rem 1.4rem !important;
+  backdrop-filter: blur(12px);
+}
+
+/* All text inside = cyan (title) */
+#installPopup *,
+.install-prompt *,
+.pwa-install-banner *,
+#iosPrompt * {
+  color: #00eaff !important;
+  text-shadow: 0 0 12px rgba(0,234,255,0.6) !important;
+}
+
+/* Subtitle only = grey */
+#installPopup p,
+#installPopup small,
+.install-prompt p,
+.install-prompt small,
+#iosPrompt p,
+#iosPrompt small {
+  color: #bbbbbb !important;
+  text-shadow: none !important;
+}
+
+/* Fix: make the "Got it" / "Close" button neutral again */
+#installPopup button,
+.install-prompt button,
+#iosPrompt button,
+#iosPrompt .close-btn {
+  color: #ffffff !important;           /* clean white */
+  background: rgba(255,255,255,0.12) !important;
+  text-shadow: none !important;
+  border: 1px solid rgba(255,255,255,0.3) !important;
+  border-radius: 12px !important;
+  padding: 0.6rem 1.4rem !important;
+  font-weight: 600 !important;
+  margin-top: 1rem !important;
+}
+
+#installPopup button:hover,
+#iosPrompt button:hover {
+  background: rgba(255,255,255,0.22) !important;
+}
+
 </style>
 
 
@@ -544,7 +658,6 @@ In Seeds of the Living Cosmos, explore the idea that life is not a cosmic accide
 async function doShare() {
     const shareData = {
         title: document.title,
-        text: "Check out this site!",
         url: window.location.href
     };
 
@@ -583,7 +696,6 @@ document.querySelectorAll(".share-button").forEach(btn => {
 document.getElementById("logoShare").addEventListener("click", async () => {
     const shareData = {
         title: document.title,
-        text: "Check out these books by Ylia Callan",
         url: window.location.href
     };
 
