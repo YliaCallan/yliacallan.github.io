@@ -405,77 +405,36 @@ header a:hover,
   text-shadow: 0 0 12px rgba(0,200,255,0.4) !important;
 }
     
-/* PWA INSTALL POPUP – IDENTICAL IN BOTH MODES (black bg + cyan/grey text) */
+/* PWA install popup – identical in day & night mode (black bg + cyan/grey text) */
 #installPopup,
 .install-prompt,
-.pwa-install-banner {
+.pwa-install-banner,
+#iosPrompt {
   background: rgba(0,0,0,0.94) !important;
-  backdrop-filter: blur(12px);
   border: 2px solid #00eaff !important;
-  border-radius: 16px;
-  padding: 1.6rem 1.4rem;
-  box-shadow: 0 10px 40px rgba(0,234,255,0.3);
+  border-radius: 16px !important;
+  padding: 1.6rem 1.4rem !important;
+  backdrop-filter: blur(12px);
 }
 
-/* Main title – always glowing cyan */
-#installPopup strong,
-#installPopup h3,
-#installPopup h4,
-.install-prompt strong,
-.install-prompt h3,
-.install-prompt h4 {
+/* All text inside = cyan (title) */
+#installPopup *,
+.install-prompt *,
+.pwa-install-banner *,
+#iosPrompt * {
   color: #00eaff !important;
-  text-shadow: 0 0 16px rgba(0,234,255,0.7) !important;
-  font-size: 1.35rem !important;
-  font-weight: 700 !important;
+  text-shadow: 0 0 12px rgba(0,234,255,0.6) !important;
 }
 
-/* Subtitle – always light grey (like night mode) */
+/* Subtitle only = grey */
 #installPopup p,
 #installPopup small,
 .install-prompt p,
-.install-prompt small {
-  color: #bbbbbb !important;
-  font-size: 1rem !important;
-  opacity: 1 !important;
-  margin-top: 0.8rem !important;
-}
-
-/* Force everything in light mode too – nuclear override */
-html[data-theme="light"] #installPopup *,
-html[data-theme="light"] .install-prompt * {
-  color: inherit !important;
-  background: transparent !important;
-} 
-
-/* FINAL PWA POPUP FIX – cyan title + grey subtitle in BOTH modes */
-#iosPrompt,
-#iosPrompt *,
-.install-prompt,
-.install-prompt * {
-  background: rgba(0,0,0,0.94) !important;
-  color: #00eaff !important;  /* cyan for title */
-  text-shadow: var(--cyan-glow) !important;
-  border: 2px solid #00eaff !important;
-  backdrop-filter: blur(12px);
-}
-
-/* Grey for subtitle text only (p, small) */
+.install-prompt small,
 #iosPrompt p,
-#iosPrompt small,
-.install-prompt p,
-.install-prompt small {
+#iosPrompt small {
   color: #bbbbbb !important;
   text-shadow: none !important;
-  opacity: 1 !important;
-}
-
-/* Override light mode broad rules – force cyan/grey */
-[data-theme="light"] #iosPrompt,
-[data-theme="light"] #iosPrompt *,
-[data-theme="light"] .install-prompt,
-[data-theme="light"] .install-prompt * {
-  color: inherit !important;  /* inherits cyan from above */
 }
     
     
