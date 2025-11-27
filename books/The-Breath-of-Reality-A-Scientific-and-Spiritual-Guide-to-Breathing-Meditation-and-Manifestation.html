@@ -256,7 +256,30 @@ body {
   }
 }
  
- 
+ /* PERFECT contrast fix — ONLY in light/day mode */
+[data-theme="light"],
+[data-theme="light"] a,
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] dt,
+[data-theme="light"] .btn,
+[data-theme="light"] .social-row a,
+[data-theme="light"] .book-title,           /* ← Carousel titles */
+[data-theme="light"] .install-trigger,     /* ← App button */
+[data-theme="light"] .copy-link {           /* ← Copy Link button */
+  color: #002233 !important;               /* Deep rich blue — 9+:1 contrast on white */
+  text-shadow: none !important;             /* Clean look in light mode */
+}
+
+/* Keep the cyan glow on hover in light mode (optional but nice) */
+[data-theme="light"] a:hover,
+[data-theme="light"] .btn:hover,
+[data-theme="light"] .install-trigger:hover,
+[data-theme="light"] .copy-link:hover {
+  color: #00c8ff !important;
+  text-shadow: 0 0 12px rgba(0,200,255,0.4) !important;
+} 
  
  
  
