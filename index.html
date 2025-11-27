@@ -689,74 +689,133 @@ header a:hover,
         
 
 
- // Share Buttons
-async function doShare() {
-    const shareData = {
-        title: document.title,
-        url: window.location.href
-    };
+<script>
+(function () {
+  // Helpers
+  function isIOS() {
+    return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  }
 
-    // Native Web Share API
-    if (navigator.share) {
-        try {
-            await navigator.share(shareData);
-            return; // Exit function if share succeeds
-        } catch (err) {
-            // Check specifically if the user cancelled the share (AbortError)
-            if (err.name === 'AbortError') {
-                console.log("Share cancelled by user:", err);
-                return; // IMPORTANT: Exit the function if user cancelled
-            } else {
-                console.error("An error occurred during sharing:", err);
-                // If it's another error (e.g. no network), fall through to clipboard fallback
-            }
-        }
+  async function fallbackCopyTextToClipboard(text) {
+    // Try modern clipboard API
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      try {
+        await navigator.clipboard.writeText(text);
+        return true;
+      } catch (err) {
+        console.warn("navigator.clipboard.writeText failed:", err);
+        // fall through to textarea method
+      }
     }
 
-    // Fallback: copy link (only runs if navigator.share is not available OR an error other than AbortError occurred)
+    // Older fallback using textarea + execCommand
     try {
-        await navigator.clipboard.writeText(window.location.href);
-        alert("Link copied to clipboard!");
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      // Move off-screen
+      ta.style.position = "fixed";
+      ta.style.left = "-9999px";
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      const ok = document.execCommand("copy");
+      document.body.removeChild(ta);
+      return ok;
     } catch (e) {
-        alert("Unable to copy link.");
+      console.warn("fallback copy failed:", e);
+      return false;
     }
-}
+  }
 
-// Attach to ALL share buttons
-document.querySelectorAll(".share-button").forEach(btn => {
-    btn.addEventListener("click", doShare);
-});
-
-// Share website on logo click
-document.getElementById("logoShare").addEventListener("click", async () => {
-    const shareData = {
-        title: document.title,
-        url: window.location.href
-    };
-
-    if (navigator.share) {
-        try {
-            await navigator.share(shareData);
-        } catch (err) {
-            console.log("Share cancelled:", err);
-            // You should add the AbortError check here too for consistency if you don't want the logo click to fallback on cancel:
-            if (err.name === 'AbortError') {
-                return; 
-            }
-        }
+  async function copyLink(url) {
+    const ok = await fallbackCopyTextToClipboard(url);
+    if (ok) {
+      // Use non-blocking UI indicator if you prefer; alert is simple
+      alert("Link copied to clipboard!");
     } else {
-        // Fallback: copy link
-        try {
-            await navigator.clipboard.writeText(window.location.href);
-            alert("Link copied to clipboard!");
-        } catch (e) {
-            alert("Unable to share or copy link.");
-        }
+      alert("Unable to copy link.");
     }
-});
+  }
 
-    
-    </script>
+  async function doNativeShare({ title, text, url }) {
+    if (!navigator.share) return false;
+    try {
+      await navigator.share({ title, text, url });
+      return true;
+    } catch (err) {
+      // If user cancels, AbortError — ignore silently
+      if (err && err.name === "AbortError") {
+        console.log("Share cancelled by user.");
+        return true; // treat as success (no fallback) if you want to avoid copying after cancel
+      }
+      console.warn("navigator.share failed:", err);
+      return false;
+    }
+  }
+
+  // Main handler for share button clicks; uses delegation
+  async function handleShareClick(event) {
+    const btn = event.target.closest(".share-button, #logoShare");
+    if (!btn) return;
+
+    // Prevent default behaviour if it's a link/button
+    event.preventDefault();
+
+    // Determine share text (data attributes override defaults)
+    const url = btn.getAttribute("data-url") || window.location.href;
+    const title = btn.getAttribute("data-title") || document.title;
+    const textAttr = btn.getAttribute("data-text") || (btn.id === "logoShare" ? "Check out these books by Ylia Callan" : "Check out this site!");
+
+    // iOS: bypass native share to avoid rich/anchor copies — copy plain URL instead
+    if (isIOS()) {
+      try {
+        await copyLink(url);
+      } catch (e) {
+        console.error("iOS copy failed:", e);
+        alert("Unable to copy link.");
+      }
+      return;
+    }
+
+    // Non-iOS: try native share first (if available), with text included
+    const shareData = { title, text: textAttr, url };
+
+    const shared = await doNativeShare(shareData);
+    if (shared) return;
+
+    // Fallback: copy URL to clipboard
+    try {
+      await copyLink(url);
+    } catch (e) {
+      console.error("Fallback copy failed:", e);
+      alert("Unable to copy link.");
+    }
+  }
+
+  // Attach event delegation once DOM is loaded
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", () => {
+      document.addEventListener("click", handleShareClick);
+    });
+  } else {
+    document.addEventListener("click", handleShareClick);
+  }
+
+  // Optional: expose a function for direct calls
+  window.siteShare = async function (opts = {}) {
+    const url = opts.url || window.location.href;
+    const title = opts.title || document.title;
+    const text = opts.text || "Check out this site!";
+    // Respect iOS copy behaviour
+    if (isIOS()) {
+      return copyLink(url);
+    }
+    const shared = await doNativeShare({ title, text, url });
+    if (!shared) return copyLink(url);
+  };
+})();
+</script>
+
     
     
     

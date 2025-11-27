@@ -1,40 +1,22 @@
-const CACHE_NAME = 'ylia-books-pwa-v5';
-const OFFLINE_URLS = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/install-pwa.js',
-  '/pwa-icons/icon-192.png',
-  '/pwa-icons/icon-512.png',
-  '/books/The-Breath-of-Reality-A-Scientific-and-Spiritual-Guide-to-Breathing-Meditation-and-Manifestation.html'
-];
+// service-worker.js – PWA stays installable, but NO aggressive caching
+const CACHE_NAME = 'ylia-books-minimal-v1';
 
-self.addEventListener('install', event => {
+// Required so the PWA can be installed (empty cache is fine)
+self.addEventListener('install', e => {
   self.skipWaiting();
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(OFFLINE_URLS))
-      .catch(err => console.error('Cache addAll failed:', err))
-  );
 });
 
-self.addEventListener('fetch', event => {
-  if (event.request.method !== 'GET') return;
-  event.respondWith(
-    caches.match(event.request).then(cached => {
-      if (cached) return cached;
-      return fetch(event.request).catch(() => caches.match('/index.html'));
-    })
-  );
-});
-
-self.addEventListener('activate', event => {
-  event.waitUntil(
-    caches.keys().then(keys => {
-      return Promise.all(keys.map(key => {
-        if (key !== CACHE_NAME) return caches.delete(key);
-      }));
-    })
-  );
+self.addEventListener('activate', e => {
   self.clients.claim();
+});
+
+// ALWAYS go to network — never serve stale files
+self.addEventListener('fetch', e => {
+  // For HTML pages → always fresh from GitHub
+  if (e.request.destination === 'document') {
+    e.respondWith(fetch(e.request));
+  } else {
+    // Images, CSS, JS → normal browser cache is enough
+    e.respondWith(fetch(e.request));
+  }
 });
