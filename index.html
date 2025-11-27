@@ -405,30 +405,18 @@ header a:hover,
   text-shadow: 0 0 12px rgba(0,200,255,0.4) !important;
 }
     
-/* PWA Install popup – FINAL FIX: always cyan + black bg, even in day mode */
-#installPopup,
-#installPopup *,
-.install-prompt,
-.install-prompt *,
-.pwa-install-banner,
-.pwa-install-banner *,
-#installButton + div,
-#installButton + div * {
+/* NUCLEAR FIX – PWA popup text ALWAYS cyan, even in day mode */
+html[data-theme="light"] #installPopup,
+html[data-theme="light"] #installPopup *,
+html[data-theme="light"] .install-prompt,
+html[data-theme="light"] .install-prompt *,
+html[data-theme="light"] .pwa-install-banner,
+html[data-theme="light"] .pwa-install-banner * {
+  color: #00eaff !important;
+  text-shadow: 0 0 12px rgba(0,234,255,0.5) !important;
   background: rgba(0,0,0,0.94) !important;
-  color: var(--cyan) !important;
-  text-shadow: var(--cyan-glow) !important;
-  border-color: var(--cyan) !important;
-  box-shadow: 0 8px 32px rgba(0,234,255,0.3) !important;
-}
-
-/* Extra safety for light mode – forces it back */
-[data-theme="light"] #installPopup,
-[data-theme="light"] #installPopup *,
-[data-theme="light"] .install-prompt,
-[data-theme="light"] .install-prompt * {
-  color: var(--cyan) !important;
-  text-shadow: var(--cyan-glow) !important;
-}   
+  border-color: #00eaff !important;
+} 
     
     
 </style>
