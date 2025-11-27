@@ -405,17 +405,47 @@ header a:hover,
   text-shadow: 0 0 12px rgba(0,200,255,0.4) !important;
 }
     
-/* NUCLEAR FIX – PWA popup text ALWAYS cyan, even in day mode */
-html[data-theme="light"] #installPopup,
-html[data-theme="light"] #installPopup *,
-html[data-theme="light"] .install-prompt,
-html[data-theme="light"] .install-prompt *,
-html[data-theme="light"] .pwa-install-banner,
-html[data-theme="light"] .pwa-install-banner * {
-  color: #00eaff !important;
-  text-shadow: 0 0 12px rgba(0,234,255,0.5) !important;
+/* PWA INSTALL POPUP – IDENTICAL IN BOTH MODES (black bg + cyan/grey text) */
+#installPopup,
+.install-prompt,
+.pwa-install-banner {
   background: rgba(0,0,0,0.94) !important;
-  border-color: #00eaff !important;
+  backdrop-filter: blur(12px);
+  border: 2px solid #00eaff !important;
+  border-radius: 16px;
+  padding: 1.6rem 1.4rem;
+  box-shadow: 0 10px 40px rgba(0,234,255,0.3);
+}
+
+/* Main title – always glowing cyan */
+#installPopup strong,
+#installPopup h3,
+#installPopup h4,
+.install-prompt strong,
+.install-prompt h3,
+.install-prompt h4 {
+  color: #00eaff !important;
+  text-shadow: 0 0 16px rgba(0,234,255,0.7) !important;
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+}
+
+/* Subtitle – always light grey (like night mode) */
+#installPopup p,
+#installPopup small,
+.install-prompt p,
+.install-prompt small {
+  color: #bbbbbb !important;
+  font-size: 1rem !important;
+  opacity: 1 !important;
+  margin-top: 0.8rem !important;
+}
+
+/* Force everything in light mode too – nuclear override */
+html[data-theme="light"] #installPopup *,
+html[data-theme="light"] .install-prompt * {
+  color: inherit !important;
+  background: transparent !important;
 } 
     
     
