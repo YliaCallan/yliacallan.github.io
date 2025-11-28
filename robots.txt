@@ -1,17 +1,8 @@
 User-agent: *
-Allow: /
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
 
-# Allow homepage and all content
-Allow: /books/
-Allow: /pwa-icons/
-Allow: /assets/
+Sitemap: https://yliacallan.github.io/music/wp-sitemap.xml
 
-# Block PWA technical files
-Disallow: /install-pwa.js
-Disallow: /service-worker.js
-Disallow: /manifest.json
-
-# Block PDF.js internals 
-Disallow: /books/assets/pdfjs/
-
-Sitemap: https://yliacallan.github.io/sitemap.xml
+User-agent: *
+Disallow: /wp-content/uploads/wpo/wpo-plugins-tables-list.json
