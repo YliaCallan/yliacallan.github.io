@@ -597,6 +597,27 @@ h6 { font-family: 'Roboto'; font-weight: normal; font-size: 16px; color: #ffffff
 <link rel="preload" href="/music/wp-content/themes/mts_newspaper/fonts/fontawesome-webfont.woff2" as="font" type="font/woff2" crossorigin>
 <style>:root{--fa-font-solid:900} .td-ss-main-sidebar{position:sticky;top:100px}</style>
 
+<link rel="stylesheet" href="/music/wp-content/plugins/sassy-social-share/public/css/sassy-social-share-public.min.css">
+<script src="/music/wp-content/plugins/sassy-social-share/public/js/sassy-social-share-public.min.js"></script>
+<script src="/music/wp-content/themes/mts_newspaper/js/tagdiv_theme.min.js"></script>
+<script src="/music/wp-content/themes/mts_newspaper/js/tdAjaxInfinite.js"></script>
+<script>
+  jQuery(document).ready(function($){tdInfiniteScroll.init();});
+  window.heateorSssSharingAjaxUrl = "";
+  window.heateorSssCloseIconPath = "/music/wp-content/plugins/sassy-social-share/public/svg/close.svg";
+  window.heateorSssHorizontalSharingCountEnable = 0;
+</script>
+<style>
+  @media(min-width:1024px){
+    .td-ss-main-sidebar > .td-ss-row > div,
+    .td-block-span12 .td-ss-row,
+    .td-related-span4 {min-height:calc(100vh - 320px)!important;display:flex;flex-direction:column}
+    .td-related-span4 .td_module_wrap {flex:1;display:flex;flex-direction:column}
+    .td-related-span4 .td-module-image {flex-shrink:0}
+    .td-related-span4 .entry-title {flex:1}
+  }
+</style>
+
 </head>
 <body id="blog" class="archive paged tag tag-ylia-callan-guitar tag-87 paged-7 tag-paged-7 wp-theme-mts_newspaper wp-child-theme-newspapaer-child main">
 			<div class="clear" id="catcher" style="height: 50px;"></div>
