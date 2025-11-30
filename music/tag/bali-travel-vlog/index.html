@@ -1262,5 +1262,13 @@ e[p].split("="),C=void 0,x=z[0].replace(/\[\d*\]/,function(L){C=L.slice(1,-1);re
 
 ai_js_code = true;
 </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var layzr = new Layzr({
+      threshold: 50
+    });
+    layzr.update().check().handlers(true);
+  });
+</script>
 </body>
 </html>

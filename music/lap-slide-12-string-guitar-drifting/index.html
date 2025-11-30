@@ -1739,5 +1739,13 @@ ai_insert_viewport_code ('ai-insert-1-87917286');
 if (document.readyState === 'complete' || (document.readyState !== 'loading' && !document.documentElement.doScroll)) ai_run_596028533245 (); else document.addEventListener ('DOMContentLoaded', ai_run_596028533245);
 ai_js_code = true;
 </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var layzr = new Layzr({
+      threshold: 50
+    });
+    layzr.update().check().handlers(true);
+  });
+</script>
 </body>
 </html>
