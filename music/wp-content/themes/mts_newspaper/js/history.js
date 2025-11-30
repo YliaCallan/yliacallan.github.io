@@ -1,1 +1,1 @@
-Failed to fetch version info for machoThemes/Newspaper.
+404: Not Found
