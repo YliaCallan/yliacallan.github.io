@@ -617,6 +617,23 @@ h6 { font-family: 'Roboto'; font-weight: normal; font-size: 16px; color: #ffffff
   }
 </style>
 
+<script src="/music/wp-content/themes/mts_newspaper/js/tagdiv_theme.min.js"></script>
+<script src="/music/wp-content/themes/mts_newspaper/js/tdAjaxInfinite.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded",()=>{if(navigator.share){document.querySelectorAll(".td-ss-main-content .entry-title").forEach(t=>t.insertAdjacentHTML("afterend",`<button onclick="navigator.share({title:document.title,url:location.href})" style="margin:20px 0;padding:12px 24px;background:#0d62f3;color:white;border:none;border-radius:8px;font-size:16px;cursor:pointer;box-shadow:0 4px 12px rgba(13,98,243,.3)">Share this track</button>`))}});
+  jQuery(function($){tdInfiniteScroll.init();});
+</script>
+<style>
+  @media(min-width:1024px){
+    .td-ss-main-sidebar > .td-ss-row > div,
+    .td-block-span12 .td-ss-row,
+    .td-related-span4 {min-height:calc(100vh - 340px)!important;display:flex;flex-direction:column}
+    .td-related-span4 .td_module_wrap {flex:1;display:flex;flex-direction:column}
+    .td-related-span4 .td-module-image {flex-shrink:0}
+    .td-related-span4 .entry-title {flex:1}
+  }
+</style>
+
 </head>
 <body id="blog" class="archive paged tag tag-ylia-callan-surf tag-302 paged-2 tag-paged-2 wp-theme-mts_newspaper wp-child-theme-newspapaer-child main">
 			<div class="clear" id="catcher" style="height: 50px;"></div>
@@ -1068,7 +1085,7 @@ h6 { font-family: 'Roboto'; font-weight: normal; font-size: 16px; color: #ffffff
                         "@type": "SiteNavigationElement",
                         "@id": "https://yliacallan.github.io/music#Ylia Callan's Musician Website Menu",
                         "name": "YouTube Music",
-                        "url": "https://music.youtube.com/channel/UCpA_L99T91Wgousjvq_jZDw"
+                        "url": "https://yliacallan.github.io/music/"
                     },
                     {
                         "@context": "http://schema.org/",
