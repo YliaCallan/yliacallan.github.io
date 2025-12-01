@@ -619,7 +619,12 @@ h6 { font-family: 'Roboto'; font-weight: normal; font-size: 16px; color: #ffffff
 async function doShare(){const a={title:document.title,url:location.href};if(navigator.share)try{await navigator.share(a);return}catch(e){if(e.name!=="AbortError")console.error(e)}try{await navigator.clipboard.writeText(location.href);alert("Link copied!")}catch(e){prompt("Copy this link:",location.href)}}
 document.querySelectorAll(".share-button").forEach(b=>b.onclick=doShare);
 </script>
-<!-- SHARE SCRIPT END --></head>
+<!--  SHARE SCRIPT -->
+<script>
+async function doShare(){try{if(navigator.share){await navigator.share({title:document.title,url:location.href});return}}catch(e){if(e.name==="AbortError")return}try{await navigator.clipboard.writeText(location.href);alert("Link copied!")}catch(e){prompt("Copy this link:",location.href)}}
+document.querySelectorAll(".share-button").forEach(b=>b.addEventListener("click",doShare));
+</script>
+<!-- END SHARE SCRIPT --><!-- SHARE SCRIPT END --></head>
 <body id="blog" class="wp-singular post-template-default single single-post postid-558 single-format-standard wp-theme-mts_newspaper wp-child-theme-newspapaer-child main">
 			<div class="clear" id="catcher" style="height: 50px;"></div>
 		<div id="sticky" class="sticky-nav" role="navigation">
@@ -688,8 +693,7 @@ document.querySelectorAll(".share-button").forEach(b=>b.onclick=doShare);
 																						<div class="post-single-content box mark-links entry-content">
 																								<header>
 													<h1 class="title single-title entry-title">Digital Afterlife Track 57 FingerStyle Instrumental Music Video 🎸 🎶</h1>
-<div style="text-align:center;margin:50px auto 30px"><button class="share-button" style="padding:14px 50px;background:#000;color:#d4af37;border:2px solid #d4af37;border-radius:16px;font-size:18px;font-weight:700;letter-spacing:1.5px;cursor:pointer;box-shadow:0 0 30px rgba(212,175,55,0.4);transition:all .4s" onmouseover="this.style.boxShadow="0 0 50px rgba(212,175,55,0.9)";this.style.transform="translateY(-4px)"" onmouseout="this.style.boxShadow="0 0 30px rgba(212,175,55,0.4)";this.style.transform=""">Share this track</button></div>																<div class="post-info">
-							</div>
+<div style="text-align:center;margin:50px auto 30px"><button class="share-button" style="padding:14px 50px;background:#000;color:#d4af37;border:2px solid #d4af37;border-radius:16px;font-size:18px;font-weight:700;letter-spacing:1.5px;cursor:pointer;box-shadow:0 0 30px rgba(212,175,55,0.4);transition:all .4s" onmouseover="this.style.boxShadow="0 0 50px rgba(212,175,55,0.9)";this.style.transform="translateY(-4px)"" onmouseout="this.style.boxShadow="0 0 30px rgba(212,175,55,0.4)";this.style.transform=""">Share this track</button></div>							</div>
 														</header>
 																								<div class="thecontent">
 													<div class="responsive-container"><div class="lyte-wrapper" title="Digital Afterlife Track 57 FingerStyle - Ylia Callan Guitar" style="width:853px;max-width:100%;margin:5px;"><div class="lyMe" id="WYL_ghtE5_n5NmM"><div id="lyte_ghtE5_n5NmM" data-src="https://i.ytimg.com/vi/ghtE5_n5NmM/hqdefault.jpg" class="pL"><div class="tC"><div class="tT">Digital Afterlife Track 57 FingerStyle - Ylia Callan Guitar</div></div><div class="play"></div><div class="ctrl"><div class="Lctrl"></div><div class="Rctrl"></div></div></div><noscript><a href="http://youtu.be/ghtE5_n5NmM" rel="nofollow"><img fetchpriority="high" decoding="async" src="http://i.ytimg.com/vi/ghtE5_n5NmM/0.jpg" alt="Digital Afterlife Track 57 FingerStyle - Ylia Callan Guitar" width="853" height="460"><br>Watch this video on YouTube</a></noscript></div></div><div class="lL" style="max-width:100%;width:853px;margin:5px;"></div></div>
