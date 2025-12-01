@@ -573,6 +573,7 @@ document.querySelectorAll(".share-button").forEach(b=>b.onclick=doShare);
 async function doShare(){try{if(navigator.share){await navigator.share({title:document.title,url:location.href});return}}catch(e){if(e.name==="AbortError")return}try{await navigator.clipboard.writeText(location.href);alert("Link copied!")}catch(e){prompt("Copy this link:",location.href)}}
 document.querySelectorAll(".share-button").forEach(b=>b.addEventListener("click",doShare));
 </script>
+<script src="/music/share-button.js"></script>
 <!-- END SHARE SCRIPT --><!-- SHARE SCRIPT END --></head>
 <body id="blog" class="archive tag tag-guitar-fingerpicking-acoustic tag-200 wp-theme-mts_newspaper wp-child-theme-newspapaer-child main">
 			<div class="clear" id="catcher" style="height: 50px;"></div>
