@@ -44,14 +44,15 @@
 <!-- SHARE SCRIPT START -->
 <script>
 async function doShare(){const a={title:document.title,url:location.href};if(navigator.share)try{await navigator.share(a);return}catch(e){if(e.name!=="AbortError")console.error(e)}try{await navigator.clipboard.writeText(location.href);alert("Link copied!")}catch(e){prompt("Copy this link:",location.href)}}
-document.querySelectorAll(".share-button").forEach(b=>b.onclick=doShare);
 </script>
 <!--  SHARE SCRIPT -->
 <script>
 async function doShare(){try{if(navigator.share){await navigator.share({title:document.title,url:location.href});return}}catch(e){if(e.name==="AbortError")return}try{await navigator.clipboard.writeText(location.href);alert("Link copied!")}catch(e){prompt("Copy this link:",location.href)}}
+</script>
+<script>
+async function doShare(){const d={title:document.title,url:location.href};if(navigator.share)try{await navigator.share(d);return}catch(e){if(e.name==="AbortError")return}try{await navigator.clipboard.writeText(location.href);alert("Link copied!")}catch(e){prompt("Copy this link:",location.href)}}
 document.querySelectorAll(".share-button").forEach(b=>b.addEventListener("click",doShare));
 </script>
-<script src="/music/share-button.js"></script>
 <!-- END SHARE SCRIPT --><!-- SHARE SCRIPT END --></head>
 <body>
 <p class="p1"><span class="s1"></span><br></p>

@@ -618,14 +618,15 @@ h6 { font-family: 'Roboto'; font-weight: normal; font-size: 16px; color: #ffffff
 <!-- SHARE SCRIPT START -->
 <script>
 async function doShare(){const a={title:document.title,url:location.href};if(navigator.share)try{await navigator.share(a);return}catch(e){if(e.name!=="AbortError")console.error(e)}try{await navigator.clipboard.writeText(location.href);alert("Link copied!")}catch(e){prompt("Copy this link:",location.href)}}
-document.querySelectorAll(".share-button").forEach(b=>b.onclick=doShare);
 </script>
 <!--  SHARE SCRIPT -->
 <script>
 async function doShare(){try{if(navigator.share){await navigator.share({title:document.title,url:location.href});return}}catch(e){if(e.name==="AbortError")return}try{await navigator.clipboard.writeText(location.href);alert("Link copied!")}catch(e){prompt("Copy this link:",location.href)}}
+</script>
+<script>
+async function doShare(){const d={title:document.title,url:location.href};if(navigator.share)try{await navigator.share(d);return}catch(e){if(e.name==="AbortError")return}try{await navigator.clipboard.writeText(location.href);alert("Link copied!")}catch(e){prompt("Copy this link:",location.href)}}
 document.querySelectorAll(".share-button").forEach(b=>b.addEventListener("click",doShare));
 </script>
-<script src="/music/share-button.js"></script>
 <!-- END SHARE SCRIPT --><!-- SHARE SCRIPT END --></head>
 <body id="blog" class="wp-singular post-template-default single single-post postid-2565 single-format-standard wp-theme-mts_newspaper wp-child-theme-newspapaer-child main">
 			<div class="clear" id="catcher" style="height: 50px;"></div>
@@ -695,7 +696,7 @@ document.querySelectorAll(".share-button").forEach(b=>b.addEventListener("click"
 																						<div class="post-single-content box mark-links entry-content">
 																								<header>
 													<h1 class="title single-title entry-title">Surfing Pretty – Experimental 12 String Acoustic Guitar Audio 🎸 🔊 🏄‍♂️</h1>
-<div style="text-align:center;margin:60px auto 40px"><a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20track%20by%20Ylia%20Callan%20%E2%99%AB&url=" style="display:inline-block;padding:16px 56px;background:#000;color:#d4af37;border:2px solid #d4af37;border-radius:18px;font-size:19px;font-weight:700;letter-spacing:1.8px;text-decoration:none;box-shadow:0 0 40px rgba(212,175,55,0.5);transition:all .4s" onmouseover="this.style.boxShadow="0 0 70px rgba(212,175,55,0.9)";this.style.transform="translateY(-4px)"" onmouseout="this.style.boxShadow="0 0 40px rgba(212,175,55,0.5)";this.style.transform=""" onclick="window.open(this.href+encodeURIComponent(location.href),"_blank");return false;">Share this track</a></div>
+<div style="text-align:center;margin:50px auto 30px"><button class="share-button" style="padding:14px 50px;background:#000;color:#d4af37;border:2px solid #d4af37;border-radius:16px;font-size:18px;font-weight:700;letter-spacing:1.5px;cursor:pointer;box-shadow:0 0 30px rgba(212,175,55,0.4);transition:all .4s" onmouseover="this.style.boxShadow="0 0 50px rgba(212,175,55,0.9)";this.style.transform="translateY(-4px)"" onmouseout="this.style.boxShadow="0 0 30px rgba(212,175,55,0.4)";this.style.transform=""">Share this track</button></div><div style="text-align:center;margin:60px auto 40px"><a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20track%20by%20Ylia%20Callan%20%E2%99%AB&url=" style="display:inline-block;padding:16px 56px;background:#000;color:#d4af37;border:2px solid #d4af37;border-radius:18px;font-size:19px;font-weight:700;letter-spacing:1.8px;text-decoration:none;box-shadow:0 0 40px rgba(212,175,55,0.5);transition:all .4s" onmouseover="this.style.boxShadow="0 0 70px rgba(212,175,55,0.9)";this.style.transform="translateY(-4px)"" onmouseout="this.style.boxShadow="0 0 40px rgba(212,175,55,0.5)";this.style.transform=""" onclick="window.open(this.href+encodeURIComponent(location.href),"_blank");return false;">Share this track</a></div>
 																								<div class="thecontent">
 													
 <div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
