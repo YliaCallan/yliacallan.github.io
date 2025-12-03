@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="google-site-verification" content="G7sdBwhy9OxObpVIhr5N8XRaGqi4EHsvU8UjCsAf-EU" />
+    <title>Ylia Callan's Books and Music | Musician • Researcher • Author</title>
+    <meta name="description" content="Australian author Ylia Callan blends science, consciousness, and cosmic storytelling in books that explore reality, mind, and the universe.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://yliacallan.github.io/">
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#000000">
+
+    <!-- ===== OPEN GRAPH (Facebook, LinkedIn, WhatsApp, iMessage) ===== -->
+    <meta property="og:title" content="Ylia Callan | Author • Researcher • Musician">
+    <meta property="og:description" content="Explore the work of Ylia Callan — author, researcher, musician and creator of physics based cosmic theories.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yliacallan.github.io/">
+    <meta property="og:site_name" content="Ylia Callan Author Website">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- IMPORTANT: Your OG image must be at least 1200×630 -->
+    <meta property="og:image" content="https://yliacallan.github.io/books/assets/images/og-image-ylia-callan-books.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ylia Callan | Author • Researcher • Musician">
+    <meta name="twitter:description" content="Explore the written and musical works of Ylia Callan.">
+    <meta name="twitter:image" content="https://yliacallan.github.io/books/assets/images/og-image-ylia-callan-books-v2.jpg">
+
+    <!-- Optional but recommended -->
+    <meta name="twitter:creator" content="@guitaralize">
+
+    <!-- ===== JSON-LD: PERSON ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ylia Callan",
+      "jobTitle": "Author, Researcher, Musician",
+      "url": "https://yliacallan.github.io/",
+      "image": "https://yliacallan.github.io/books/assets/images/ylia-callan-10-years-old.jpg",
+      "description": "Australian musician, independent writer and researcher bridging physics, philosophy and consciousness.",
+      "sameAs": [
+        "https://play.google.com/store/books/author?id=Ylia+Callan",
+        "https://books.apple.com/us/author/ylia-callan/id672856291",
+        "https://www.youtube.com/@ylia",
+        "https://www.instagram.com/yl12ia/",
+        "https://www.tiktok.com/guitaralize/",
+        "https://x.com/guitaralize/"
+      ]
+    }
+    </script>
+
+    <!-- ===== JSON-LD: LIST OF WORKS (if you populate it later) ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": []
+    }
+    </script>
+  
+    
+    <!-- Critical CSS (inlined) -->
+<style>
+:root{
+  --black:#000;--cyan:#00eaff;--cyan-glow:0 0 12px rgba(0,234,255,.5);--transition:all .35s cubic-bezier(.4,0,.2,1)
+}
+*,*::before,*::after{box-sizing:border-box}
+body,h1,h2,h3,p,ul{margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,sans-serif;background:var(--black);color:#e0faff;line-height:1.65;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--cyan);text-decoration:none;transition:var(--transition)}
+a:hover{opacity:.8}
+
+/* Header */
+header{position:sticky;top:0;background:rgba(0,0,0,.95);backdrop-filter:blur(12px);z-index:1000;border-bottom:1px solid rgba(0,234,255,.15)}
+nav{max-width:1400px;margin:0 auto;padding:1rem;display:flex;justify-content:space-between;align-items:center}
+.site-logo{font-size:24px;font-weight:900;color:#00e3ff;text-shadow:0 0 10px #00e3ff;cursor:pointer;transition:.2s}
+.site-logo:hover{opacity:.8;transform:scale(1.02)}
+.nav-links{display:flex;gap:2rem}
+.nav-links a{font-weight:500;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-6px;left:0;width:0;height:2px;background:var(--cyan);transition:var(--transition)}
+.nav-links a:hover::after{width:100%}
+.hamburger{display:none;cursor:pointer;width:28px;height:20px;position:relative}
+.hamburger span{display:block;height:3px;width:100%;background:var(--cyan);border-radius:2px;transition:var(--transition)}
+.hamburger span:nth-child(2){margin:5px 0}
+
+/* Hero */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem;background:radial-gradient(circle at center,rgba(0,234,255,.06),transparent 70%)}
+.hero h1{font-size:clamp(3rem,8vw,6rem);margin-bottom:.5rem;animation:glow 4s ease-in-out infinite alternate}
+.hero .subtitle{font-size:clamp(1.2rem,4vw,1.8rem);margin-bottom:2rem;opacity:.9}
+.hero .bio{max-width:800px;margin:0 auto;font-size:1.1rem;opacity:.85}
+
+/* Carousel – Featured Books */
+.carousel{padding:0rem 1rem;max-width:1400px;margin:0 auto}
+.carousel h2{text-align:center;font-size:2.5rem;margin-bottom:3rem;color:var(--cyan);text-shadow:var(--cyan-glow)}
+.swiper{padding:2rem 0}
+.swiper-slide{background:rgba(0,234,255,.03);border-radius:16px;overflow:hidden;transition:var(--transition);text-align:center}
+.swiper-slide:hover{transform:translateY(-12px);box-shadow:var(--cyan-glow)}
+.book-cover{width:100%;height:380px;object-fit:cover;border-bottom:3px solid var(--cyan)}
+.book-title{padding:1.5rem;font-size:1.4rem;color:var(--cyan)}
+
+/* iPhone Safari fix – no more stretched/tall covers */
+@media (max-width:414px) and (max-height:896px){
+  .book-cover{height:auto !important;max-height:380px !important;object-fit:contain !important;aspect-ratio:2/3 !important}
+  .swiper-slide{padding:1rem !important}
+}
+
+/* Gallery */
+.gallery{padding:0rem 1rem;max-width:1400px;margin:0 auto}
+.gallery h2{text-align:center;font-size:2.5rem;margin-bottom:3rem;color:var(--cyan);text-shadow:var(--cyan-glow)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:2rem}
+
+/* Book pages – related cards & metadata (used on both) */
+.related-card,.book-card{
+  overflow:hidden;border-radius:16px;background:rgba(0,234,255,.03);transition:var(--transition);
+  max-width:320px;margin:0 auto
+}
+.related-card:hover,.book-card:hover{transform:translateY(-8px);box-shadow:var(--cyan-glow)}
+.related-card img,.book-card img,#bookGrid img{
+  width:100% !important;height:auto !important;max-height:75vh !important;object-fit:contain !important;
+  background:#000 !important;padding:14px 10px 10px !important;box-sizing:border-box !important;
+  border-bottom:2px solid var(--cyan) !important;display:block !important
+}
+.metadata,.description,.themes{max-width:1000px;margin:4rem auto;padding:0 1rem}
+.metadata{background:rgba(0,234,255,.03);border:1px solid rgba(0,234,255,.2);border-radius:16px;padding:2rem}
+.metadata dl{display:grid;grid-template-columns:1fr 2fr;gap:1rem 1.5rem;align-items:start}
+.metadata dt{color:var(--cyan);font-weight:600}
+.metadata dd{margin:0}
+
+/* Footer & Contact */
+footer{padding:1rem 1rem;text-align:center;border-top:1px solid rgba(0,234,255,.15)}
+.socials{padding:1rem;max-width:1400px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:1.5rem}
+.socials h2{font-size:2.5rem;color:var(--cyan);text-shadow:var(--cyan-glow);order:-1}
+.footer-socials{padding:0 1rem 2rem;text-align:center;font-size:1.1rem}
+.social-row + .social-row { margin-top: 2rem; }
+.social-row{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin:1rem 0;width:100%}
+.social-row a{color:var(--cyan);font-weight:600;white-space:nowrap;transition:all .3s}
+.social-row a:hover{opacity:.8;text-shadow:var(--cyan-glow);transform:translateY(-2px)}
+@media(max-width:480px){.social-row{gap:1.5rem;font-size:1rem}}
+
+/* Copy Link */
+.copy-link-row{display:flex;justify-content:center;position:relative;margin:1rem 0}
+#copyFeedback{position:absolute;left:50%;transform:translateX(-50%);bottom:-28px;color:var(--cyan);font-weight:600;opacity:0;transition:opacity .4s;pointer-events:none}
+.copy-link{background:transparent;border:2px solid var(--cyan);color:var(--cyan);padding:.6rem 1.4rem;border-radius:50px;font-weight:600;cursor:pointer;transition:all .3s;font-size:.95rem}
+.copy-link:hover{background:var(--cyan);color:#000;box-shadow:0 0 20px rgba(0,234,255,.5)}
+
+/* Share & PWA buttons */
+.share-button{background:#00e3ff;color:#000;padding:12px 20px;font-size:18px;font-weight:600;border:none;border-radius:10px;cursor:pointer;margin:20px auto 0;display:block;width:100%;max-width:280px;box-shadow:0 0 10px rgba(0,227,255,.6);transition:.2s}
+.share-button:hover{background:#0ff;transform:translateY(-2px)}
+.nav-app-btn,.footer-app-btn{background:none;border:none;padding:0;margin:0;color:#00eaff;font-weight:600;font-size:inherit;cursor:pointer;display:inline-block}
+.nav-app-btn:hover,.footer-app-btn:hover{opacity:.8}
+
+/* Banner image on book pages */
+.book-cover-wrapper{display:flex;justify-content:center;align-items:center;width:100%;margin:1.5rem 0;padding:0 1rem}
+.book-cover-large{width:100%;max-width:900px;height:auto;border-radius:16px;box-shadow:0 10px 30px rgba(0,234,255,.25);border:2px solid rgba(0,234,255,.3);transition:var(--transition)}
+.book-cover-large:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,234,255,.4);border-color:var(--cyan)}
+@media(max-width:768px){.book-cover-wrapper{margin:1rem 0;padding:0 .5rem}.book-cover-large{border-radius:12px}}
+
+/* Mobile menu */
+@media(max-width:768px){
+  .nav-links{position:fixed;top:70px;left:-100%;width:100%;height:calc(100vh-70px);background:rgba(0,0,0,.98);flex-direction:column;align-items:center;padding-top:4rem;transition:left .4s}
+  .nav-links.active{left:0}
+  .hamburger{display:block}
+  .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,6px)}
+  .hamburger.active span:nth-child(2){opacity:0}
+  .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-8px)}
+}
+
+/* Glow animation */
+@keyframes glow{from{text-shadow:0 0 12px rgba(0,234,255,.5)}to{text-shadow:0 0 20px rgba(0,234,255,.8),0 0 30px rgba(0,234,255,.4)}}
+h1,h2{animation:glow 4s ease-in-out infinite alternate}
+
+
+/* Fix all book covers – perfect ratio, no more Lighthouse warnings */
+img[width="400"][alt*="by Ylia Callan"],
+.book-cover, .related-card img, .book-card img {
+  height: auto !important;
+}
+
+
+
+/* ============================================= */
+/* FINAL TOUCH TARGET FIX – 100% Lighthouse clean */
+/* ============================================= */
+
+.swiper-pagination-bullet {
+  width: 44px !important;     /* actual element is now 44×44 */
+  height: 44px !important;    /* Google requires minimum 44×44 */
+  background: rgba(0,234,255,0.25) !important;
+  border-radius: 50%;
+  opacity: 1 !important;
+  margin: 0 4px !important;   /* small gap because the element itself is huge now */
+  transition: all 0.3s ease;
+  display: inline-flex !important;   /* important! */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tiny visible dot inside the huge invisible one */
+.swiper-pagination-bullet::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #00eaff;
+  border-radius: 50%;
+  display: block;
+}
+
+.swiper-pagination-bullet-active::before {
+  background: #00eaff;
+  box-shadow: 0 0 16px #00eaff;
+  transform: scale(1.4);
+}
+
+/* Auto-growing mobile menu – no more fixed height issues */
+@media(max-width:768px) {
+    .nav-links {
+        height: auto !important;
+        min-height: calc(100vh - 70px);
+        padding-top: .5rem;
+        padding-bottom: 3rem;
+    }
+}
+
+/* Day Night Mode */
+:root {
+  --black: #000000;
+  --cyan: #00eaff;
+  --cyan-glow: 0 0 12px rgba(0,234,255,0.5);
+  --transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+  --bg: #000000;  /* Default dark */
+  --text: #e0faff;
+  --card-bg: rgba(0,234,255,0.03);
+}
+
+[data-theme="light"] {
+  --bg: #f8faff;
+  --text: #000;
+  --card-bg: rgba(0,234,255,0.08);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.6s, color 0.6s;
+}
+
+.metadata, .viewer-container, .related-card {
+  background: var(--card-bg);
+  transition: all 0.6s;
+}
+
+.swiper-slide h3, .swiper-slide .book-title, .swiper-slide .slide-title {
+    position: relative !important;
+    z-index: 10 !important;
+    padding-bottom: 0 !important;
+}
+.swiper-pagination { bottom: 40px !important; }
+
+    
+    /* Fix carousel pagination overlap on iPhone – titles fully visible */
+@media (max-width: 414px) and (max-height: 896px) { /* Targets iPhone portrait */
+  .swiper-slide {
+    padding-bottom: 0px !important; /* Extra space for bullets below title */
+  }
+  
+  .book-title {
+    margin-bottom: 20px !important; /* Pulls title up away from bullets */
+    padding-bottom: 0 !important;
+    position: relative;
+    z-index: 2; /* Puts title above bullets if needed */
+  }
+  
+  .swiper-pagination {
+    bottom: 8px !important; /* Moves bullets down from slide edge */
+  }
+}
+
+/* Hide pagination dots on mobile – clean & beautiful */
+@media (max-width: 768px) {
+  .swiper-pagination {
+    display: none !important;
+  }
+}
+
+/* FINAL FIX – Audiobooks buttons on homepage – 100% works */
+#audiobooks .social-row {
+  all: unset !important;               /* ← kills the old .social-row styling */
+  display: flex !important;
+  justify-content: center !important;
+  gap: 2rem !important;
+  flex-wrap: wrap !important;
+  margin: 2rem 0 !important;
+}
+
+#audiobooks .social-row a {
+  all: unset !important;               /* ← completely resets the killer rule */
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 58px !important;
+  padding: 1rem 2.2rem !important;
+  background: rgba(0,234,255,0.12) !important;
+  border: 2px solid var(--cyan) !important;
+  border-radius: 16px !important;
+  color: var(--cyan) !important;
+  font-weight: 700 !important;
+  font-size: 1.15rem !important;
+  min-width: 240px !important;
+  text-align: center !important;
+  cursor: pointer !important;
+  transition: var(--transition) !important;
+  box-shadow: 0 4px 15px rgba(0,234,255,0.2) !important;
+}
+
+#audiobooks .social-row a:hover {
+  background: var(--cyan) !important;
+  color: #000 !important;
+  transform: translateY(-6px) !important;
+  box-shadow: 0 10px 30px rgba(0,234,255,0.5) !important;
+}
+
+/* Audiobooks buttons on homepage → black text in day mode, cyan in night */
+[data-theme="light"] #audiobooks .social-row a {
+  color: #000 !important;           /* black text in day mode */
+  background: rgba(0,234,255,0.18) !important;  /* slightly more visible bg */
+  border-color: #00c8ff !important;
+}
+
+[data-theme="light"] #audiobooks .social-row a:hover {
+  color: #000 !important;           /* stays black on hover */
+  background: #00eaff !important;   /* full cyan fill on hover */
+  box-shadow: 0 10px 30px rgba(0,234,255,0.5) !important;
+}
+    
+/* DAY/NIGHT MODE — NEW VERSION: black header + cyan text in BOTH modes */
+[data-theme="light"] {
+  --bg: #f8faff;
+  --text: #000;
+  --card-bg: rgba(0,234,255,0.08);
+}
+
+/* Keep header & mobile menu BLACK with cyan text in light mode */
+[data-theme="light"] header,
+[data-theme="light"] .nav-links {
+  background: rgba(0,0,0,0.95) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,234,255,.15);
+}
+
+/* Cyan glowing text in header/menu (both modes) */
+header a,
+header button,
+.nav-links a,
+.nav-links button,
+.hamburger span {
+  color: var(--cyan) !important;
+  text-shadow: var(--cyan-glow) !important;
+}
+
+/* Hamburger stays cyan */
+.hamburger span,
+[data-theme="light"] .hamburger span {
+  background: var(--cyan) !important;
+}
+
+/* Hover glow stays cyan */
+header a:hover,
+.nav-links a:hover,
+.nav-links button:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+  text-shadow: 0 0 20px rgba(0,234,255,0.8) !important;
+}
+
+/* Only the main page content gets dark text in light mode */
+[data-theme="light"] body { background: var(--bg); color: var(--text); }
+[data-theme="light"] h1, [data-theme="light"] h2, [data-theme="light"] h3,
+[data-theme="light"] p, [data-theme="light"] dt, [data-theme="light"] dd,
+[data-theme="light"] .book-title {
+  color: #001122 !important;
+  text-shadow: none !important;
+}
+[data-theme="light"] a:not(header a):not(.nav-links a),
+[data-theme="light"] .btn,
+[data-theme="light"] .social-row a,
+[data-theme="light"] .install-trigger,
+[data-theme="light"] .copy-link {
+  color: #002233 !important;
+}
+[data-theme="light"] a:hover:not(header a):not(.nav-links a),
+[data-theme="light"] .btn:hover {
+  color: #00c8ff !important;
+  text-shadow: 0 0 12px rgba(0,200,255,0.4) !important;
+}
+    
+/* PWA install popup – identical in day & night mode (black bg + cyan/grey text) */
+#installPopup,
+.install-prompt,
+.pwa-install-banner,
+#iosPrompt {
+  background: rgba(0,0,0,0.94) !important;
+  border: 2px solid #00eaff !important;
+  border-radius: 16px !important;
+  padding: 1.6rem 1.4rem !important;
+  backdrop-filter: blur(12px);
+}
+
+/* All text inside = cyan (title) */
+#installPopup *,
+.install-prompt *,
+.pwa-install-banner *,
+#iosPrompt * {
+  color: #00eaff !important;
+  text-shadow: 0 0 12px rgba(0,234,255,0.6) !important;
+}
+
+/* Subtitle only = grey */
+#installPopup p,
+#installPopup small,
+.install-prompt p,
+.install-prompt small,
+#iosPrompt p,
+#iosPrompt small {
+  color: #bbbbbb !important;
+  text-shadow: none !important;
+}
+
+/* Fix: make the "Got it" / "Close" button neutral again */
+#installPopup button,
+.install-prompt button,
+#iosPrompt button,
+#iosPrompt .close-btn {
+  color: #ffffff !important;           /* clean white */
+  background: rgba(255,255,255,0.12) !important;
+  text-shadow: none !important;
+  border: 1px solid rgba(255,255,255,0.3) !important;
+  border-radius: 12px !important;
+  padding: 0.6rem 1.4rem !important;
+  font-weight: 600 !important;
+  margin-top: 1rem !important;
+}
+
+#installPopup button:hover,
+#iosPrompt button:hover {
+  background: rgba(255,255,255,0.22) !important;
+}
+  
+/* Mobile Friendly Videos */
+  .video-block {
+    max-width: 752px;
+    margin: 40px auto;
+    text-align: center;
+  }
+
+  .video-block video {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  .video-caption {
+    margin-top: 12px;
+    font-size: 18px;
+    color: #00ffff;
+  }
+  
+  
+    
+    
+</style>
+
+    <!-- Swiper.js (lightweight) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
+    <!-- PWA Core – ROOT ONLY – FINAL VERSION -->
+
+<link rel="manifest" href="/manifest.json?v=2">
+<script src="/install-pwa.js?v=10" defer></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js?v=10')
+      .then(() => console.log('PWA: SW registered'))
+      .catch(err => console.error('PWA: SW failed', err));
+  }
+</script>
+
+
+
+</head>
+
+
+<body>
+
+    <header>
+        <nav>
+            <div class="site-logo" id="logoShare">Ylia Callan</div>
+            <div class="nav-links" id="navLinks">
+                <a href="https://yliacallan.github.io/">Home</a>
+                <a href="#books">Books</a>
+                <a href="#catalogue">Catalogue</a>
+                <a href="#audiobooks">Audiobooks</a>
+                <a href="#socials">Contact</a>
+                <a href="/music/">Music🎼</a>
+                <button type="button" id="themeToggle" onclick="toggleTheme()" 
+        style="background:none; border:none; color:var(--cyan); font-weight:600; cursor:pointer; padding:0.5rem;">
+  Dark Mode🌙 
+</button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div>
+                <h1>♾️Home♾️</h1>
+  <div class="book-cover-wrapper">
+      <img 
+  src="/books/assets/images/ylia-callan-book-banner-800w-min.png"
+  alt="Ylia Callan's author website banner – Infinity Spheres"
+  class="book-cover-large"
+  width="800"
+  height="267"
+  fetchpriority="high"
+  loading="eager">
+  </div>
+                <p class="subtitle">Musician • Author</p>
+                <p class="bio">
+                    Ylia Callan is an Australian musician, independent writer and researcher whose work bridges physics, philosophy and consciousness.<br><br>
+                    Callan explores how cosmic processes, light, structure, gravity and information shape life, culture and the evolution of intelligence. His books combine scientific curiosity with accessible, reflective narrative, offering readers a pathway to rethink the relationship between the universe and human awareness.
+                </p>
+            </div>
+        </section>
+
+<!-- Video 1 – Musician & Author Intro -->
+<div class="video-block">
+  <video 
+    autoplay
+    muted
+    playsinline
+    preload="auto"
+    poster="/books/assets/videos/ylia-callan-musician-author-intro-video-poster.png">
+    <source src="/books/assets/videos/ylia-callan-musician-author-intro-video.mp4" type="video/mp4">
+  </video>
+  <p class="video-caption"></p>
+</div>
+
+        <section class="carousel" id="books">
+            <h2>♾️Books♾️</h2>
+            <div class="swiper featured-swiper">
+                <div class="swiper-wrapper" id="featuredSlides"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+<section style="max-width:900px;margin:0rem auto;padding:0 1.5rem;text-align:center;">
+  <h3 style="text-align:center;margin:2rem 0 1.5rem;font-size:2rem;font-weight:600;color:var(--cyan);text-shadow:var(--cyan-glow);">
+    Consciousness, Cosmology & Reality
+  </h3>
+
+  <p style="font-size:1.15rem;line-height:1.78;opacity:0.92;margin-bottom:1.4rem;">
+    Callan’s work dives into the deepest questions of consciousness, physics, and the origins of existence. 
+    Books such as <em>The Fractal Mind</em>, <em>Dreaming the Universe</em>, <em>The Music of Reality</em>, 
+    <em>The Breath of Reality</em>, <em>The Stellar Mind</em>, and <em>Seeds of the Living Cosmos</em> explore 
+    how awareness, matter and information shape the unfolding universe.
+  </p>
+
+  <p style="font-size:1.15rem;line-height:1.78;opacity:0.92;margin-bottom:1.4rem;">
+    Through titles like <em>Unified Relational Theory of Time</em>, <em>Rethinking Time</em>, 
+    <em>The Dual Universe</em>, <em>The Sun Engine</em>, <em>The Reflective Cosmos</em>, 
+    <em>Cosmic Frontiers</em>, and <em>Between Light and Infinity</em>, Ylia presents bold theoretical 
+    frameworks for understanding space, time, energy and the hidden architecture of reality.
+  </p>
+
+  <p style="font-size:1.15rem;line-height:1.78;opacity:0.92;">
+    Together, these books form a cohesive exploration of how the universe thinks, evolves 
+    and expresses itself through consciousness.
+  </p>
+</section>
+
+<!-- Video 2 – Consciousness & Cosmology -->
+<div class="video-block">
+  <video 
+    autoplay
+    muted
+    playsinline
+    preload="auto"
+    poster="/books/assets/videos/ylia-callan-consciousness-cosmology-reality-video-poster.png">
+    <source src="/books/assets/videos/ylia-callan-consciousness-cosmology-reality-video.mp4" type="video/mp4">
+  </video>
+  <p class="video-caption"></p>
+</div>
+
+        <!-- Audiobooks – FIXED: big glowing h2 + real buttons -->
+<section id="audiobooks" style="margin:5rem 0; text-align:center;">
+  <h2 style="font-size:2.5rem; color:var(--cyan); text-shadow:var(--cyan-glow); 
+             margin-bottom:2.5rem; animation:glow 4s ease-in-out infinite alternate;">
+    Audiobooks🎧
+  </h2>
+
+  <!-- Changed from class="actions" → class="social-row" so CSS kicks in -->
+  <div class="social-row" style="justify-content:center; gap:2.5rem; flex-wrap:wrap;">
+    <a href="https://play.google.com/store/books/collection/cluster?gsr=ShmCARYKEgoOQVFBQUFFQ3FlRm80NE0QERAE:S:ANO1ljLItnQ"
+       target="_blank" rel="noopener">
+      Google Play 📚
+    </a>
+    <a href="https://books.apple.com/gb/author/ylia-callan/id672856291?see-all=audio-books"
+       target="_blank" rel="noopener">
+      Apple Books 📖
+    </a>
+  </div>
+</section>
+            <!-- SOCIAL SHARE BAR – NOW PERFECT -->
+    <button class="share-button">Share</button>
+
+        <section class="gallery" id="catalogue">
+            <h2>♾️Catalogue♾️</h2>
+            <div class="grid" id="bookGrid"></div>
+        </section>
+        
+<!-- Video 3 – Civilisation & Human Evolution -->
+<div class="video-block">
+  <video 
+    autoplay
+    muted
+    playsinline
+    preload="auto"
+    poster="/books/assets/videos/ylia-callan-civilisation-history-human-evolution-video-poster.png">
+    <source src="/books/assets/videos/ylia-callan-civilisation-history-human-evolution-video.mp4" type="video/mp4">
+  </video>
+  <p class="video-caption"></p>
+</div>
+        
+<section style="max-width:900px;margin:0rem auto;padding:0 1.5rem;text-align:center;">
+  <h3 style="text-align:center;margin:2rem 0 1.5rem;font-size:2rem;font-weight:600;color:var(--cyan);text-shadow:var(--cyan-glow);">
+    Civilisation, History & Human Evolution
+  </h3>
+  
+  <p style="font-size:1.15rem;line-height:1.78;opacity:0.92;margin-bottom:1.4rem;">
+    Ylia also explores the long arcs of civilisation and the patterns that guide human society. 
+    Works such as <em>Money – The Shaper of Civilisation</em>, <em>Songlines to Cities</em>, 
+    <em>Empire of Rum</em> and <em>Then and Now</em> reveal how culture, power and technology 
+    have evolved over millennia.
+  </p>
+  
+  <p style="font-size:1.15rem;line-height:1.78;opacity:0.92;margin-bottom:1.4rem;">
+    Books like <em>3.8 Billion Year Story</em>, <em>Beyond Growth</em>, 
+    <em>Firing the Cloud</em> and <em>The Great Reorganisation</em> examine the forces driving 
+    transformation today — from economics and ecology to information systems and global change.
+  </p>
+  
+  <p style="font-size:1.15rem;line-height:1.78;opacity:0.92;">
+    Together, this collection offers a wide-angle view of humanity: where we came from, 
+    how we organise ourselves and the futures we are moving toward.
+  </p>
+</section>
+
+    </main>
+<footer>
+  <!-- Banner Image – centered below h2 -->
+  <div class="book-cover-wrapper">     
+      <img 
+  src="/books/assets/images/ylia-callan-book-banner-800w-min.png"
+  alt="Ylia Callan's author website banner – Infinity Spheres"
+  class="book-cover-large"
+  width="800"
+  height="267"
+  fetchpriority="high"
+  loading="eager">
+  </div>
+  <!-- Share button (if you want it here) -->
+  <button class="share-button" style="display: block; margin: 2rem auto;">Share</button>
+
+<section style="max-width:900px;margin:0rem auto;padding:0 1.5rem;text-align:center;">
+  <h3 style="text-align:center;margin:2rem 0 1.5rem;font-size:2rem;font-weight:600;color:var(--cyan);text-shadow:var(--cyan-glow);">
+    Health, Stress & Human Potential
+  </h3>
+
+  <p style="font-size:1.15rem;line-height:1.78;opacity:0.92;margin-bottom:1.4rem;">
+    Health and human potential are recurring themes throughout many of Ylia’s writings. 
+    In books such as <em>Whole Health</em>, <em>Evolution of Stress</em> and <em>The Reflective Mind</em>, 
+    he examines how biology, psychology, environment and modern living interact to shape wellbeing.
+  </p>
+
+  <p style="font-size:1.15rem;line-height:1.78;opacity:0.92;margin-bottom:1.4rem;">
+    These works explore the body’s natural rhythms, the roots of chronic stress, and the ways 
+    consciousness influences healing and resilience.
+  </p>
+
+  <p style="font-size:1.15rem;line-height:1.78;opacity:0.92;">
+    Ylia’s approach blends scientific clarity with practical insight, offering readers a grounded path 
+    toward physical balance, mental clarity and long-term vitality.
+  </p>
+</section>
+
+<!-- Video 4 – Physics, Philosophy & Consciousness -->
+<div class="video-block">
+  <video 
+    autoplay
+    muted
+    playsinline
+    preload="auto"
+    poster="/books/assets/videos/ylia-callan-physics-philosophy-consciousness-video-poster.png">
+    <source src="/books/assets/videos/ylia-callan-physics-philosophy-consciousness-video.mp4" type="video/mp4">
+  </video>
+  <p class="video-caption"></p>
+</div>
+
+  <!-- Contact Section – h2 perfectly centered -->
+  <section class="socials" id="socials">
+    <h2 style="text-align: center; margin: 3rem 0 2rem; width: 100%;">♾️Contact♾️</h2>
+  </section>
+  <!-- Social Links – centered below banner -->
+  <div class="footer-socials">
+    <!-- LINE 1 – Main socials -->
+    <div class="social-row">
+      <a href="https://www.youtube.com/@ylia" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.linkedin.com/in/ylia-callan-8b889976/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/yl12ia/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/guitaralize/" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://x.com/guitaralize/" target="_blank" rel="noopener">X (Twitter)</a>
+    </div>
+
+    <!-- LINE 2 – Music + App + Install + Home -->
+    <div class="social-row">
+      <a href="/music/">Music 🎼</a>
+      <button type="button" class="install-trigger nav-app-btn" onclick="triggerInstall()">App 📱</button>
+      <a href="https://yliacallan.github.io/">Home ♾️</a>
+    </div>
+
+    <!-- LINE 3 – Book stores -->
+    <div class="social-row">
+      <a href="https://play.google.com/store/books/author?id=Ylia+Callan" target="_blank" rel="noopener">Google Play</a>
+      <a href="https://books.apple.com/us/author/ylia-callan/id672856291" target="_blank" rel="noopener">Apple Books</a>
+    </div>
+
+    <!-- Copy Link Row – centered -->
+    <div class="social-row copy-link-row">
+      <button id="copyLinkBtn" class="copy-link">Copy Link 🔗</button>
+      <span id="copyFeedback">Copied!</span>
+    </div>
+
+    <p>&copy; <span id="year">2025</span> Ylia Callan. All rights reserved.</p>
+  </div>
+</footer>
+
+    <!-- Floating Install Button — ADD ID BACK -->
+<button id="installButton" class="install-trigger" onclick="triggerInstall()"
+        style="display:none; position:fixed; bottom:20px; right:20px; background:#00eaff; color:#000; border:none; padding:14px 26px; border-radius:50px; font-weight:700; font-size:1rem; cursor:pointer; box-shadow:0 0 24px rgba(0,234,255,0.7); z-index:9998;">
+  Install App
+</button>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Main JS -->
+    <script defer>
+        // Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Books data (replace with real covers & links when ready)
+        const books = [
+            { title: "Whole Health", cover: "https://yliacallan.github.io/books/assets/covers/Whole-Health-A-Complete-Guide-to-Body-Mind-and-Longevity-by-Ylia-Callan-400x600.png", url: "https://yliacallan.github.io/books/Whole-Health-A-Complete-Guide-to-Body-Mind-and-Longevity.html" },
+            { title: "The Breath of Reality", cover: "https://yliacallan.github.io/books/assets/covers/The-Breath-of-Reality-A-Scientific-and-Spiritual-Guide-to-Breathing-Meditation-and-Manifestation-Cover-400x600.jpg", url: "https://yliacallan.github.io/books/The-Breath-of-Reality-A-Scientific-and-Spiritual-Guide-to-Breathing-Meditation-and-Manifestation.html" },
+            { title: "The Sacred Alphabet", cover: "https://yliacallan.github.io/books/assets/covers/The-Sacred-Alphabet-400x600.png", url: "/books/The-Sacred-Alphabet-Language-Meaning-and-Mind.html" },
+            { title: "Money - The Shaper of Civilisation", cover: "https://yliacallan.github.io/books/assets/covers/Money-The-Shaper-of-Civilisation-400x600.png", url: "/books/Money-The-Shaper-of-Civilisation.html" },
+            { title: "Wings of Knowing", cover: "https://yliacallan.github.io/books/assets/covers/Wings-of-Knowing-400x600.png", url: "/books/Wings-of-Knowing-How-Birds-Reflect-a-Deeper-Intelligence-in-Nature.html" },
+            { title: "Alien UFOs and the Heliosphere", cover: "https://yliacallan.github.io/books/assets/covers/Alien-UFOs-and-the-Heliosphere-400x600.png", url: "/books/Alien-UFOs-and-the-Heliosphere-Decoding-the-Cosmic-Puzzle-of-Alien-Life-and-Our-Place-Among-the-Stars.html" },
+            { title: "The Reflective Cosmos", cover: "https://yliacallan.github.io/books/assets/covers/The-Reflective-Cosmos-400x600.png", url: "/books/The-Reflective-Cosmos-A-Unified-Theory-of-Space-Life-and-Mind.html" },
+            { title: "The Dual Universe", cover: "https://yliacallan.github.io/books/assets/covers/The-Dual-Universe-400x600.png", url: "/books/The-Dual-Universe-Creation-and-Recycling-Through-Stars-and-Black-Holes.html" },
+            { title: "The Sun Engine", cover: "https://yliacallan.github.io/books/assets/covers/The-Sun-Engine-400x600.png", url: "/books/The-Sun-Engine-The-Story-of-Life-Light-and-Cosmic-Cycles-of-Creation.html" },
+            { title: "The Story of Space", cover: "https://yliacallan.github.io/books/assets/covers/The-Story-of-Space-400x600.png", url: "/books/The-Story-of-Space-From-Spirit-Realms-to-Spacetime-and-Beyond.html" }, 
+            { title: "Divine Intelligence", cover: "https://yliacallan.github.io/books/assets/covers/Divine-Intelligence-400x600.png", url: "/books/Divine-Intelligence-Is-Life-Woven-Into-the-Fabric-of-the-Universe.html" }, 
+            { title: "3.8 Billion Year Story", cover: "https://yliacallan.github.io/books/assets/covers/3.8-Billion-Year-Story-400x600.png", url: "/books/The-3.8-Billion-Year-Story-of-Life-and-Evolution.html" }, 
+            { title: "The Stellar Mind", cover: "https://yliacallan.github.io/books/assets/covers/The-Stellar-Mind-400x600.png", url: "/books/The-Stellar-Mind-The-Fundamental-Intelligence-of-the-Universe.html" }, 
+            { title: "Seeds of the Living Cosmos", cover: "https://yliacallan.github.io/books/assets/covers/Seeds-of-the-Living-Cosmos-400x600.png", url: "/books/Seeds-of-the-Living-Cosmos-How-Life-Shaped-the-Universe.html" },                                                                       
+            { title: "Unified Relational Theory of Time", cover: "https://yliacallan.github.io/books/assets/covers/Unified-Relational-Theory-of-Time-400x600.png", url: "/books/Unified-Relational-Theory-of-Time.html" }, 
+            { title: "Rethinking Time", cover: "https://yliacallan.github.io/books/assets/covers/Rethinking-Time-400x600.png", url: "/books/Rethinking-Time-Consciousness-and-Creation-Across-Planes-of-Reality.html" }, 
+            { title: "Dreaming the Universe", cover: "https://yliacallan.github.io/books/assets/covers/Dreaming-the-Universe-400x600.png", url: "/books/Dreaming-the-Universe-Exploring-the-Hidden-Secrets-of-Sleep.html" }, 
+            { title: "The Fractal Mind", cover: "https://yliacallan.github.io/books/assets/covers/The-Fractal-Mind-400x600.png", url: "/books/The-Fractal-Mind-How-Ancient-Wisdom-Predicted-Modern-Science.html" }, 
+            { title: "Consciousness", cover: "https://yliacallan.github.io/books/assets/covers/Consciousness-400x600.png", url: "/books/Consciousness-Where-Did-It-Come-From-and-Where-Is-It-Going.html" }, 
+            { title: "The Music of Reality", cover: "https://yliacallan.github.io/books/assets/covers/The-Music-of-Reality-400x600.png", url: "/books/The-Music-of-Reality-Frequency-Vibration-and-the-Hidden-Architecture-of-the-Universe.html" }, 
+            { title: "The Reflective Pulse", cover: "https://yliacallan.github.io/books/assets/covers/The-Reflective-Pulse-400x600.png", url: "/books/The-Reflective-Pulse-The-Mirror-of-Emotions.html" }, 
+            { title: "Return to the Medium", cover: "https://yliacallan.github.io/books/assets/covers/Return-to-the-Medium-400x600.png", url: "/books/Return-to-the-Medium-Science-Spirit-and-the-Mystery-of-Afterlife.html" }, 
+            { title: "Empire of Rum", cover: "https://yliacallan.github.io/books/assets/covers/Empire-of-Rum-400x600.png", url: "/books/Empire-of-Rum-The-Unofficial-Economy-of-Early-Australia.html" }, 
+            { title: "Songlines to Cities", cover: "https://yliacallan.github.io/books/assets/covers/Songlines-to-Cities-400x600.png", url: "/books/Songlines-to-Cities-The-History-of-Australia.html" }, 
+            { title: "From Penal Colony to Paper Justice", cover: "https://yliacallan.github.io/books/assets/covers/From-Penal-Colony-to-Paper-Justice-400x600.png", url: "/books/From-Penal-Colony-to-Paper-Justice.html" }, 
+            { title: "History of Ideology", cover: "https://yliacallan.github.io/books/assets/covers/History-of-Ideology-400x600.png", url: "/books/History-of-Ideology-Beyond-AI-Capitalism.html" }, 
+            { title: "The Sky Messengers", cover: "https://yliacallan.github.io/books/assets/covers/The-Sky-Messengers-400x600.png", url: "/books/The-Sky-Messengers-A-Global-Guide-to-the-Spiritual-Meaning-of-Birds.html" }, 
+            { title: "100 Years of Truth", cover: "https://yliacallan.github.io/books/assets/covers/100-Years-of-Truth-400x600.png", url: "/books/100-Years-of-Truth-A-Century-Through-Technology-and-Society.html" }, 
+            { title: "Beyond the Stars", cover: "https://yliacallan.github.io/books/assets/covers/Beyond-the-Stars-400x600.png", url: "/books/Beyond-the-Stars-Astronomy-in-the-21st-Century.html" }, 
+            { title: "Evolution of Stress", cover: "https://yliacallan.github.io/books/assets/covers/Evolution-of-Stress-400x600.png", url: "/books/Evolution-of-Stress-A-Journey-Through-Human-Stress-and-the-Art-of-Mastering-It.html" }, 
+            { title: "Firing the Cloud", cover: "https://yliacallan.github.io/books/assets/covers/Firing-the-Cloud-400x600.png", url: "/books/Firing-the-Cloud-How-Humanity-Survived-and-Accelerated.html" }, 
+            { title: "Then and Now", cover: "https://yliacallan.github.io/books/assets/covers/Then-and-Now-400x600.png", url: "/books/Then-and-Now-A-Century-of-Global-Progress.html" }, 
+            { title: "The Reflective Mind", cover: "https://yliacallan.github.io/books/assets/covers/The-Reflective-Mind-400x600.png", url: "/books/The-Reflective-Mind-A-Mirror-of-Consciousness.html" }, 
+            { title: "Beyond Growth", cover: "https://yliacallan.github.io/books/assets/covers/Beyond-Growth-400x600.png", url: "/books/Beyond-Growth-A-Global-Blueprint-for-the-21st-Century.html" }, 
+            { title: "Cosmic Frontiers", cover: "https://yliacallan.github.io/books/assets/covers/Cosmic-Frontiers-400x600.png", url: "/books/Cosmic-Frontiers-The-New-Questions-of-21st-Century-Astronomy.html" }, 
+            { title: "The Great Reorganisation", cover: "https://yliacallan.github.io/books/assets/covers/The-Great-Reorganisation-400x600.png", url: "/books/The-Great-Reorganisation-Evolving-Beyond-Conflict-to-Building-a-Living-Future.html" }, 
+            { title: "Clarity Codes", cover: "https://yliacallan.github.io/books/assets/covers/Clarity-Codes-400x600.png", url: "/books/Clarity-Codes-Manual-for-Being-Human.html" }, 
+            { title: "Infinity", cover: "https://yliacallan.github.io/books/assets/covers/Infinity-400x600.png", url: "/books/Infinity-Why-Nothing-Ends-and-Everything-Is-Possible.html" }, 
+            { title: "Between Light and Infinity", cover: "https://yliacallan.github.io/books/assets/covers/Between-Light-and-Infinity-400x600.png", url: "/books/Between-Light-and-Infinity-Theory-of-Everything.html" } 
+        ];
+
+        // Randomize order on each load
+        function shuffle(array) {
+            return array.sort(() => Math.random() - 0.5);
+        }
+
+        const shuffledBooks = shuffle([...books]);
+
+        // Populate featured carousel (first 4)
+        const featuredSlides = document.getElementById('featuredSlides');
+        shuffledBooks.slice(0, 9).forEach(book => {
+            featuredSlides.innerHTML += `
+                <div class="swiper-slide">
+                    <a href="${book.url}">
+                        <img src="${book.cover}" alt="${book.title} by Ylia Callan" loading="lazy" width="400" height="600">
+                        <div class="book-title">${book.title}</div>
+                    </a>
+                </div>
+            `;
+        });
+
+        // Populate gallery (catalogue)
+        const bookGrid = document.getElementById('bookGrid');
+        shuffledBooks.forEach(book => {
+            bookGrid.innerHTML += `
+                <a href="${book.url}" class="book-card">
+                    <img src="${book.cover}" alt="${book.title} by Ylia Callan" loading="lazy" width="400" height="600">
+                    <h3>${book.title}</h3>
+                </a>
+            `;
+        });
+
+        // Initialize Swiper
+        new Swiper('.featured-swiper', {
+            loop: true,
+            autoplay: { delay: 4000, disableOnInteraction: false },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            grabCursor: true,
+            breakpoints: {
+                320: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+            }
+        });
+       
+
+ // Share Buttons
+async function doShare() {
+    const shareData = {
+        title: document.title,
+        url: window.location.href
+    };
+
+    // Native Web Share API
+    if (navigator.share) {
+        try {
+            await navigator.share(shareData);
+            return; // Exit function if share succeeds
+        } catch (err) {
+            // Check specifically if the user cancelled the share (AbortError)
+            if (err.name === 'AbortError') {
+                console.log("Share cancelled by user:", err);
+                return; // IMPORTANT: Exit the function if user cancelled
+            } else {
+                console.error("An error occurred during sharing:", err);
+                // If it's another error (e.g. no network), fall through to clipboard fallback
+            }
+        }
+    }
+
+    // Fallback: copy link (only runs if navigator.share is not available OR an error other than AbortError occurred)
+    try {
+        await navigator.clipboard.writeText(window.location.href);
+        alert("Link copied to clipboard!");
+    } catch (e) {
+        alert("Unable to copy link.");
+    }
+}
+
+// Attach to ALL share buttons
+document.querySelectorAll(".share-button").forEach(btn => {
+    btn.addEventListener("click", doShare);
+});
+
+// Share website on logo click
+document.getElementById("logoShare").addEventListener("click", async () => {
+    const shareData = {
+        title: document.title,
+        url: window.location.href
+    };
+
+    if (navigator.share) {
+        try {
+            await navigator.share(shareData);
+        } catch (err) {
+            console.log("Share cancelled:", err);
+            // You should add the AbortError check here too for consistency if you don't want the logo click to fallback on cancel:
+            if (err.name === 'AbortError') {
+                return; 
+            }
+        }
+    } else {
+        // Fallback: copy link
+        try {
+            await navigator.clipboard.writeText(window.location.href);
+            alert("Link copied to clipboard!");
+        } catch (e) {
+            alert("Unable to share or copy link.");
+        }
+    }
+});
+
+    </script>
+
+    <!-- Non-critical CSS deferred -->
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
+
+
+<!-- iOS Add to Home Screen Popup — PERFECTLY MATCHES APPLE -->
+<div id="iosPrompt" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.95); backdrop-filter:blur(12px); align-items:center; justify-content:center; z-index:9999; padding:20px; font-family:system-ui;">
+  <div style="background:#000; border:2px solid #00eaff; border-radius:20px; padding:36px 28px; max-width:340px; text-align:center; color:#e0faff; box-shadow:0 0 40px rgba(0,234,255,0.5);">
+    <h3 style="margin:0 0 20px; color:#00eaff; font-size:1.5rem; font-weight:700;">Add to Home Screen</h3>
+    <p style="margin:0 0 32px; line-height:1.7; opacity:0.9; font-size:1.1rem;">
+     In Safari tap the Share button<br>then select <strong>Add to Home Screen</strong>
+    </p>
+
+    <!-- Icons Container — perfectly aligned -->
+    <div style="display:flex; align-items:center; justify-content:center; gap:30px; margin:20px 0;">
+      
+      <!-- REAL Apple Share Icon (arrow perfectly positioned) -->
+      <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#00eaff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="11" width="18" height="10" rx="2" ry="2"/>
+        <path d="M12 17V2"/>
+        <path d="m8 6 4-4 4 4"/>
+      </svg>
+
+      <!-- Right Arrow (flow indicator) -->
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+
+      <!-- REAL Apple "Add to Home Screen" Icon -->
+      <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#00eaff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+        <line x1="12" y1="8" x2="12" y2="16"/>
+        <line x1="8" y1="12" x2="16" y2="12"/>
+      </svg>
+    </div>
+
+    <button onclick="hideIosPrompt()" style="margin-top:20px; background:#00eaff; color:#000; border:none; padding:14px 36px; border-radius:16px; font-weight:700; font-size:1.2rem; cursor:pointer; box-shadow:0 4px 15px rgba(0,234,255,0.4);">
+      Got it
+    </button>
+  </div>
+</div>
+    
+<!-- Floating Install Button -->
+<button class="install-trigger" onclick="triggerInstall()"
+        style="display:none; position:fixed; bottom:20px; right:20px; background:#00eaff; color:#000; border:none; padding:14px 26px; border-radius:50px; font-weight:700; font-size:1rem; cursor:pointer; box-shadow:0 0 24px rgba(0,234,255,0.7); z-index:9998;">
+  Install App
+</button>
+    
+<script>
+// Perfect "Copy Link" – works everywhere, no jump, no errors
+document.getElementById('copyLinkBtn')?.addEventListener('click', async () => {
+  const url = location.href;
+  const feedback = document.getElementById('copyFeedback');
+
+  try {
+    await navigator.clipboard.writeText(url);
+  } catch (err) {
+    // Fallback for very old browsers (almost never needed today)
+    const textarea = document.createElement('textarea');
+    textarea.value = url;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+  }
+
+  // Show feedback (text is already "Copied!" in HTML, just fade in/out)
+  feedback.style.opacity = '1';
+  setTimeout(() => feedback.style.opacity = '0', 2000);
+});
+</script>
+
+    <script>
+// EXACT FIX FOR YOUR HAMBURGER MENU — CLOSES ON LINK CLICK
+document.querySelectorAll('#navLinks a').forEach(link => {
+  link.addEventListener('click', () => {
+    // Toggle off the active classes (your exact structure)
+    document.getElementById('hamburger').classList.remove('active');
+    document.getElementById('navLinks').classList.remove('active');
+    console.log('Menu closed!');  // Confirm in console
+  });
+});
+        
+</script>
+
+<script>
+// Auto Day/Night Mode + Manual Toggle – Complete
+const setTheme = (mode) => {
+  if (mode === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.getElementById('themeToggle').innerHTML = 'Light Mode☀️';
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    document.getElementById('themeToggle').innerHTML = 'Dark Mode🌙 ';
+  }
+  localStorage.setItem('theme', mode);
+};
+
+const toggleTheme = () => {
+  const current = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  setTheme(current === 'dark' ? 'light' : 'dark');
+};
+
+const autoSetTheme = () => {
+  const hour = new Date().getHours();
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const saved = localStorage.getItem('theme');
+  if (saved) {
+    setTheme(saved);
+  } else if (prefersDark || (hour >= 18 || hour < 7)) {
+    setTheme('dark');
+  } else {
+    setTheme('light');
+  }
+};
+
+// Run on load
+autoSetTheme();
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', autoSetTheme);
+</script>
+
+<!-- Epic Sun (day) + Stars (night) background -->
+<div id="epicBackground"></div>
+
+<style>
+  #epicBackground {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(circle at 50% 30%, rgba(255,220,100,0.15) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 1.2s ease;
+  }
+
+  /* DAY MODE – glowing animated sun */
+  [data-theme="light"] #epicBackground {
+    opacity: 1;
+    background: 
+      radial-gradient(circle at 50% 20%, #ffd700 0%, #ff9800 30%, transparent 60%),
+      radial-gradient(circle at 50% 20%, #fff 0%, transparent 40%);
+    animation: sunPulse 12s ease-in-out infinite;
+  }
+
+  @keyframes sunPulse {
+    0%, 100% { box-shadow: 0 0 80px 40px rgba(255,200,0,0.4); }
+    50%      { box-shadow: 0 0 120px 60px rgba(255,230,50,0.6); }
+  }
+
+  /* NIGHT MODE – BIG STATIC TWINKLING STARS (no movement, no zoom) */
+  [data-theme="dark"] #epicBackground,
+  :root:not([data-theme]) #epicBackground {
+    opacity: 1;
+    background: #000;
+  }
+
+  [data-theme="dark"] #epicBackground::before,
+  :root:not([data-theme]) #epicBackground::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    background-image:
+      radial-gradient(3px 3px at 15% 25%, #fff, transparent 60%),
+      radial-gradient(4px 4px at 35% 70%, #fff, transparent 60%),
+      radial-gradient(2px 2px at 55% 15%, #fff, transparent 60%),
+      radial-gradient(5px 5px at 75% 80%, #fff, transparent 60%),
+      radial-gradient(3px 3px at 90% 45%, #fff, transparent 60%),
+      radial-gradient(4px 4px at 25% 90%, #fff, transparent 60%),
+      radial-gradient(3.5px 3.5px at 65% 35%, #fff, transparent 60%),
+      radial-gradient(4.5px 4.5px at 45% 10%, #fff, transparent 60%),
+      radial-gradient(2.5px 2.5px at 80% 60%, #fff, transparent 60%),
+      radial-gradient(5px 5px at 20% 55%, #fff, transparent 60%),
+      radial-gradient(3px 3px at 70% 30%, #fff, transparent 60%),
+      radial-gradient(4px 4px at 10% 75%, #fff, transparent 60%);
+    background-repeat: repeat;
+    background-size: 200px 200px, 280px 280px, 240px 240px, 320px 320px, 260px 260px, 300px 300px, 220px 220px, 340px 340px, 290px 290px, 310px 310px, 250px 250px, 270px 270px;
+    animation: twinkle 6s ease-in-out infinite;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.7; }
+    50%      { opacity: 1; }
+  }
+</style>
+
+ 
+</body>
+</html>
