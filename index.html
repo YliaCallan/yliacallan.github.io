@@ -457,8 +457,26 @@ header a:hover,
   background: rgba(255,255,255,0.22) !important;
 }
   
+/* Mobile Friendly Videos */
+  .video-block {
+    max-width: 752px;
+    margin: 40px auto;
+    text-align: center;
+  }
 
+  .video-block video {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
 
+  .video-caption {
+    margin-top: 12px;
+    font-size: 18px;
+    color: #00ffff;
+  }
+  
+  
     
     
 </style>
@@ -531,21 +549,18 @@ header a:hover,
         </section>
 
 <!-- Video 1 – Musician & Author Intro -->
-<div style="max-width:752px; margin:40px auto; text-align:center;">
+<div class="video-block">
   <video 
-    width="752" 
-    height="416" 
-    autoplay 
-    loop 
-    muted 
-    playsinline 
-    preload="auto" 
-    poster="/books/assets/videos/ylia-callan-musician-author-intro-video-poster.png"
-    loading="lazy">
+    autoplay
+    muted
+    playsinline
+    loop
+    preload="auto"
+    controls
+    poster="/books/assets/videos/ylia-callan-musician-author-intro-video-poster.jpg">
     <source src="/books/assets/videos/ylia-callan-musician-author-intro-video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
-  <p style="margin-top:12px; font-size:18px; color:#00ffff;">Musician • Author • Explorer of Reality</p>
+  <p class="video-caption">Musician • Author • Explorer of Reality</p>
 </div>
 
         <section class="carousel" id="books">
@@ -581,20 +596,18 @@ header a:hover,
 </section>
 
 <!-- Video 2 – Consciousness & Cosmology -->
-<div style="max-width:752px; margin:40px auto; text-align:center;">
+<div class="video-block">
   <video 
-    width="752" 
-    height="416" 
-    autoplay 
-    loop 
-    muted 
-    playsinline 
-    preload="auto" 
-    poster="/books/assets/videos/ylia-callan-consciousness-cosmology-reality-video-poster.png"
-    loading="lazy">
+    autoplay
+    muted
+    playsinline
+    loop
+    preload="auto"
+    controls
+    poster="/books/assets/videos/ylia-callan-consciousness-cosmology-reality-video-poster.jpg">
     <source src="/books/assets/videos/ylia-callan-consciousness-cosmology-reality-video.mp4" type="video/mp4">
   </video>
-  <p style="margin-top:12px; font-size:18px; color:#00ffff;">Consciousness • Cosmology • The Nature of Reality</p>
+  <p class="video-caption">Consciousness • Cosmology • The Nature of Reality</p>
 </div>
 
         <!-- Audiobooks – FIXED: big glowing h2 + real buttons -->
@@ -624,21 +637,19 @@ header a:hover,
             <div class="grid" id="bookGrid"></div>
         </section>
         
-        <!-- Video 3 – Civilisation & Human Evolution -->
-<div style="max-width:752px; margin:40px auto; text-align:center;">
+<!-- Video 3 – Civilisation & Human Evolution -->
+<div class="video-block">
   <video 
-    width="752" 
-    height="416" 
-    autoplay 
-    loop 
-    muted 
-    playsinline 
-    preload="auto" 
-    poster="/books/assets/videos/ylia-callan-civilisation-history-human-evolution-video-poster.png"
-    loading="lazy">
+    autoplay
+    muted
+    playsinline
+    loop
+    preload="auto"
+    controls
+    poster="/books/assets/videos/ylia-callan-civilisation-history-human-evolution-video-poster.jpg">
     <source src="/books/assets/videos/ylia-callan-civilisation-history-human-evolution-video.mp4" type="video/mp4">
   </video>
-  <p style="margin-top:12px; font-size:18px; color:#00ffff;">Civilisation • History • Human Evolution</p>
+  <p class="video-caption">Civilisation • History • Human Evolution</p>
 </div>
         
 <section style="max-width:900px;margin:0rem auto;padding:0 1.5rem;text-align:center;">
@@ -704,20 +715,18 @@ header a:hover,
 </section>
 
 <!-- Video 4 – Physics, Philosophy & Consciousness -->
-<div style="max-width:752px; margin:40px auto; text-align:center;">
+<div class="video-block">
   <video 
-    width="752" 
-    height="416" 
-    autoplay 
-    loop 
-    muted 
-    playsinline 
-    preload="auto" 
-    poster="/books/assets/videos/ylia-callan-physics-philosophy-consciousness-video-poster.png"
-    loading="lazy">
+    autoplay
+    muted
+    playsinline
+    loop
+    preload="auto"
+    controls
+    poster="/books/assets/videos/ylia-callan-physics-philosophy-consciousness-video-poster.jpg">
     <source src="/books/assets/videos/ylia-callan-physics-philosophy-consciousness-video.mp4" type="video/mp4">
   </video>
-  <p style="margin-top:12px; font-size:18px; color:#00ffff;">Physics • Philosophy • Consciousness</p>
+  <p class="video-caption">Physics • Philosophy • Consciousness</p>
 </div>
 
   <!-- Contact Section – h2 perfectly centered -->
