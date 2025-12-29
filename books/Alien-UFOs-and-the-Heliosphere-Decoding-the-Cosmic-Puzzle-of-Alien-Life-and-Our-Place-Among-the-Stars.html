@@ -255,7 +255,35 @@ body {
   }
 }
  
- 
+    .glass-header {
+  background: rgba(255, 255, 255, 0.15); /* Light semi-transparent white for light mode; adjust alpha for more/less transparency */
+  backdrop-filter: blur(12px); /* Core frosted glass blur effect */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for depth */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Optional soft shadow */
+  transition: background 0.3s ease; /* Smooth on hover/scroll if desired */
+}
+
+/* For dark mode support (if your site has a dark variant class on <body> or prefers-color-scheme) */
+@media (prefers-color-scheme: dark) {
+  .glass-header {
+    background: rgba(0, 0, 0, 0.25); /* Darker semi-transparent for better contrast in dark mode */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Ensure text/links in header have good contrast */
+.glass-header a,
+.glass-header * {
+  color: #333; /* Dark text for light mode */
+}
+
+@media (prefers-color-scheme: dark) {
+  .glass-header a,
+  .glass-header * {
+    color: #fff; /* Light text for dark mode */
+  }
+}
  
  
  
@@ -292,7 +320,7 @@ body {
 
 <body>
 
-<header>
+    <header class="glass-header">
     <nav>
         <a href="https://yliacallan.github.io/" class="site-logo" id="logoShare"><img src="/books/assets/images/ylia-callan-books-and-author-website-376x60px.png" alt="Ylia Callan" width="376" height="60" loading="eager" style="width:188px;height:auto;"></a>
             <div class="nav-links" id="navLinks">
@@ -493,7 +521,7 @@ body {
 /* Keep header & mobile menu BLACK with cyan text in light mode */
 [data-theme="light"] header,
 [data-theme="light"] .nav-links {
-  background: rgba(0,0,0,0.95) !important;
+
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(0,234,255,.15);
 }
