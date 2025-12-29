@@ -506,54 +506,6 @@ header a:hover,
     color: #fff; /* Light text for dark mode */
   }
 }
-  
-
-    
-  /* Force glassmorphic transparent header - overrides any previous backgrounds */
-header.header,
-.header {
-  background: rgba(255, 255, 255, 0.15) !important; /* Light glass tint for day mode */
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
-  transition: background 0.3s ease !important;
-}
-
-/* Scrolled state - more opaque for readability */
-header.header-scrolled,
-.header.header-scrolled {
-  background: rgba(255, 255, 255, 0.5) !important; /* Stronger tint when scrolled in day */
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-}
-
-/* Dark mode overrides */
-@media (prefers-color-scheme: dark) {
-  header.header,
-  .header {
-    background: rgba(0, 0, 0, 0.3) !important; /* Dark glass tint for night mode */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
-  }
-
-  header.header-scrolled,
-  .header.header-scrolled {
-    background: rgba(0, 0, 0, 0.6) !important;
-  }
-}
-
-/* Ensure text/logo contrast */
-.header a,
-.header .logo {
-  color: #333 !important; /* Dark text day */
-}
-
-@media (prefers-color-scheme: dark) {
-  .header a,
-  .header .logo {
-    color: #fff !important; /* Light text night */
-  }
-}
     
     
     
