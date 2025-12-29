@@ -508,38 +508,39 @@ header a:hover,
 }
   
 .header {
-  background: rgba(255, 255, 255, 0.15); /* Semi-transparent white for light mode */
+  background: rgba(255, 255, 255, 0.1); /* Very light tint for day mode – adjust alpha (0.1-0.2) if too faint */
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px); /* For Safari/iOS */
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Optional depth */
   transition: all 0.3s ease;
 }
 
-/* When scrolled (your existing .header-scrolled class – make it slightly more opaque for readability) */
+/* Scrolled state – slightly more tint for readability */
 header.header-scrolled {
-  background: rgba(255, 255, 255, 0.65); /* Less transparent when scrolled */
+  background: rgba(255, 255, 255, 0.4); /* More visible when scrolled in day mode */
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
 
-    @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   .header {
-    background: rgba(0, 0, 0, 0.25); /* Semi-transparent dark */
+    background: rgba(0, 0, 0, 0.2); /* Light dark tint for night mode – adjust alpha if needed */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   header.header-scrolled {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.5); /* More visible when scrolled in night mode */
   }
 }
 
-    .header a {
-  color: #333; /* Dark text in light mode */
+.header a, .header .logo {
+  color: #333 !important; /* Strong dark in day mode */
 }
 
 @media (prefers-color-scheme: dark) {
-  .header a {
-    color: #fff; /* Light text in dark mode */
+  .header a, .header .logo {
+    color: #fff !important; /* Strong light in night mode */
   }
 }
 
