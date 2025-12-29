@@ -475,6 +475,37 @@ header a:hover,
     font-size: 18px;
     color: #00ffff;
   }
+
+
+    .glass-header {
+  background: rgba(255, 255, 255, 0.15); /* Light semi-transparent white for light mode; adjust alpha for more/less transparency */
+  backdrop-filter: blur(12px); /* Core frosted glass blur effect */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for depth */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Optional soft shadow */
+  transition: background 0.3s ease; /* Smooth on hover/scroll if desired */
+}
+
+/* For dark mode support (if your site has a dark variant class on <body> or prefers-color-scheme) */
+@media (prefers-color-scheme: dark) {
+  .glass-header {
+    background: rgba(0, 0, 0, 0.25); /* Darker semi-transparent for better contrast in dark mode */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Ensure text/links in header have good contrast */
+.glass-header a,
+.glass-header * {
+  color: #333; /* Dark text for light mode */
+}
+
+@media (prefers-color-scheme: dark) {
+  .glass-header a,
+  .glass-header * {
+    color: #fff; /* Light text for dark mode */
+  }
+}
   
   
     
