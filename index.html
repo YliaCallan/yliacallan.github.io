@@ -83,7 +83,7 @@ a{color:var(--cyan);text-decoration:none;transition:var(--transition)}
 a:hover{opacity:.8}
 
 /* Header */
-header{position:sticky;top:0;background:rgba(255, 255, 255, 0.15);backdrop-filter:blur(12px);z-index:1000;border-bottom:1px solid rgba(0,234,255,.15)}
+header{position:sticky;top:0;background:rgba(0,0,0,.95);backdrop-filter:blur(12px);z-index:1000;border-bottom:1px solid rgba(0,234,255,.15)}
 nav{max-width:1400px;margin:0 auto;padding:1rem;display:flex;justify-content:space-between;align-items:center}
 .site-logo{font-size:24px;font-weight:900;color:#00e3ff;text-shadow:0 0 10px #00e3ff;cursor:pointer;transition:.2s}
 .site-logo:hover{opacity:.8;transform:scale(1.02)}
@@ -507,43 +507,53 @@ header a:hover,
   }
 }
   
+
+    
+  /* Force glassmorphic transparent header - overrides any previous backgrounds */
+header.header,
 .header {
-  background: rgba(255, 255, 255, 0.1); /* Very light tint for day mode – adjust alpha (0.1-0.2) if too faint */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Optional depth */
-  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.15) !important; /* Light glass tint for day mode */
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+  transition: background 0.3s ease !important;
 }
 
-/* Scrolled state – slightly more tint for readability */
-header.header-scrolled {
-  background: rgba(255, 255, 255, 0.4); /* More visible when scrolled in day mode */
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+/* Scrolled state - more opaque for readability */
+header.header-scrolled,
+.header.header-scrolled {
+  background: rgba(255, 255, 255, 0.5) !important; /* Stronger tint when scrolled in day */
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
 }
 
+/* Dark mode overrides */
 @media (prefers-color-scheme: dark) {
+  header.header,
   .header {
-    background: rgba(0, 0, 0, 0.2); /* Light dark tint for night mode – adjust alpha if needed */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.3) !important; /* Dark glass tint for night mode */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
   }
 
-  header.header-scrolled {
-    background: rgba(0, 0, 0, 0.5); /* More visible when scrolled in night mode */
+  header.header-scrolled,
+  .header.header-scrolled {
+    background: rgba(0, 0, 0, 0.6) !important;
   }
 }
 
-.header a, .header .logo {
-  color: #333 !important; /* Strong dark in day mode */
+/* Ensure text/logo contrast */
+.header a,
+.header .logo {
+  color: #333 !important; /* Dark text day */
 }
 
 @media (prefers-color-scheme: dark) {
-  .header a, .header .logo {
-    color: #fff !important; /* Strong light in night mode */
+  .header a,
+  .header .logo {
+    color: #fff !important; /* Light text night */
   }
 }
-
     
     
     
