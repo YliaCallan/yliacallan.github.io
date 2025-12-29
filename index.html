@@ -507,7 +507,43 @@ header a:hover,
   }
 }
   
-  
+.header {
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent white for light mode */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* For Safari/iOS */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* When scrolled (your existing .header-scrolled class – make it slightly more opaque for readability) */
+header.header-scrolled {
+  background: rgba(255, 255, 255, 0.65); /* Less transparent when scrolled */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+    @media (prefers-color-scheme: dark) {
+  .header {
+    background: rgba(0, 0, 0, 0.25); /* Semi-transparent dark */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  header.header-scrolled {
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+
+    .header a {
+  color: #333; /* Dark text in light mode */
+}
+
+@media (prefers-color-scheme: dark) {
+  .header a {
+    color: #fff; /* Light text in dark mode */
+  }
+}
+
+    
     
     
 </style>
